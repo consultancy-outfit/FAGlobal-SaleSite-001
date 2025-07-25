@@ -110,11 +110,13 @@ export const MobileHeader = () => {
                   style={{
                     textDecoration: "none",
                     color:
-                      pathname === item?.path
-                        ? theme?.palette?.text?.secondary
-                        : theme?.palette?.common?.text_gray,
+                      pathname?.startsWith(item?.path) && item?.path !== "/"
+                        ? theme?.palette?.primary?.main
+                        : pathname === "/" && item?.path === "/"
+                          ? theme?.palette?.primary?.main
+                          : theme?.palette?.common?.text_gray,
                     fontSize: item?.path === pathname ? 18 : 16,
-                    fontWeight: item?.path === pathname ? 600 : 400,
+                    fontWeight: theme?.typography?.fontWeightMedium,
                     lineHeight: "32px",
                   }}
                 >

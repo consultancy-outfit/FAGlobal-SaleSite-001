@@ -10,17 +10,17 @@ export const navLinksData = [
     path: APP_ROUTES.ABOUT_US,
   },
   {
-    title: "Services",
+    title: "Proudts",
     path: APP_ROUTES.SERVICES,
   },
   {
-    title: "Pricing",
+    title: "Use Cases",
     path: APP_ROUTES.PRICING,
   },
-  {
-    title: "Careers",
-    path: APP_ROUTES.CAREERS,
-  },
+  // {
+  //   title: "Careers",
+  //   path: APP_ROUTES.CAREERS,
+  // },
   {
     title: "Contact Us",
     path: APP_ROUTES.CONTACT_US,

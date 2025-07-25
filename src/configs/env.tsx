@@ -4,12 +4,12 @@ export const BACKEND_BASE_URL =
   process?.env?.NEXT_PUBLIC_BACKEND_BASE_URL ?? "";
 export const IMAGE_BASE_URL = process?.env?.NEXT_PUBLIC_IMAGE_BASE_URL ?? "";
 export const FRONTEND_BASE_URL =
-  process?.env?.NEXT_PUBLIC_FRONTEND_BASE_URL ??
-  "https://app.identitygram.co.uk/";
+  process?.env?.NEXT_PUBLIC_FRONTEND_BASE_URL ?? "/";
 export const FRONTEND_SALE_SITE_BASE_URL =
   process?.env?.NEXT_PUBLIC_FRONTEND_SALE_SITE_BASE_URL ?? DOMAIN;
 export const PROJECT_NAME =
-  process?.env?.NEXT_PUBLIC_PROJECT_NAME ?? "Identity Gram";
+  process?.env?.NEXT_PUBLIC_PROJECT_NAME ??
+  "FA Global | Smarter Open Banking & Financial Data Solutions";
 export const PROJECT_DESCRIPTION =
   process?.env?.NEXT_PUBLIC_PROJECT_DESCRIPTION;
 export const BASE_URL =
