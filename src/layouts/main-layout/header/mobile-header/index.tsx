@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { navLinksData } from "../header.data";
 import { LinkButton } from "@/components/buttons/link-button";
-import { APP_ROUTES, PROJECT_WEB_APP_ROUTES } from "@/constants/routes";
+import { APP_ROUTES } from "@/constants/routes";
 
 export const MobileHeader = () => {
   const [active, setActive] = useState(false);
@@ -145,13 +145,10 @@ export const MobileHeader = () => {
                 color: theme?.palette?.text?.primary,
               }}
             >
-              Partner With Us
+              Login
             </LinkButton>
             <LinkButton
-              link={PROJECT_WEB_APP_ROUTES?.SIGNUP}
-              linkProps={{
-                target: "_blank",
-              }}
+              link={APP_ROUTES?.CONTACT_US}
               customStyles={{
                 borderRadius: 2,
                 px: 2,
@@ -159,7 +156,7 @@ export const MobileHeader = () => {
                 bgcolor: theme?.palette?.text?.primary,
               }}
             >
-              Register Now
+              Get Started
             </LinkButton>
           </Box>
         </Box>
