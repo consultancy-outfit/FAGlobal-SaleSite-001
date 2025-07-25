@@ -1,0 +1,38 @@
+import { FRONTEND_BASE_URL } from "@/configs/env";
+
+export const AUTH_ROUTES = {
+  SIGNIN: "/signin",
+  SIGNUP: "/signup",
+  FORGOT_PASSWORD: "/forgot-password",
+  RESET_PASSWORD: "/reset-password",
+};
+
+export const APP_ROUTES = {
+  HOME: "/",
+  ABOUT_US: "/about-us",
+  SERVICES: "/services",
+  SERVICES_DETAIL: "/services/detail",
+  PRICING: "/pricing",
+  CAREERS: "/careers",
+  PARTNER_WITH_US: "/partner-with-us",
+  CONTACT_US: "/contact-us",
+  COOKIE_POLICY: "/cookies-policy",
+  DATA_PROTECTION_POLICY: "/data-protection-policy",
+  SECURITY_AND_COMPLIANCE_POLICY: "/security-and-compliance-policy",
+  PRIVACY_POLICY: "/privacy-policy",
+  TERM_AND_CONDITION: "/terms-and-conditions",
+};
+
+export const SOCIAL_ROUTES = {
+  INSTAGRAM: "https://www.instagram.com/identitygram_/",
+  LINKEDIN: "https://www.linkedin.com/company/identitygram",
+  FACEBOOK: "https://www.facebook.com/Identitygram",
+  TWITTER: "https://twitter.com/Identitygram_",
+  YOUTUBE: "https://www.youtube.com/@Identitygram_",
+  TIKTOK: "https://www.tiktok.com/@identitygram_",
+};
+
+export const PROJECT_WEB_APP_ROUTES = {
+  SIGNUP: `${FRONTEND_BASE_URL}/auth/signup`,
+  SIGNIN: `${FRONTEND_BASE_URL}/auth/login`,
+};
