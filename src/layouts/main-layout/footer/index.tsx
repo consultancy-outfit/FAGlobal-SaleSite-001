@@ -15,7 +15,7 @@ const Footer = () => {
       sx={{
         bgcolor: "#272835",
         color: "white",
-        px: { xs: 4, sm: 8 },
+        px: { xs: 5, sm: 10 },
         py: { xs: 3, sm: 5 },
         m: 2,
         borderRadius: "12px",
@@ -29,7 +29,7 @@ const Footer = () => {
               <Image src={FAGlobalLogoImage} alt="Logo" />
             </Stack>
             <Typography
-              variant="body2"
+              variant="body1"
               sx={{
                 maxWidth: 300,
                 color: "#ADAEBA",
@@ -81,7 +81,7 @@ const Footer = () => {
           {products.map((item) => (
             <Typography
               key={item?.id}
-              variant="body2"
+              variant="body1"
               color="#D2D3DF"
               fontFamily="Manrope"
               sx={{ mt: 1.5, cursor: "pointer" }}
@@ -104,7 +104,7 @@ const Footer = () => {
           {about.map((item) => (
             <Typography
               key={item?.id}
-              variant="body2"
+              variant="body1"
               color="#D2D3DF"
               fontFamily="Manrope"
               sx={{ mt: 1.5, cursor: "pointer" }}
@@ -127,7 +127,7 @@ const Footer = () => {
           {resources.map((item) => (
             <Typography
               key={item?.id}
-              variant="body2"
+              variant="body1"
               color="#D2D3DF"
               fontFamily="Manrope"
               sx={{ mt: 1.5, cursor: "pointer" }}
@@ -148,20 +148,20 @@ const Footer = () => {
             Support
           </Typography>
           <Typography
-            variant="body2"
+            variant="body1"
             sx={{ mt: 1.5, cursor: "pointer" }}
             color="#D2D3DF"
             fontFamily="Manrope"
           >
-            Email:
+            Email: info@faglobalbkfinance.com
           </Typography>
           <Typography
-            variant="body2"
+            variant="body1"
             sx={{ mt: 1.5, cursor: "pointer" }}
             color="#D2D3DF"
             fontFamily="Manrope"
           >
-            Address
+            Address: 30 Churchill Place, London, England, E14 5RE
           </Typography>
         </Grid>
       </Grid>
@@ -176,7 +176,7 @@ const Footer = () => {
         gap={2}
       >
         <Typography
-          variant="body2"
+          variant="body1"
           sx={{ color: "#EEEFFB", fontFamily: "Manrope" }}
         >
           Copyright © 2025 FA Global. All rights reserved
@@ -185,14 +185,14 @@ const Footer = () => {
           <Link
             href="#"
             color="inherit"
-            sx={{ color: "#EEEFFB", fontFamily: "Manrope" }}
+            sx={{ color: "#EEEFFB", fontFamily: "Manrope", fontSize: 16 }}
           >
             Privacy Policy
           </Link>
           <Link
             href="#"
             color="inherit"
-            sx={{ color: "#EEEFFB", fontFamily: "Manrope" }}
+            sx={{ color: "#EEEFFB", fontFamily: "Manrope", fontSize: 16 }}
           >
             Terms & Conditions
           </Link>
