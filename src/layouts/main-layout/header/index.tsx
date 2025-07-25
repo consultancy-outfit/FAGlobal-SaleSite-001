@@ -5,7 +5,7 @@ import { navLinksData } from "./header.data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LinkButton } from "@/components/buttons/link-button";
-import { APP_ROUTES, PROJECT_WEB_APP_ROUTES } from "@/constants/routes";
+import { APP_ROUTES } from "@/constants/routes";
 import { motion, useAnimation } from "framer-motion";
 import { useScroll } from "framer-motion";
 import { MobileHeader } from "./mobile-header";
@@ -79,18 +79,18 @@ export const Header = () => {
           {navLinksData?.map((item) => (
             <Typography
               key={item?.title}
-              variant="subtitle2"
+              variant="body2"
               component={Link}
               href={item?.path}
               sx={{
                 textDecoration: "none",
-                color: theme?.palette?.text?.primary,
-                fontWeight:
+                color:
                   pathname?.startsWith(item?.path) && item?.path !== "/"
-                    ? "fontWeightBold"
+                    ? theme?.palette?.primary?.main
                     : pathname === "/" && item?.path === "/"
-                      ? "fontWeightBold"
-                      : "fontWeightMedium",
+                      ? theme?.palette?.primary?.main
+                      : theme?.palette?.text?.primary,
+                fontWeight: theme?.typography?.fontWeightMedium,
               }}
             >
               {item?.title}
@@ -108,27 +108,38 @@ export const Header = () => {
               variant="outlined"
               color="secondary"
               customStyles={{
-                borderRadius: 2,
-                px: 1,
-                py: 1,
+                borderRadius: "999px",
+                border: "1px solid #F2F2F2",
+                px: "24px",
+                py: "8px",
+                height: "50px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "fit-content",
+                bgcolor: theme?.palette?.common?.white,
                 color: theme?.palette?.text?.primary,
               }}
             >
-              Partner With Us
+              Login
             </LinkButton>
             <LinkButton
-              link={PROJECT_WEB_APP_ROUTES?.SIGNUP}
-              linkProps={{
-                target: "_blank",
-              }}
+              link={APP_ROUTES?.CONTACT_US}
               customStyles={{
-                borderRadius: 2,
-                px: 1,
-                py: 1,
-                bgcolor: theme?.palette?.text?.primary,
+                borderRadius: "999px",
+                border: `1.5px solid ${theme?.palette?.primary?.main}`,
+                px: "24px",
+                py: "8px",
+                bgcolor: theme?.palette?.primary?.main,
+                color: theme?.palette?.common?.white,
+                height: "50px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "fit-content",
               }}
             >
-              Register Now
+              Get Started
             </LinkButton>
           </Stack>
           <Box

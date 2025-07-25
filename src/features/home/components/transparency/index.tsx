@@ -46,7 +46,8 @@ const Transparency = () => {
       >
         <Box gap={6} display="flex" flexDirection="column">
           <HeadingText variant="h3" fontWeight="fontWeightMedium">
-            Build transparency online with Identity gram
+            Build transparency online with FA Global | Smarter Open Banking &
+            Financial Data Solutions
           </HeadingText>
           <Box maxWidth="1200px" mx="auto">
             <SubHeadingText variant="subtitle2" fontWeight="fontWeightNormal">
