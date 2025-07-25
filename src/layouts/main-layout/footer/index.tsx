@@ -8,8 +8,10 @@ import XIcon from "@mui/icons-material/X";
 import { Box, Grid, IconButton, Link, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import { about, products, resources } from "./footer.data";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -85,6 +87,9 @@ const Footer = () => {
               color="#D2D3DF"
               fontFamily="Manrope"
               sx={{ mt: 1.5, cursor: "pointer" }}
+              onClick={() => {
+                router.push(item?.link);
+              }}
             >
               {item?.label}
             </Typography>
@@ -108,6 +113,9 @@ const Footer = () => {
               color="#D2D3DF"
               fontFamily="Manrope"
               sx={{ mt: 1.5, cursor: "pointer" }}
+              onClick={() => {
+                router.push(item?.link);
+              }}
             >
               {item?.label}
             </Typography>
@@ -131,6 +139,9 @@ const Footer = () => {
               color="#D2D3DF"
               fontFamily="Manrope"
               sx={{ mt: 1.5, cursor: "pointer" }}
+              onClick={() => {
+                router.push(item?.link);
+              }}
             >
               {item?.label}
             </Typography>
@@ -183,14 +194,14 @@ const Footer = () => {
         </Typography>
         <Stack direction="row" spacing={3}>
           <Link
-            href="#"
+            href="/privacy-policy"
             color="inherit"
             sx={{ color: "#EEEFFB", fontFamily: "Manrope", fontSize: 16 }}
           >
             Privacy Policy
           </Link>
           <Link
-            href="#"
+            href="/terms-and-conditions"
             color="inherit"
             sx={{ color: "#EEEFFB", fontFamily: "Manrope", fontSize: 16 }}
           >
