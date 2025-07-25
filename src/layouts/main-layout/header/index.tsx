@@ -1,22 +1,66 @@
 "use client";
-import { Box, Stack, Typography, useTheme } from "@mui/material";
-import { useEffect } from "react";
-import { navLinksData } from "./header.data";
+import {
+  Box,
+  Stack,
+  Typography,
+  useTheme,
+  Button,
+  Menu,
+  MenuItem,
+} from "@mui/material";
+import React, { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LinkButton } from "@/components/buttons/link-button";
-import { APP_ROUTES } from "@/constants/routes";
 import { motion, useAnimation } from "framer-motion";
 import { useScroll } from "framer-motion";
+
+// Import MUI Icons
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+
+// Assuming these paths are correct for your project structure
+import { navLinksData } from "./header.data";
+import { LinkButton } from "@/components/buttons/link-button";
+import { APP_ROUTES } from "@/constants/routes";
 import { MobileHeader } from "./mobile-header";
 import { LogoAvatar } from "@/components/avatars/logo-avatar";
+
+// Define a type for your nav link items, especially for children
+interface NavLinkItem {
+  title: string;
+  path: string;
+  children?: NavLinkItem[]; // Children are also NavLinkItem type
+}
 
 export const Header = () => {
   const pathname = usePathname();
   const controls = useAnimation();
   const { scrollYProgress } = useScroll();
+  const theme = useTheme();
+
+  // State specifically for the "Products" dropdown menu
+  // HTMLElement or null is the correct type for anchorEl
+  const [productsAnchorEl, setProductsAnchorEl] = useState<null | HTMLElement>(
+    null,
+  );
+  const openProductsMenu = Boolean(productsAnchorEl);
+
+  // Use useCallback for event handlers to prevent unnecessary re-renders
+  // React.MouseEvent<HTMLButtonElement> is the type for a click event on a Button
+  const handleProductsClick = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement>) => {
+      setProductsAnchorEl(event.currentTarget);
+    },
+    [],
+  );
+
+  const handleProductsClose = useCallback(() => {
+    setProductsAnchorEl(null);
+  }, []);
 
   useEffect(() => {
+    if (!theme) return; // Only proceed if theme is defined
+
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       if (latest > 0.01) {
         controls.start({
@@ -24,7 +68,7 @@ export const Header = () => {
           transition: { duration: 0.4 },
           boxShadow:
             "0px 3px 4px rgba(0, 0, 0, 0.1), 0px 0px 3px rgba(0, 0, 0, 0.05)",
-          backgroundColor: theme?.palette?.common?.white,
+          backgroundColor: theme.palette.common.white,
           top: 20,
           padding: "2.8rem 1rem",
         });
@@ -40,8 +84,7 @@ export const Header = () => {
       }
     });
     return () => unsubscribe();
-  }, [controls, scrollYProgress]);
-  const theme = useTheme();
+  }, [controls, scrollYProgress, theme]);
 
   return (
     <>
@@ -76,26 +119,98 @@ export const Header = () => {
           alignItems="center"
           display={{ xs: "none", lg: "flex" }}
         >
-          {navLinksData?.map((item) => (
-            <Typography
-              key={item?.title}
-              variant="body2"
-              component={Link}
-              href={item?.path}
-              sx={{
-                textDecoration: "none",
-                color:
-                  pathname?.startsWith(item?.path) && item?.path !== "/"
-                    ? theme?.palette?.primary?.main
-                    : pathname === "/" && item?.path === "/"
-                      ? theme?.palette?.primary?.main
-                      : theme?.palette?.text?.primary,
-                fontWeight: theme?.typography?.fontWeightMedium,
-              }}
-            >
-              {item?.title}
-            </Typography>
-          ))}
+          {/* Cast navLinksData to the defined type for better type inference */}
+          {(navLinksData as NavLinkItem[])?.map((item) => {
+            const isActiveParent = item.children
+              ? item.children.some((child) =>
+                  pathname?.startsWith(child.path),
+                ) || pathname?.startsWith(item.path)
+              : pathname?.startsWith(item.path) && item.path !== "/"
+                ? true
+                : pathname === "/" && item.path === "/";
+
+            const textColor = theme
+              ? isActiveParent
+                ? theme.palette.primary.main
+                : theme.palette.text.primary
+              : "inherit";
+
+            return item.children ? (
+              <React.Fragment key={item.title}>
+                <Button
+                  id="products-button"
+                  aria-controls={openProductsMenu ? "products-menu" : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={openProductsMenu ? "true" : undefined}
+                  onClick={handleProductsClick}
+                  sx={{
+                    textTransform: "none",
+                    color: textColor,
+                    fontWeight: theme?.typography?.fontWeightMedium,
+                    "&:hover": {
+                      backgroundColor: "transparent",
+                    },
+                    padding: "6px 8px",
+                    minWidth: "auto",
+                  }}
+                  // Add endIcon for the dropdown arrow
+                  endIcon={
+                    openProductsMenu ? (
+                      <KeyboardArrowUpIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon />
+                    )
+                  }
+                >
+                  <Typography variant="body2" component="span">
+                    {item?.title}
+                  </Typography>
+                </Button>
+                <Menu
+                  id="products-menu"
+                  anchorEl={productsAnchorEl}
+                  open={openProductsMenu}
+                  onClose={handleProductsClose}
+                  MenuListProps={{
+                    "aria-labelledby": "products-button",
+                  }}
+                  sx={{ zIndex: 2000 }}
+                >
+                  {item.children.map((childItem) => (
+                    <MenuItem
+                      key={childItem.title}
+                      onClick={handleProductsClose}
+                      component={Link}
+                      href={childItem.path}
+                      sx={{
+                        color: theme
+                          ? pathname === childItem.path
+                            ? theme.palette.primary.main
+                            : theme.palette.text.primary
+                          : "inherit",
+                      }}
+                    >
+                      {childItem.title}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </React.Fragment>
+            ) : (
+              <Typography
+                key={item?.title}
+                variant="body2"
+                component={Link}
+                href={item?.path}
+                sx={{
+                  textDecoration: "none",
+                  color: textColor,
+                  fontWeight: theme?.typography?.fontWeightMedium,
+                }}
+              >
+                {item?.title}
+              </Typography>
+            );
+          })}
         </Stack>
         <Stack direction="row" spacing={2} alignItems={"center"}>
           <Stack

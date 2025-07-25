@@ -9,7 +9,6 @@ export const MainLayout = (props: any) => {
     <>
       <Header />
       <Box sx={{ height: 110 }} />
-      {/* <ChatBot /> */}
       <main>{children}</main>
       <Footer />
     </>
