@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import RootProvidersLayout from "@/layouts/root-providers-layout";
 import { outfitFontFamily } from "@/assets/fonts/outfit";
-import { FRONTEND_SALE_SITE_BASE_URL } from "@/configs/env";
 
 export const metadata: Metadata = {
   title: "FA Global | Smarter Open Banking & Financial Data Solutions",
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${FRONTEND_SALE_SITE_BASE_URL}/og-logo.png`,
+        url: "https://faglobal.netlify.app/og-logo.png",
         type: "image/png",
         width: 1200,
         height: 630,

@@ -14,16 +14,28 @@ export const navLinksData = [
     path: APP_ROUTES.SERVICES,
     children: [
       {
-        title: "Product 1",
+        title: "Core Services",
         path: APP_ROUTES.PRODUCT_1,
       },
       {
-        title: "Product 2",
+        title: "Data Intelligence & Enrichment",
         path: APP_ROUTES.PRODUCT_2,
       },
       {
-        title: "Product 3",
+        title: " Identity & KYC",
         path: APP_ROUTES.PRODUCT_3,
+      },
+      {
+        title: "Compliance & Access",
+        path: APP_ROUTES.PRODUCT_4,
+      },
+      {
+        title: "Centspay",
+        path: APP_ROUTES.PRODUCT_5,
+      },
+      {
+        title: "Accountant Help Squad",
+        path: APP_ROUTES.PRODUCT_6,
       },
     ],
   },

@@ -21,9 +21,12 @@ export const APP_ROUTES = {
   SECURITY_AND_COMPLIANCE_POLICY: "/security-and-compliance-policy",
   PRIVACY_POLICY: "/privacy-policy",
   TERM_AND_CONDITION: "/terms-and-conditions",
-  PRODUCT_1: "/p1",
-  PRODUCT_2: "/p2",
-  PRODUCT_3: "/p3",
+  PRODUCT_1: "/core-services",
+  PRODUCT_2: "/data-intelligence-enrichment",
+  PRODUCT_3: "/identity-kyc",
+  PRODUCT_4: "/compliance-access",
+  PRODUCT_5: "/centspay",
+  PRODUCT_6: "/accountant-help-squad",
 };
 
 export const SOCIAL_ROUTES = {
