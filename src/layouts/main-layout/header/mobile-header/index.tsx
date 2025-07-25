@@ -148,7 +148,7 @@ export const MobileHeader = () => {
               Login
             </LinkButton>
             <LinkButton
-              link={APP_ROUTES?.CONTACT_US}
+              link={APP_ROUTES?.Get_STARTED}
               customStyles={{
                 borderRadius: 2,
                 px: 2,

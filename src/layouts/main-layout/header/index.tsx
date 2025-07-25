@@ -239,7 +239,7 @@ export const Header = () => {
               Login
             </LinkButton>
             <LinkButton
-              link={APP_ROUTES?.CONTACT_US}
+              link={APP_ROUTES?.Get_STARTED}
               customStyles={{
                 borderRadius: "999px",
                 border: `1.5px solid ${theme?.palette?.primary?.main}`,
