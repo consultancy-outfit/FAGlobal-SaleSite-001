@@ -1,201 +1,205 @@
 "use client";
-import {
-  Box,
-  Container,
-  Link,
-  Typography,
-  IconButton,
-  useTheme,
-} from "@mui/material";
-import { ItemGridLayout } from "@/components/layouts/item-grid-layout";
-import { ContainerGridLayout } from "@/components/layouts/container-grid-layout";
-import {
-  footerLinkData,
-  footerSocialData,
-  footerTermsData,
-} from "./footer.data";
-import NextLink from "next/link";
-import {
-  COMPANY_CRN,
-  COMPANY_EMAIL_ADDRESS,
-  COMPANY_LOCATION_ADDRESS,
-  PROJECT_NAME,
-} from "@/configs/env";
-import { FooterBgImage } from "@/assets/images/layout";
-import { SubHeadingText } from "@/components/text/sub-heading-text";
-import { ArrowOutward } from "@mui/icons-material";
-import { LogoAvatar } from "@/components/avatars/logo-avatar";
 
-export const Footer = () => {
-  const theme = useTheme();
+import { Icon5 } from "@/assets/icons/common";
+import { FAGlobalLogoImage } from "@/assets/images/logo";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import XIcon from "@mui/icons-material/X";
+import { Box, Grid, IconButton, Link, Stack, Typography } from "@mui/material";
+import Image from "next/image";
+import { about, products, resources } from "./footer.data";
+
+const Footer = () => {
   return (
     <Box
-      component="footer"
       sx={{
-        pt: { md: 8, sm: 18, xs: "none" },
-        backgroundImage: { sm: `url(${FooterBgImage.src})`, xs: null },
-        bgcolor: { sm: "unset", xs: theme?.palette?.primary?.main },
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100% 100%",
-        backgroundPosition: "center",
+        bgcolor: "#272835",
+        color: "white",
+        px: { xs: 4, sm: 8 },
+        py: { xs: 3, sm: 5 },
+        m: 2,
+        borderRadius: "12px",
       }}
     >
-      <Container maxWidth="xl" sx={{ py: 4, mt: 14 }}>
-        <ContainerGridLayout spacing={2}>
-          <ItemGridLayout xs={12} md={3.5}>
-            <Box>
-              <LogoAvatar link="javascript:void(0)" height={60} width={229} />
-            </Box>
+      <Grid container spacing={4}>
+        {/* Logo and Description */}
+        <Grid size={{ md: 4, xs: 12 }}>
+          <Stack spacing={2}>
+            <Stack>
+              <Image src={FAGlobalLogoImage} alt="Logo" />
+            </Stack>
             <Typography
-              variant="body1"
-              color={theme?.palette?.common?.white}
-              mt={1}
-              maxWidth={370}
-            >
-              {`${PROJECT_NAME}’s AI-powered verification prevents fraud, ensures KYC compliance, and drives fast customer conversions—leave identity verification to our experts and focus on what you do best.`}
-            </Typography>
-            <Box
-              mt={{ md: 4, xs: 2 }}
+              variant="body2"
               sx={{
-                display: "flex",
-                justifyContent: "space-between",
                 maxWidth: 300,
-                gap: 1,
+                color: "#ADAEBA",
+                fontFamily: "Manrope",
+                fontSize: 16,
               }}
             >
-              {footerSocialData?.map((social) => (
-                <IconButton
-                  key={social?.name}
-                  href={social?.path}
-                  target="_blank"
-                  sx={{
-                    bgcolor: `rgba(255, 255, 255, 0.2)`,
-                    p: 1.5,
-                    width: 50,
-                    height: 50,
-                  }}
-                >
-                  <social.icon />
-                </IconButton>
-              ))}
-            </Box>
-          </ItemGridLayout>
-
-          {footerLinkData?.map((item) => (
-            <ItemGridLayout xs={6} md={2.7} key={item?.title}>
-              <Typography
-                variant="subtitle2"
-                fontWeight="fontWeightBold"
-                gutterBottom
-                color={theme?.palette?.common?.white}
-                mb={2}
-              >
-                {item?.title}
-              </Typography>
-              {item?.links?.map((link) => (
-                <Link
-                  key={link?.name}
-                  href={link?.path}
-                  underline="none"
-                  color={theme?.palette?.common?.white}
-                  display="block"
-                  py={0.5}
-                  component={NextLink}
-                  fontSize={18}
-                  fontWeight="fontWeightNormal"
-                  width="fit-content"
-                >
-                  {link?.name}{" "}
-                  {link?.name === "View All" && (
-                    <ArrowOutward fontSize="small" sx={{ mb: -0.4 }} />
-                  )}
-                </Link>
-              ))}
-            </ItemGridLayout>
-          ))}
-          <ItemGridLayout xs={12} md={3.1}>
-            <Typography
-              variant="subtitle2"
-              fontWeight="fontWeightBold"
-              gutterBottom
-              color={theme?.palette?.common?.white}
-              mb={2}
-            >
-              Contact Us
+              Empowering Financial Innovation Through Open Banking
             </Typography>
-            <SubHeadingText
-              variant="subtitle2"
-              fontWeight="fontWeightBold"
-              color={theme?.palette?.common?.white}
-            >
-              Location
-            </SubHeadingText>
-            <SubHeadingText
-              variant="subtitle2"
-              fontWeight="fontWeightNormal"
-              color={theme?.palette?.common?.white}
-            >
-              {COMPANY_LOCATION_ADDRESS}, CRN ({COMPANY_CRN})
-            </SubHeadingText>
-            <SubHeadingText
-              variant="subtitle2"
-              fontWeight="fontWeightBold"
-              color={theme?.palette?.common?.white}
-              marginTop={2}
-            >
-              Email
-            </SubHeadingText>
-            <SubHeadingText
-              variant="subtitle2"
-              fontWeight="fontWeightNormal"
-              color={theme?.palette?.common?.white}
-            >
-              {COMPANY_EMAIL_ADDRESS}
-            </SubHeadingText>
-          </ItemGridLayout>
-        </ContainerGridLayout>
-      </Container>
-
-      <Box bgcolor={theme?.palette?.primary?.dark} py={3}>
-        <Container
-          maxWidth="xl"
-          sx={{
-            display: "flex",
-            justifyContent: { lg: "space-between", xs: "center" },
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: 2,
-          }}
-        >
-          <Typography
-            variant="body1"
-            color={theme?.palette?.common?.white}
-            textAlign="center"
-          >
-            Copyrights © 2025 All Rights Reserved by {PROJECT_NAME}
-          </Typography>
-          <Box display="flex" flexWrap="wrap" gap={2} justifyContent="center">
-            {footerTermsData?.map((item) => (
-              <Typography
-                key={item?.name}
-                variant="body1"
-                color={theme?.palette?.common?.white}
+            <Stack direction="row" spacing={2} mt={2}>
+              <IconButton
+                color="inherit"
+                sx={{ backgroundColor: "#2E2E3E", p: 1 }}
               >
-                <NextLink
-                  href={item?.path}
-                  style={{
-                    textDecoration: "none",
-                    color: theme?.palette?.common?.white,
-                    fontWeight: 400,
-                  }}
-                >
-                  {item?.name}
-                </NextLink>
-              </Typography>
-            ))}
-          </Box>
-        </Container>
+                <InstagramIcon />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                sx={{ backgroundColor: "#2E2E3E", p: 1 }}
+              >
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                sx={{ backgroundColor: "#2E2E3E", p: 1 }}
+              >
+                <XIcon />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                sx={{ backgroundColor: "#2E2E3E", p: 1 }}
+              >
+                <Image src={Icon5} alt="icon5" />
+              </IconButton>
+            </Stack>
+          </Stack>
+        </Grid>
+
+        {/* Products */}
+        <Grid size={{ md: 2, xs: 6 }}>
+          <Typography
+            variant="subtitle1"
+            color="#F6F7FF"
+            fontFamily="Manrope"
+            fontWeight={500}
+          >
+            Products
+          </Typography>
+          {products.map((item) => (
+            <Typography
+              key={item?.id}
+              variant="body2"
+              color="#D2D3DF"
+              fontFamily="Manrope"
+              sx={{ mt: 1.5, cursor: "pointer" }}
+            >
+              {item?.label}
+            </Typography>
+          ))}
+        </Grid>
+
+        {/* Company */}
+        <Grid size={{ md: 2, xs: 6 }}>
+          <Typography
+            variant="subtitle1"
+            color="#F6F7FF"
+            fontFamily="Manrope"
+            fontWeight={500}
+          >
+            Company
+          </Typography>
+          {about.map((item) => (
+            <Typography
+              key={item?.id}
+              variant="body2"
+              color="#D2D3DF"
+              fontFamily="Manrope"
+              sx={{ mt: 1.5, cursor: "pointer" }}
+            >
+              {item?.label}
+            </Typography>
+          ))}
+        </Grid>
+
+        {/* Resources */}
+        <Grid size={{ md: 2, xs: 6 }}>
+          <Typography
+            variant="subtitle1"
+            color="#F6F7FF"
+            fontFamily="Manrope"
+            fontWeight={500}
+          >
+            Resources
+          </Typography>
+          {resources.map((item) => (
+            <Typography
+              key={item?.id}
+              variant="body2"
+              color="#D2D3DF"
+              fontFamily="Manrope"
+              sx={{ mt: 1.5, cursor: "pointer" }}
+            >
+              {item?.label}
+            </Typography>
+          ))}
+        </Grid>
+
+        {/* Support */}
+        <Grid size={{ md: 2, xs: 6 }}>
+          <Typography
+            variant="subtitle1"
+            color="#F6F7FF"
+            fontFamily="Manrope"
+            fontWeight={500}
+          >
+            Support
+          </Typography>
+          <Typography
+            variant="body2"
+            sx={{ mt: 1.5, cursor: "pointer" }}
+            color="#D2D3DF"
+            fontFamily="Manrope"
+          >
+            Email:
+          </Typography>
+          <Typography
+            variant="body2"
+            sx={{ mt: 1.5, cursor: "pointer" }}
+            color="#D2D3DF"
+            fontFamily="Manrope"
+          >
+            Address
+          </Typography>
+        </Grid>
+      </Grid>
+
+      {/* Bottom bar */}
+      <Box
+        mt={6}
+        display="flex"
+        justifyContent="space-between"
+        flexDirection={{ xs: "column", sm: "row" }}
+        alignItems={{ xs: "flex-start", sm: "center" }}
+        gap={2}
+      >
+        <Typography
+          variant="body2"
+          sx={{ color: "#EEEFFB", fontFamily: "Manrope" }}
+        >
+          Copyright © 2025 FA Global. All rights reserved
+        </Typography>
+        <Stack direction="row" spacing={3}>
+          <Link
+            href="#"
+            color="inherit"
+            sx={{ color: "#EEEFFB", fontFamily: "Manrope" }}
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            href="#"
+            color="inherit"
+            sx={{ color: "#EEEFFB", fontFamily: "Manrope" }}
+          >
+            Terms & Conditions
+          </Link>
+        </Stack>
       </Box>
     </Box>
   );
 };
+
+export default Footer;
