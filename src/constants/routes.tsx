@@ -21,6 +21,9 @@ export const APP_ROUTES = {
   SECURITY_AND_COMPLIANCE_POLICY: "/security-and-compliance-policy",
   PRIVACY_POLICY: "/privacy-policy",
   TERM_AND_CONDITION: "/terms-and-conditions",
+  PRODUCT_1: "/p1",
+  PRODUCT_2: "/p2",
+  PRODUCT_3: "/p3",
 };
 
 export const SOCIAL_ROUTES = {
