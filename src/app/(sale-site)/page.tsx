@@ -1,5 +1,18 @@
-import { HomeFeature } from "@/features/home";
+import { HomeImage } from "@/assets/images/features/home";
+import { Stack } from "@mui/material";
+import Image from "next/image";
 
 export default function Home() {
-  return <HomeFeature />;
+  return (
+    <Stack alignItems="center">
+      <Image
+        src={HomeImage}
+        alt="Home"
+        style={{
+          width: "100%",
+          height: "auto",
+        }}
+      />
+    </Stack>
+  );
 }
