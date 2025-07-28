@@ -40,6 +40,7 @@ const info = {
 const grey = {
   0: "#adafca",
   500: "#667085",
+  600: "#ADAEBA",
 };
 
 const divider = "#999999";
@@ -75,6 +76,8 @@ const common = {
   lightest_pink: "#FABFDD",
   rose_gold: "#FCD9C5",
   link: "#6B21F3",
+  bg_dark: "#272835",
+  bg_dull: "#2E2E3E",
 };
 
 export const palette = {
@@ -112,5 +115,7 @@ declare module "@mui/material/styles" {
     lightest_pink?: string;
     rose_gold?: string;
     link?: string;
+    bg_dark?: string;
+    bg_dull?: string;
   }
 }
