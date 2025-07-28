@@ -39,8 +39,16 @@ const LoginForm = () => {
         >
           Or
         </Divider>
-        <TextFormFields name="email" placeholder="Username or email" />
-        <TextFormFields name="password" placeholder="Password" />
+        <TextFormFields
+          name="email"
+          color="common.black"
+          placeholder="Username or email"
+        />
+        <TextFormFields
+          name="password"
+          color="common.black"
+          placeholder="Password"
+        />
         <BodyText
           variant="body2"
           color="primary.main"
