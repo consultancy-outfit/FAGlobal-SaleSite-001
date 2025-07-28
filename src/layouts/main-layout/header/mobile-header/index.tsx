@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { navLinksData } from "../header.data";
 import { LinkButton } from "@/components/buttons/link-button";
-import { APP_ROUTES, PROJECT_WEB_APP_ROUTES } from "@/constants/routes";
+import { APP_ROUTES } from "@/constants/routes";
 
 export const MobileHeader = () => {
   const [active, setActive] = useState(false);
@@ -110,11 +110,13 @@ export const MobileHeader = () => {
                   style={{
                     textDecoration: "none",
                     color:
-                      pathname === item?.path
-                        ? theme?.palette?.text?.secondary
-                        : theme?.palette?.common?.text_gray,
+                      pathname?.startsWith(item?.path) && item?.path !== "/"
+                        ? theme?.palette?.primary?.main
+                        : pathname === "/" && item?.path === "/"
+                          ? theme?.palette?.primary?.main
+                          : theme?.palette?.common?.text_gray,
                     fontSize: item?.path === pathname ? 18 : 16,
-                    fontWeight: item?.path === pathname ? 600 : 400,
+                    fontWeight: theme?.typography?.fontWeightMedium,
                     lineHeight: "32px",
                   }}
                 >
@@ -143,13 +145,10 @@ export const MobileHeader = () => {
                 color: theme?.palette?.text?.primary,
               }}
             >
-              Partner With Us
+              Login
             </LinkButton>
             <LinkButton
-              link={PROJECT_WEB_APP_ROUTES?.SIGNUP}
-              linkProps={{
-                target: "_blank",
-              }}
+              link={APP_ROUTES?.Get_STARTED}
               customStyles={{
                 borderRadius: 2,
                 px: 2,
@@ -157,7 +156,7 @@ export const MobileHeader = () => {
                 bgcolor: theme?.palette?.text?.primary,
               }}
             >
-              Register Now
+              Get Started
             </LinkButton>
           </Box>
         </Box>

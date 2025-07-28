@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
-import { Footer } from "./footer";
+import Footer from "./footer";
 import { Header } from "./header";
-import { ChatBot } from "@/features/ChatBot/ChatBot";
 
 export const MainLayout = (props: any) => {
   const { children } = props;
@@ -10,7 +9,6 @@ export const MainLayout = (props: any) => {
     <>
       <Header />
       <Box sx={{ height: 110 }} />
-      {/* <ChatBot /> */}
       <main>{children}</main>
       <Footer />
     </>

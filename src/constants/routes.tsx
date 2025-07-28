@@ -10,17 +10,24 @@ export const AUTH_ROUTES = {
 export const APP_ROUTES = {
   HOME: "/",
   ABOUT_US: "/about-us",
-  SERVICES: "/services",
+  SERVICES: "/products",
   SERVICES_DETAIL: "/services/detail",
-  PRICING: "/pricing",
+  PRICING: "/use-cases",
   CAREERS: "/careers",
-  PARTNER_WITH_US: "/partner-with-us",
+  PARTNER_WITH_US: "/login",
   CONTACT_US: "/contact-us",
   COOKIE_POLICY: "/cookies-policy",
   DATA_PROTECTION_POLICY: "/data-protection-policy",
   SECURITY_AND_COMPLIANCE_POLICY: "/security-and-compliance-policy",
   PRIVACY_POLICY: "/privacy-policy",
   TERM_AND_CONDITION: "/terms-and-conditions",
+  PRODUCT_1: "/core-services",
+  PRODUCT_2: "/data-intelligence-enrichment",
+  PRODUCT_3: "/identity-kyc",
+  PRODUCT_4: "/compliance-access",
+  PRODUCT_5: "/centspay",
+  PRODUCT_6: "/accountant-help-squad",
+  Get_STARTED: "/get-started",
 };
 
 export const SOCIAL_ROUTES = {

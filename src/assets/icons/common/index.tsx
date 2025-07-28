@@ -19,3 +19,4 @@ export { default as XIcon } from "./x-icon";
 export { default as NoteIcon } from "./note-icon";
 export { default as TikTokIcon } from "./tiktok-icon";
 export { default as YoutubeIcon } from "./youtube-icon";
+export { default as Icon5 } from "./icon5.svg";

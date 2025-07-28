@@ -10,16 +10,38 @@ export const navLinksData = [
     path: APP_ROUTES.ABOUT_US,
   },
   {
-    title: "Services",
+    title: "Products",
     path: APP_ROUTES.SERVICES,
+    children: [
+      {
+        title: "Core Services",
+        path: APP_ROUTES.PRODUCT_1,
+      },
+      {
+        title: "Data Intelligence & Enrichment",
+        path: APP_ROUTES.PRODUCT_2,
+      },
+      {
+        title: " Identity & KYC",
+        path: APP_ROUTES.PRODUCT_3,
+      },
+      {
+        title: "Compliance & Access",
+        path: APP_ROUTES.PRODUCT_4,
+      },
+      {
+        title: "Centspay",
+        path: APP_ROUTES.PRODUCT_5,
+      },
+      {
+        title: "Accountant Help Squad",
+        path: APP_ROUTES.PRODUCT_6,
+      },
+    ],
   },
   {
-    title: "Pricing",
+    title: "Use Cases",
     path: APP_ROUTES.PRICING,
-  },
-  {
-    title: "Careers",
-    path: APP_ROUTES.CAREERS,
   },
   {
     title: "Contact Us",

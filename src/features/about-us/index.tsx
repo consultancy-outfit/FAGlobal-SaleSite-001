@@ -1,25 +1,16 @@
 "use client";
 
-import {
-  ExpertsTeam,
-  Hero,
-  OurMission,
-  OurValues,
-  RequestDemo,
-  Testimonials,
-  WeExist,
-} from "./components";
-
+import { Box, Typography } from "@mui/material";
 export const AboutUsFeature = () => {
   return (
     <>
-      <Hero />
-      <WeExist />
-      <OurMission />
-      <OurValues />
-      <ExpertsTeam />
-      <Testimonials />
-      <RequestDemo />
+      <Box
+        sx={{
+          backgroundColor: "common.light_background",
+        }}
+      >
+        <Typography>About Us</Typography>
+      </Box>
     </>
   );
 };
