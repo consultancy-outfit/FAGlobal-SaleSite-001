@@ -1,77 +1,37 @@
-import { BodyText } from "@/components/text/body-text";
 import { HeadingText } from "@/components/text/heading-text";
-import { Box, IconButton, Stack, useTheme } from "@mui/material";
-import { CheckIcon } from "../../assets/icons";
-import { contactInfoData, contactSocialData } from "./contact-info.data";
-import { PROJECT_NAME } from "@/configs/env";
+import { Box } from "@mui/material";
+import { SubHeadingText } from "@/components/text/sub-heading-text";
 
 const ContactInfoCard = () => {
-  const theme = useTheme();
   return (
     <>
       <Box
         sx={{
-          backgroundColor: "common.card_bg_purple",
-          borderRadius: 6,
           p: "6rem 1rem 1rem 1rem",
           height: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
+          m: { xs: 2, sm: 4, md: 6 },
         }}
       >
         <Box>
-          <HeadingText variant="h4" fontWeight="fontWeightMedium">
-            Why {PROJECT_NAME}
+          <HeadingText
+            variant="h1"
+            fontWeight="fontWeightMedium"
+            color="common.white"
+          >
+            Let’s Get Connected – We&apos;re Here to Help!
           </HeadingText>
-          <BodyText variant="body1" marginTop={3}>
-            Tell {PROJECT_NAME} about you and we’ll put you in touch right away
-            with our team
-          </BodyText>
-          <Box>
-            {contactInfoData?.map((item) => (
-              <Stack
-                direction="row"
-                key={item}
-                spacing={2}
-                mt={4}
-                alignItems="center"
-              >
-                <CheckIcon />
-                <BodyText
-                  variant="body1"
-                  customStyles={{ maxWidth: 320, lineHeight: "22px" }}
-                >
-                  {item}
-                </BodyText>
-              </Stack>
-            ))}
-          </Box>
-        </Box>
-        <Box
-          mt={{ md: 4, xs: 2 }}
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            maxWidth: 300,
-            gap: 1,
-          }}
-        >
-          {contactSocialData?.map((social) => (
-            <IconButton
-              key={social?.name}
-              href={social?.path}
-              target="_blank"
-              sx={{
-                bgcolor: `rgba(187, 192, 223, 0.4)`,
-                p: 1.5,
-                width: 50,
-                height: 50,
-              }}
-            >
-              <social.icon color={theme?.palette?.primary?.main} />
-            </IconButton>
-          ))}
+          <SubHeadingText
+            variant="subtitle1"
+            marginTop={3}
+            color="grey.600"
+            fontWeight="fontWeightThin"
+          >
+            Have questions or need assistance? Our team is ready to support you
+            with expert guidance reach out today!
+          </SubHeadingText>
         </Box>
       </Box>
     </>

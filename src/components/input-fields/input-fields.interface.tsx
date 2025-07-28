@@ -12,4 +12,5 @@ export interface FieldLabelPropsI {
   label?: string;
   required?: boolean;
   marginBottom?: number;
+  color?: string;
 }
