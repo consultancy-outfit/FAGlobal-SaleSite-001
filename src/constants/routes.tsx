@@ -28,6 +28,7 @@ export const APP_ROUTES = {
   PRODUCT_5: "/centspay",
   PRODUCT_6: "/accountant-help-squad",
   Get_STARTED: "/get-started",
+  Comming_Soon: "/coming-soon",
 };
 
 export const SOCIAL_ROUTES = {
