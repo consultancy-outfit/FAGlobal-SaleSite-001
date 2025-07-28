@@ -2,7 +2,7 @@ import { HeadingText } from "@/components/text/heading-text";
 import { Box } from "@mui/material";
 import { SubHeadingText } from "@/components/text/sub-heading-text";
 
-const ContactInfoCard = () => {
+const GetStartedInfoCard = () => {
   return (
     <>
       <Box
@@ -21,7 +21,7 @@ const ContactInfoCard = () => {
             fontWeight="fontWeightMedium"
             color="common.white"
           >
-            Let’s Get Connected – We&apos;re Here to Help!
+            Begin Your Journey with FA Global
           </HeadingText>
           <SubHeadingText
             variant="subtitle1"
@@ -29,8 +29,8 @@ const ContactInfoCard = () => {
             color="grey.600"
             fontWeight="fontWeightThin"
           >
-            Have questions or need assistance? Our team is ready to support you
-            with expert guidance reach out today!
+            Kickstart your success with powerful tools, expert insights, and
+            seamless onboarding to guide every step
           </SubHeadingText>
         </Box>
       </Box>
@@ -38,4 +38,4 @@ const ContactInfoCard = () => {
   );
 };
 
-export default ContactInfoCard;
+export default GetStartedInfoCard;

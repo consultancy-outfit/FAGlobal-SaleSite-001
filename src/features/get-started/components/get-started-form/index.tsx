@@ -1,6 +1,6 @@
 "use client";
-import { contactUsFormFields } from "./contact-form.data";
-import { useContactUs } from "./use-contact-form";
+import { contactUsFormFields } from "./get-started-form.data";
+import { useGetStarted } from "./use-get-started-form";
 import { CustomFormProvider } from "@/providers/custom-form-provider";
 import { FormGrid } from "@/components/grids/form-grid";
 import { CommonCard } from "@/components/cards/common-card";
@@ -9,8 +9,8 @@ import { CommonCircularProgress } from "@/components/progress-bars/common-circul
 import { HeadingText } from "@/components/text/heading-text";
 import { SubHeadingText } from "@/components/text/sub-heading-text";
 
-const ContactForm = () => {
-  const { methods, handleSubmit, submitContactUs, isLoading } = useContactUs();
+const GetStartedForm = () => {
+  const { methods, handleSubmit, submitContactUs, isLoading } = useGetStarted();
 
   return (
     <CommonCard
@@ -29,7 +29,7 @@ const ContactForm = () => {
         color="common.white"
         customStyles={{ textAlign: "center" }}
       >
-        Tell us about yourself and we&apos;ll get back to you shortly.
+        Get Started with FA Global Today&quot;
       </HeadingText>
       <br />
       <CustomFormProvider
@@ -48,7 +48,7 @@ const ContactForm = () => {
           customStyles={{ p: "1rem 1.5rem", fontSize: 20, borderRadius: 12 }}
           fullWidth
         >
-          {isLoading ? <CommonCircularProgress /> : "Contact Sales"}
+          {isLoading ? <CommonCircularProgress /> : "Submit"}
         </CommonLoadingButton>
         <SubHeadingText
           variant="subtitle1"
@@ -56,12 +56,12 @@ const ContactForm = () => {
           color="grey.600"
           fontWeight="fontWeightThin"
         >
-          By submitting this form, you agree to FA Global Terms of Service and
-          Privacy Policy.
+          By submitting this form, Your journey with FA Global begins now. We’ll
+          reach out soon to support your success
         </SubHeadingText>
       </CustomFormProvider>
     </CommonCard>
   );
 };
 
-export default ContactForm;
+export default GetStartedForm;

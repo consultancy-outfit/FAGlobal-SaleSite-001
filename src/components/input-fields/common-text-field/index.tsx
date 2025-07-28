@@ -16,15 +16,16 @@ export const CommonTextField = (props: any) => {
     startIcon = undefined,
     endIcon = undefined,
     placeholder,
-    backgroundColor = "common.textfield_grey",
-    borderRadius = 1,
+    backgroundColor = "transparent",
+    borderRadius = 3,
     border = "1px solid",
-    color,
-    borderColor = "transparent",
+    color = "common.white",
+    borderColor = "grey.600",
     name,
     ref,
     id = name,
     required = false,
+    labelColor = "grey.600",
     ...other
   } = props;
 
@@ -32,7 +33,7 @@ export const CommonTextField = (props: any) => {
     <>
       {label && (
         <label htmlFor={name}>
-          <FieldLabel label={label} required={required} />
+          <FieldLabel label={label} required={required} color={labelColor} />
         </label>
       )}
       <TextField

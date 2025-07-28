@@ -9,21 +9,14 @@ export const contactUsFormValidationSchema = Yup?.object()?.shape({
     ?.email("Invalid email")
     ?.typeError("Invalid email")
     ?.required("Email is required"),
-  query: Yup?.string()?.trim()?.required("Message is required"),
   phoneNumber: Yup?.string()?.trim()?.required("Phone number is required"),
-  terms: Yup?.boolean()?.oneOf(
-    [true],
-    "You must accept the terms and conditions",
-  ),
 });
 
 export const contactUsFormDefaultValues = {
   firstName: "",
   lastName: "",
   email: "",
-  query: "",
   phoneNumber: "",
-  terms: false,
 };
 
 export const contactUsFormFields = [
@@ -63,15 +56,6 @@ export const contactUsFormFields = [
       name: "phoneNumber",
       placeholder: "Enter phone number",
       required: true,
-    },
-    component: TextFormFields,
-    md: 12,
-  },
-  {
-    _id: 5,
-    componentProps: {
-      name: "message",
-      placeholder: "Message",
     },
     component: TextFormFields,
     md: 12,
