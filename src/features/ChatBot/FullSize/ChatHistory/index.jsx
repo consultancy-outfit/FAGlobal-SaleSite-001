@@ -39,7 +39,7 @@ export const ChatHistory = (props) => {
                   <Typography
                     className="chat-bot-font-family"
                     sx={{
-                      color: "#505050", 
+                      color: "#505050",
                       fontWeight: 700,
                       fontSize: "0.875rem",
                       py: 0.5,
@@ -50,7 +50,7 @@ export const ChatHistory = (props) => {
                 </Box>
               ))}
             </Box>
-          )
+          ),
       )}
     </ApiRequestFlow>
   );

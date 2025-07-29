@@ -1,18 +1,5 @@
-import { Stack } from "@mui/material";
-import Image from "next/image";
+import { ContactUsFeature } from "@/features/contact-us";
 
-import CoreServiceImage from "./get-started.svg";
-export default function PartnerWithUs() {
-  return (
-    <Stack alignItems="center">
-      <Image
-        src={CoreServiceImage}
-        alt="Home"
-        style={{
-          width: "100%",
-          height: "auto",
-        }}
-      />
-    </Stack>
-  );
+export default function ContactUs() {
+  return <ContactUsFeature />;
 }

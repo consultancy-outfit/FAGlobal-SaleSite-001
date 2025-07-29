@@ -1,18 +1,17 @@
-import { HomeImage } from "@/assets/images/features/home";
+import { Hero, RealTimeAccess } from "@/features/home/components";
+import HomeThirdSection from "@/features/home/components/3rd-section";
+import WhatOurCustomersSaySection from "@/features/home/components/what-our-customers-say";
 import { Stack } from "@mui/material";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <Stack alignItems="center">
-      <Image
-        src={HomeImage}
-        alt="Home"
-        style={{
-          width: "100%",
-          height: "auto",
-        }}
-      />
-    </Stack>
+    <>
+      <Stack spacing={2} textAlign="center">
+        <Hero />
+        <RealTimeAccess />
+        <HomeThirdSection />
+        <WhatOurCustomersSaySection />
+      </Stack>
+    </>
   );
 }

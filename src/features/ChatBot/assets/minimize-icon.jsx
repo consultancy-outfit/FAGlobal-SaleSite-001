@@ -18,4 +18,4 @@ export const MinimizeIcon = () => {
   );
 };
 
-export default MinimizeIcon
+export default MinimizeIcon;
