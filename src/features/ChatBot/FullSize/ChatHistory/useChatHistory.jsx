@@ -19,7 +19,7 @@ export const useChatHistory = (props) => {
     if (disabledNewChat) return;
     setPage(0);
     navigate(
-      `${CHAT_BOT_ROUTES?.FULL_SIZE_CHAT_BOT}?conversationId=${id}&redirect=${redirectRoute}`
+      `${CHAT_BOT_ROUTES?.FULL_SIZE_CHAT_BOT}?conversationId=${id}&redirect=${redirectRoute}`,
     );
   };
 

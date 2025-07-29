@@ -1,18 +1,9 @@
-import { UseCaseImage } from "@/assets/images/features/home";
-import { Stack } from "@mui/material";
-import Image from "next/image";
+import { UseCases } from "@/features/use-cases";
 
 export default function Pricing() {
   return (
-    <Stack alignItems="center">
-      <Image
-        src={UseCaseImage}
-        alt="Home"
-        style={{
-          width: "100%",
-          height: "auto",
-        }}
-      />
-    </Stack>
+    <>
+      <UseCases />
+    </>
   );
 }

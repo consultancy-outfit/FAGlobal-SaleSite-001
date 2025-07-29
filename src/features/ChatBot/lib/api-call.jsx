@@ -8,7 +8,7 @@ import {
 import { API_MESSAGES } from "../constants/messages";
 import { LOCAL_STORAGE_KEYS } from "../constants/ui";
 
-const hasToken = getDataFromLocalStorage()?.authToken
+const hasToken = getDataFromLocalStorage()?.authToken;
 
 export const axiosInstance = axios?.create({
   baseURL: CHAT_BOT_BASE_BE_URL,
@@ -33,7 +33,7 @@ axiosInstance?.interceptors?.response?.use(
       window?.location?.reload();
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 export const getDataAPI = async (apiDataParameter) => {

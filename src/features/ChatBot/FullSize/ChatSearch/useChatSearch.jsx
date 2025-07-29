@@ -43,14 +43,14 @@ export const useChatSearch = (props) => {
 
   const handleChatHistoryClick = (id) => {
     navigate(
-      `${CHAT_BOT_ROUTES?.FULL_SIZE_CHAT_BOT}?conversationId=${id}&redirect=${redirectRoute}`
+      `${CHAT_BOT_ROUTES?.FULL_SIZE_CHAT_BOT}?conversationId=${id}&redirect=${redirectRoute}`,
     );
     closePortal();
   };
 
   const startNewChat = () => {
     navigate(
-      `${CHAT_BOT_ROUTES?.FULL_SIZE_CHAT_BOT}?redirect=${redirectRoute}`
+      `${CHAT_BOT_ROUTES?.FULL_SIZE_CHAT_BOT}?redirect=${redirectRoute}`,
     );
     setIsNewChat(true);
     closePortal();
