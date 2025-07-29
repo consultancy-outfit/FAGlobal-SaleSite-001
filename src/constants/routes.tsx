@@ -43,3 +43,12 @@ export const PROJECT_WEB_APP_ROUTES = {
   SIGNUP: `${FRONTEND_BASE_URL}/auth/signup`,
   SIGNIN: `${FRONTEND_BASE_URL}/auth/login`,
 };
+
+export const USE_CASE_DETAIL_ROUTES = {
+  APP_BUDGETING: "/use-cases/use-case-detail/app-budgeting",
+  DIGITAL_PLATFORM: "/use-cases/use-case-detail/digital-platform",
+  GIG_ECONOMY_WORKERS: "/use-cases/use-case-detail/gig-economy-workers",
+  PAYMENT_FLOWS: "/use-cases/use-case-detail/payment-flows",
+  REGULATE_PLATFORM: "/use-cases/use-case-detail/regulated-platform",
+  SECURE_KYC: "/use-cases/use-case-detail/secure-kyc",
+};
