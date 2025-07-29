@@ -3,13 +3,18 @@ import { Typography } from "@mui/material";
 import { FieldLabelPropsI } from "../input-fields.interface";
 
 const FieldLabel = (props: FieldLabelPropsI) => {
-  const { label, required = false, marginBottom = 0.6 } = props;
+  const {
+    label,
+    required = false,
+    marginBottom = 0.6,
+    color = "text.primary",
+  } = props;
 
   return (
     <Typography
       variant="body1"
       sx={{
-        color: "text.primary",
+        color: color,
         marginBottom: marginBottom,
         fontWeight: "fontWeightMedium",
       }}
