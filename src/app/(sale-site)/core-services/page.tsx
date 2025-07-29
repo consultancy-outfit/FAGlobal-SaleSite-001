@@ -1,4 +1,5 @@
-import ServicesFeature from "@/features/services";
+import { CoreServicesFeature } from "@/features/products/components";
+
 export default function CoreServicesh() {
-  return <ServicesFeature />;
+  return <CoreServicesFeature />;
 }
