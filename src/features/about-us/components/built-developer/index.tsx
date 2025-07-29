@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Card, CardContent, Container, Typography } from "@mui/material";
 
-import { BD1 } from "../../assets";
+import { BD1, BD2, BD3 } from "../../assets";
 import Image from "next/image";
 
 const BuildDeveloper = () => {
@@ -12,39 +12,14 @@ const BuildDeveloper = () => {
       desc: "From startups to enterprises, companies rely on our platform to power secure, efficient financial services. Whether you're building a fintech app or streamlining internal operations, our open banking solutions are designed to scale with your needs.",
     },
     {
-      image: BD1,
+      image: BD2,
       title: "Embedded Payments",
       desc: "We take regulatory compliance seriously. Our platform is fully aligned with PSD2, GDPR, and other global standards — so you can focus on innovation, while we ensure your data handling and user consent flows meet the highest compliance requirements.",
     },
     {
-      image: BD1,
+      image: BD3,
       title: "Data Intelligence & Insights",
       desc: "Accelerate development with ready-to-use tools, clear documentation, and example code. Spend less time debugging and more time building innovative financial products.",
-    },
-    {
-      image: BD1,
-      title: "Unified Bank Integration",
-      desc: "From startups to enterprises, companies rely on our platform to power secure, efficient financial services. Whether you're building a fintech app or streamlining internal operations, our open banking solutions are designed to scale with your needs.",
-    },
-    {
-      image: BD1,
-      title: "Embedded Payments",
-      desc: "We take regulatory compliance seriously. Our platform is fully aligned with PSD2, GDPR, and other global standards — so you can focus on innovation, while we ensure your data handling and user consent flows meet the highest compliance requirements.",
-    },
-    {
-      image: BD1,
-      title: "Data Intelligence & Insights",
-      desc: "Accelerate development with ready-to-use tools, clear documentation, and example code. Spend less time debugging and more time building innovative financial products.",
-    },
-    {
-      image: BD1,
-      title: "Unified Bank Integration",
-      desc: "From startups to enterprises, companies rely on our platform to power secure, efficient financial services. Whether you're building a fintech app or streamlining internal operations, our open banking solutions are designed to scale with your needs.",
-    },
-    {
-      image: BD1,
-      title: "Embedded Payments",
-      desc: "We take regulatory compliance seriously. Our platform is fully aligned with PSD2, GDPR, and other global standards — so you can focus on innovation, while we ensure your data handling and user consent flows meet the highest compliance requirements.",
     },
   ];
 
@@ -65,7 +40,9 @@ const BuildDeveloper = () => {
             fontSize: { xs: "16px", md: "24px" },
           }}
         >
-          Like the best API platforms in the world...
+          Like the best API platforms in the world, our technology is built with
+          developers in mind. We offer extensive documentation, SDKs, sandbox
+          environments, and technical support to help you go live fast.
         </Typography>
 
         {/* Scrollable container */}

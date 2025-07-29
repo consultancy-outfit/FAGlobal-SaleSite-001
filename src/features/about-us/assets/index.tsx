@@ -25,6 +25,8 @@ export { default as GeckoTerminal } from "./gt.png";
 export { default as Pancake } from "./pancake.png";
 export { default as layer } from "./layer.png";
 export { default as BD1 } from "./bd.png";
+export { default as BD2 } from "./bd2.png";
+export { default as BD3 } from "./bd3.png";
 export { default as team } from "./team.png";
 export { default as team2 } from "./team2.png";
 export { default as team3 } from "./team3.png";
