@@ -41,7 +41,7 @@ const HomeThirdSection = () => {
   ];
 
   return (
-    <Box px={{ xs: 2, md: 10 }}>
+    <Box px={{ xs: 2, md: 5, lg: 10 }}>
       <Grid container spacing={10}>
         {data.map((item, index) => (
           <SlideSidewayInView key={item.id} initialX={item?.initialX}>
