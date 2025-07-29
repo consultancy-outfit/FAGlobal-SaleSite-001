@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect } from "react";
 import { FullSize } from "../FullSize";
 import { AuthGuard } from "../guard/auth-guard";

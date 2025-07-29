@@ -25,7 +25,6 @@ const PartnerWithUs = () => {
           width: { xs: "90%", md: "80%", lg: "73%" },
           margin: "0 auto",
         }}
-
       >
         <ListGrid
           list={partnerOptions}
@@ -33,40 +32,40 @@ const PartnerWithUs = () => {
           lg={4}
           render={(option: any) => (
             <HoverScaleUpDown>
-                <Card
-                  sx={{
-                    backgroundColor: option.bgColor,
-                    borderRadius: "24px",
-                    height: { xs: "100%", sm: "560px", lg: "550px",xl:"466px" },
-                    border: option.border || "none",
-                    maxWidth: 416,
-                    margin: "0 auto",
-                  }}
-                  key={option?._id}
+              <Card
+                sx={{
+                  backgroundColor: option.bgColor,
+                  borderRadius: "24px",
+                  height: { xs: "100%", sm: "560px", lg: "550px", xl: "466px" },
+                  border: option.border || "none",
+                  maxWidth: 416,
+                  margin: "0 auto",
+                }}
+                key={option?._id}
+              >
+                <CardContent
+                  sx={{ padding: { xs: "20px", sm: "30px", xl: "40px" } }}
                 >
-                  <CardContent
-                    sx={{ padding: { xs: "20px", sm: "30px", xl: "40px" } }}
+                  <ScaleInView>
+                    <Image
+                      src={option?.icon}
+                      alt={option?.alt || "Partner option icon"}
+                      style={{ marginBottom: "60px" }}
+                    />
+                  </ScaleInView>
+                  <HeadingText variant="h5" fontWeight="fontWeightMedium">
+                    {option.title}
+                  </HeadingText>
+                  <SubHeadingText
+                    variant="subtitle2"
+                    fontWeight="fontWeightNormal"
+                    marginBottom={2}
+                    marginTop={3}
                   >
-                    <ScaleInView>
-                      <Image
-                        src={option?.icon}
-                        alt={option?.alt || "Partner option icon"}
-                        style={{ marginBottom: "60px" }}
-                      />
-                    </ScaleInView>
-                    <HeadingText variant="h5" fontWeight="fontWeightMedium">
-                      {option.title}
-                    </HeadingText>
-                    <SubHeadingText
-                      variant="subtitle2"
-                      fontWeight="fontWeightNormal"
-                      marginBottom={2}
-                      marginTop={3}
-                    >
-                      {option.description}
-                    </SubHeadingText>
-                  </CardContent>
-                </Card>
+                    {option.description}
+                  </SubHeadingText>
+                </CardContent>
+              </Card>
             </HoverScaleUpDown>
           )}
         />

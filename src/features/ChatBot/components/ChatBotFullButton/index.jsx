@@ -30,7 +30,7 @@ export const ChatBotFullButton = () => {
     queryParams.append("redirect", pathname);
 
     navigate(
-      `${CHAT_BOT_ROUTES?.FULL_SIZE_CHAT_BOT}?${queryParams.toString()}`
+      `${CHAT_BOT_ROUTES?.FULL_SIZE_CHAT_BOT}?${queryParams.toString()}`,
     );
   };
 

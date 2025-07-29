@@ -10,4 +10,3 @@ export const LOCAL_STORAGE_KEYS = {
 };
 
 export const COMPANY_CODES = "Ig";
-

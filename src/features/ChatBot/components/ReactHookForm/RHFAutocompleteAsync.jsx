@@ -60,7 +60,7 @@ export default function RHFAutocompleteAsync(props) {
         setIsFetching(false);
       }
     },
-    [apiUrl, queryKey, externalParams]
+    [apiUrl, queryKey, externalParams],
   );
 
   function debounce(func, wait) {
