@@ -28,7 +28,6 @@ import { APP_ROUTES } from "@/constants/routes";
 import { MobileHeader } from "./mobile-header";
 import { LogoAvatar } from "@/components/avatars/logo-avatar";
 
-// Helper function to get Icon component by name or directly render a component
 const getIconComponent = (
   icon?: string | React.FC<any>,
   marginRight: string = "8px",
@@ -179,11 +178,6 @@ export const Header = () => {
     () => navLinksData.find((item) => item.title === "Products"),
     [],
   );
-
-  // const developersNavLink = useMemo(
-  //   () => navLinksData.find((item) => item.title === "Developers"),
-  //   [],
-  // );
 
   const productsForTabs = productsNavLink?.children?.filter(
     (item) => item.children,

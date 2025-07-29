@@ -20,14 +20,19 @@ export const LogoAvatar = (props: LogoAvatarPropsI) => {
     isCenter = false,
   } = props;
 
+  // Ensure Logo is a valid string URL
   const Logo = isLight ? CommonLightLogoImage?.src : CommonDarkLogoImage?.src;
+  if (!Logo) {
+    // console.warn("Logo image source is undefined. Using fallback.");
+    return null; // Prevent rendering if Logo is invalid
+  }
 
   return (
     <Box>
-      <Link href={link}>
+      <Link href={link} passHref>
         <Avatar
           src={Logo}
-          alt={PROJECT_NAME}
+          alt={PROJECT_NAME || "Project Logo"}
           sx={{
             width,
             height,
@@ -39,7 +44,7 @@ export const LogoAvatar = (props: LogoAvatarPropsI) => {
         />
         {!!productName && (
           <Typography
-            component={"p"}
+            component="p"
             sx={{
               color: "primary.main",
               textAlign: "right",

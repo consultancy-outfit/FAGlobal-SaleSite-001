@@ -19,10 +19,10 @@ export const typography = {
     fontSize: pxToRem(72),
   },
   h3: {
-    fontSize: pxToRem(60),
+    fontSize: pxToRem(52),
   },
   h4: {
-    fontSize: pxToRem(36),
+    fontSize: pxToRem(40),
   },
   h5: {
     fontSize: pxToRem(28),
