@@ -1,3 +1,4 @@
+// SectionPanel.tsx (or similar file)
 "use client";
 import React from "react";
 import {
@@ -15,9 +16,11 @@ import ContactSection from "../contect-section/contect-section";
 interface SectionData {
   id: string;
   title: string;
+  subtitle: string; // Add this new subtitle property
   description: string;
   features: string[];
   imageUrl?: string;
+  featuresHeading?: string;
 }
 
 interface SectionPanelProps {
@@ -90,22 +93,23 @@ const SectionPanel: React.FC<SectionPanelProps> = ({ sections }) => {
                   {section.title}
                 </Typography>
 
+                {/* New Subtitle Typography */}
                 <Typography
                   variant="subtitle1"
                   sx={{
                     fontSize: { xs: "1rem", sm: "1.15rem", md: "1.125rem" },
-                    fontWeight: 500,
+                    fontWeight: 500, // This seems to be the style for the subtitle in the image
                     color: "#100F11",
-                    marginBottom: { xs: 2, sm: 3 },
+                    marginBottom: { xs: 1, sm: 2 }, // Adjust margin as needed
                     textAlign: "left",
                   }}
                 >
-                  {section.description.split(".")[0] + "."}
+                  {section.subtitle}
                 </Typography>
 
                 {/* Main Description */}
                 <Typography
-                  variant="body2"
+                  variant="body2" // Changed to body2 as it's a longer text block
                   sx={{
                     fontSize: { xs: "0.9rem", sm: "1rem", md: "1.05rem" },
                     lineHeight: 1.6,
@@ -117,26 +121,29 @@ const SectionPanel: React.FC<SectionPanelProps> = ({ sections }) => {
                   {section.description}
                 </Typography>
 
-                {/* Features Heading */}
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontSize: { xs: "1rem", sm: "0.95rem", md: "1rem" },
-                    fontWeight: "bold",
-                    color: "#9747FF",
-                    marginTop: { xs: "18px", sm: "20px" },
-                    marginBottom: { xs: 1, sm: 2 },
-                    textAlign: "left",
-                    textTransform: "capitalize",
-                  }}
-                >
-                  Account Information Services:
-                </Typography>
+                {/* Features Heading - now dynamic */}
+                {section.features.length > 0 && ( // Only show heading if there are features
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontSize: { xs: "1rem", sm: "0.95rem", md: "1rem" },
+                      fontWeight: "bold",
+                      color: "#9747FF",
+                      marginTop: { xs: "18px", sm: "20px" },
+                      marginBottom: { xs: 1, sm: 2 },
+                      textAlign: "left",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    {section.featuresHeading || "Key Features:"}{" "}
+                    {/* Dynamic heading or default */}
+                  </Typography>
+                )}
               </SlideSidewayInView>
               <SlideUpInView>
                 <Grid container spacing={{ xs: 1, sm: 2, md: 3 }}>
                   {section.features.map((feature, idx) => (
-                    <Grid size={{ xs: 12, sm: 6, lg: 2.4 }} key={idx}>
+                    <Grid size={{ xs: 12, lg: 2.4 }} key={idx}>
                       <Box
                         sx={{
                           display: "flex",
