@@ -84,11 +84,10 @@ export const CentspayFeature = () => {
     <>
       <Box sx={{ bgcolor: "#ffffff" }}>
         <HeroCustomSection
-          subtitle="Payments"
+          subtitle="Centspay"
           title="Smarter Spending, Instant Transfers. Global Access."
           description="Our Centspay is a next-generation digital wallet designed to simplify money management for individuals, students, and businesses. With a user-friendly interface and robust features, you can create multiple wallets, send and receive funds, and control as you see fit. Our platform ensures seamless money movement across various channels, supporting instant transfers, card solutions, and multi-currency payments. Individuals can easily track expenses, set budgets, and make quick payments, while businesses can automate payroll, manage team cards, and streamline expenses effortlessly. Students benefit from financial literacy tools and flexible spending options. Centspay is built to empower smarter spending, instant transfers, and global access, all while simplifying financial operations and creating a robust foundation for improved financial health."
           textColor="#FFFFFF"
-          buttonText="Learn More" // Assuming a "Learn More" button, or you can specify if there's a different one in the image (it's not explicit, but common for such sections)
         />
         <SectionPanel sections={sections} />
       </Box>

@@ -81,7 +81,7 @@ const CoreServicesPage = () => {
     <>
       <Box sx={{ bgcolor: "#ffffff" }}>
         <HeroCustomSection
-          subtitle="Data Intelligence & Enrichment"
+          subtitle="Core Services"
           title="Smarter decisions from enriched data."
           description="Our data intelligence & enrichment engine transforms raw financial data into a meaningful, actionable, and insightful resource. Whether you're building a personal finance tool, a lending platform, or an accounting engine, we'll help you unlock the full potential of your data. Gain deeper insights into spending habits, optimize for your specific market needs, bring smarter workflows and enable a better customer journey."
           textColor="#FFFFFF"

@@ -85,11 +85,11 @@ export const CentspayFeature = () => {
     <>
       <Box sx={{ bgcolor: "#ffffff" }}>
         <HeroCustomSection
-          subtitle="Payments"
-          title="Smarter Spending, Instant Transfers. Global Access."
-          description="Our Centspay is a next-generation digital wallet designed to simplify money management for individuals, students, and businesses. With a user-friendly interface and robust features, you can create multiple wallets, send and receive funds, and control as you see fit. Our platform ensures seamless money movement across various channels, supporting instant transfers, card solutions, and multi-currency payments. Individuals can easily track expenses, set budgets, and make quick payments, while businesses can automate payroll, manage team cards, and streamline expenses effortlessly. Students benefit from financial literacy tools and flexible spending options. Centspay is built to empower smarter spending, instant transfers, and global access, all while simplifying financial operations and creating a robust foundation for improved financial health."
+          subtitle="Accountant Help Squad"
+          title="Transform raw data into 
+powerful financial insights."
+          description="Accountant Help Squad (AHS) is your dedicated back-office finance partner, combining automation with professional support to simplify financial operations. Designed for SMEs, startups, and growing businesses, AHS ensures timely and compliant bookkeeping, smooth reconciliation, and proactive financial insights. Our services are modular, allowing you to pick what suits your current operations—be it managing supplier payments, collecting dues, tracking cashflow, or full-spectrum accounting. By integrating with your existing ERP or banking system, AHS reduces human error, improves reporting quality, and frees your team to focus on growth. All services come with expert oversight, making it a powerful tool for strategic financial control."
           textColor="#FFFFFF"
-          buttonText="Learn More"
         />
         <SectionPanel sections={sections} />
       </Box>

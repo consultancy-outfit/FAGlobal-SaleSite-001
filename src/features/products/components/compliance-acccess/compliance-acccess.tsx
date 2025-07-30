@@ -86,11 +86,12 @@ export const ComplianceacccessFeature = () => {
     <>
       <Box sx={{ bgcolor: "#ffffff" }}>
         <HeroCustomSection
-          subtitle="Everything in its place"
-          title="Trusted financial access with regulatory compliance"
+          subtitle="Compliance & Access"
+          title="Trusted financial access 
+with regulatory compliance"
           description="Our compliance & access services ensure that your business adheres to all major financial data regulations, such as PSD2 and GDPR, with our comprehensive framework built for security, consent, and data aggregation. We provide the right frameworks to securely access and manage financial data with full consent. With bank-grade security protocols, we ensure that your data is always protected and compliant with the highest standards. Build your future-proof an access to financial innovations without worrying about breaches or industry risks. Our platform supports bank-based access, seamless user multi-bank data aggregation, and robust consent management to give you the tools you need to build the future-proof an access to financial innovations."
           textColor="#FFFFFF"
-          buttonText="Compliance & Access"
+          buttonText=""
         />
         <SectionPanel sections={sections} />
       </Box>
