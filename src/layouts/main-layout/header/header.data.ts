@@ -163,14 +163,14 @@ export const navLinksData: NavLinkItem[] = [
           },
           {
             title: "Account Profilers",
-            path: APP_ROUTES.PRODUCT_7,
+            path: APP_ROUTES.PRODUCT_6,
             icon: AccountExpertsIcon,
           },
         ],
       },
       {
         title: "View All",
-        path: APP_ROUTES.SERVICES,
+        path: APP_ROUTES.PRODUCT_7,
       },
     ],
   },

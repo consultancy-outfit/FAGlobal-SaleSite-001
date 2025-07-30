@@ -22,6 +22,7 @@ import SlideSidewayInView from "@/components/animations/animation-scroll/slide-s
 import { APP_ROUTES } from "@/constants/routes";
 import { useRouter } from "next/navigation";
 import ContactSection from "../contect-section/contect-section";
+import HeroCustomSection from "../hero/hero";
 
 interface SectionData {
   id: string;
@@ -266,6 +267,13 @@ const Section = ({
 export const ViewAllFeature = () => {
   return (
     <>
+      <HeroCustomSection
+        subtitle=""
+        title="Powering Modern Financial Services with Open Banking Technology"
+        description="We provide a suite of powerful, secure, and regulatory-compliant products designed to modernise how financial data is accessed, used, and monetised. Whether you're a fintech startup, lender, business platform, or a bank, our products are built to help you launch faster, grow smarter, and scale securely."
+        textColor="#FFFFFF"
+        buttonText="Get Started"
+      />
       <Box sx={{ bgcolor: "#ffffff" }}>
         {sectionsData.map((section) => (
           <Section key={section.id} {...section} />
