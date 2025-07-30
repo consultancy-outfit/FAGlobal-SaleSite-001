@@ -27,6 +27,7 @@ export const APP_ROUTES = {
   PRODUCT_4: "/compliance-access",
   PRODUCT_5: "/centspay",
   PRODUCT_6: "/accountant-help-squad",
+  PRODUCT_7: "/view-all",
   Get_STARTED: "/get-started",
   Comming_Soon: "/coming-soon",
 };
