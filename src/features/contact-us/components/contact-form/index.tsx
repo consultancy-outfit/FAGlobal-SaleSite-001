@@ -46,6 +46,7 @@ const ContactForm = () => {
           loading={isLoading}
           disabled={isLoading}
           customStyles={{ p: "1rem 1.5rem", fontSize: 20, borderRadius: 12 }}
+          onClick={() => handleSubmit(submitContactUs)}
           fullWidth
         >
           {isLoading ? <CommonCircularProgress /> : "Contact Sales"}
