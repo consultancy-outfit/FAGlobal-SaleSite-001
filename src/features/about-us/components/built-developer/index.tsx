@@ -3,22 +3,22 @@ import React from "react";
 import { Box, Card, CardContent, Container, Typography } from "@mui/material";
 
 import Image from "next/image";
-import { bd1, bd2, bd3 } from "../../assets";
+import { aaa, bbb, ccc } from "../../assets";
 
 const BuildDeveloper = () => {
   const features = [
     {
-      image: bd1,
+      image: aaa,
       title: "Unified Bank Integration",
       desc: "From startups to enterprises, companies rely on our platform to power secure, efficient financial services. Whether you're building a fintech app or streamlining internal operations, our open banking solutions are designed to scale with your needs.",
     },
     {
-      image: bd2,
+      image: bbb,
       title: "Embedded Payments",
       desc: "We take regulatory compliance seriously. Our platform is fully aligned with PSD2, GDPR, and other global standards — so you can focus on innovation, while we ensure your data handling and user consent flows meet the highest compliance requirements.",
     },
     {
-      image: bd3,
+      image: ccc,
       title: "Data Intelligence & Insights",
       desc: "Accelerate development with ready-to-use tools, clear documentation, and example code. Spend less time debugging and more time building innovative financial products.",
     },
