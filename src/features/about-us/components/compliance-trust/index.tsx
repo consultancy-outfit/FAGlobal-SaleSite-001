@@ -1,3 +1,4 @@
+"use client";
 import { Box, Typography, Grid } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { layer } from "../../assets";

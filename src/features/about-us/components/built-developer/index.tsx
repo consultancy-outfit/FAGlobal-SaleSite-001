@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 import { Box, Card, CardContent, Container, Typography } from "@mui/material";
 
-import { bd1, bd2, bd3 } from "../../assets";
 import Image from "next/image";
+import { bd1, bd2, bd3 } from "../../assets";
 
 const BuildDeveloper = () => {
   const features = [
