@@ -49,7 +49,7 @@ const ContactForm = () => {
           onClick={() => handleSubmit(submitContactUs)}
           fullWidth
         >
-          {isLoading ? <CommonCircularProgress /> : "Contact Sales"}
+          {isLoading ? <CommonCircularProgress /> : "Submit"}
         </CommonLoadingButton>
         <SubHeadingText
           variant="subtitle1"

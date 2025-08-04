@@ -18,7 +18,7 @@ export const HeroSection = () => {
         <Typography variant="h2" color="black" fontWeight={600}>
           Use Cases
         </Typography>
-        <Typography variant="body1" color="grey">
+        <Typography variant="body1" color="grey" fontSize={18}>
           Explore how our technology enables smarter payments, faster
           onboarding, and better financial decisions across industries.
         </Typography>

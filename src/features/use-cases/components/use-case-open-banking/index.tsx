@@ -25,7 +25,12 @@ export const UseCaseOpenBanking = () => {
         <Typography variant="h4" color="black" fontWeight={600}>
           Empowering Financial Innovation Through Open Banking
         </Typography>
-        <Typography variant="body1" color="grey">
+        <Typography
+          variant="body1"
+          color="grey"
+          fontSize={18}
+          textAlign={"center"}
+        >
           Have a question, need a demo, or want to partner with us? We’d love to
           hear from you.
         </Typography>

@@ -16,7 +16,7 @@ export const typography = {
     fontSize: pxToRem(84),
   },
   h2: {
-    fontSize: pxToRem(72),
+    fontSize: pxToRem(60),
   },
   h3: {
     fontSize: pxToRem(52),

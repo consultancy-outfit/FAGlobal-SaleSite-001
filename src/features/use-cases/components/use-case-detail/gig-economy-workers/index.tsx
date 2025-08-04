@@ -27,10 +27,10 @@ export const GigEconomyWorkers = () => {
           p={6}
           bgcolor={theme?.palette?.grey?.[100]}
         >
-          <Typography variant="h2" color="black" fontWeight={600}>
+          <Typography variant="h2" color="#0A0A0A" fontWeight={600}>
             Income Verification for Gig Economy Workers
           </Typography>
-          <Typography variant="body1" color="grey">
+          <Typography variant="subtitle2" color="#525252" fontWeight={400}>
             Secure and real-time income validation tailored to freelancers,
             contractors, and gig professionals.
           </Typography>
@@ -38,10 +38,10 @@ export const GigEconomyWorkers = () => {
       </SlideUpInView>
       <Box mx={6} my={2}>
         <Box display={"flex"} flexDirection={"column"} gap={1.5} py={5} px={2}>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Overview
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={400} fontSize={"16px"} color="#525252">
             In today’s dynamic economy, a growing segment of the workforce earns
             income from multiple gig platforms—such as ride-sharing, delivery
             apps, freelance portals, or consulting gigs. Traditional income
@@ -49,12 +49,12 @@ export const GigEconomyWorkers = () => {
             delays or outright rejections in financial services like loans,
             mortgages, or account approvals.
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={400} fontSize={"16px"} color="#525252">
             This use case empowers financial institutions and fintech platforms
             to verify gig workers income in a fast, accurate, and user-consented
             way—driving inclusion while maintaining compliance.
           </Typography>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Key Features
           </Typography>
           <List>
@@ -62,43 +62,59 @@ export const GigEconomyWorkers = () => {
               <ListItemText
                 primary="Multi-Source Aggregation"
                 secondary="Collect income data across platforms like Uber, Upwork, Fiverr, or DoorDash with the users consent."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem disableGutters>
               <ListItemText
                 primary="Real-Time Data Syncing"
                 secondary="Fetch updated income records using secure APIs to provide the latest earning history."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem disableGutters>
               <ListItemText
                 primary="Income Pattern Analysis"
                 secondary="Understand weekly/monthly trends, frequency of jobs, and payment consistency to make better risk decisions."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem disableGutters>
               <ListItemText
                 primary="PDF or Digital Proof Generation"
                 secondary=" Generate downloadable, verified income reports that users can attach to applications (e.g., rental, credit, or government aid)."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
           </List>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Ideal Use Scenarios
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={400} fontSize={"16px"} color="#525252">
             Loan and credit applications for gig workers
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={400} fontSize={"16px"} color="#525252">
             Renting or leasing services needing income proof
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={400} fontSize={"16px"} color="#525252">
             Buy Now Pay Later (BNPL) platforms
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={400} fontSize={"16px"} color="#525252">
             Personal finance apps that offer tax and budgeting tools
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={400} fontSize={"16px"} color="#525252">
             Neobanks or challenger banks onboarding self-employed users
           </Typography>
           <Grid container my={3}>
@@ -127,7 +143,7 @@ export const GigEconomyWorkers = () => {
               size={{ xs: 12, md: 6 }}
               p={{ xs: 0, sm: 4 }}
             >
-              <Typography fontWeight={600} fontSize={"30px"} color="black">
+              <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
                 Income Verification for Gig Economy Workers
               </Typography>
               <Box
@@ -146,7 +162,7 @@ export const GigEconomyWorkers = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} fontSize={"20px"} color="#454745">
                   Real-Time Income Data from Multiple Platforms
                 </Typography>
               </Box>
@@ -166,7 +182,7 @@ export const GigEconomyWorkers = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} fontSize={"20px"} color="#454745">
                   Reduce Risk in Lending & Credit Decisions
                 </Typography>
               </Box>
@@ -186,13 +202,13 @@ export const GigEconomyWorkers = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} fontSize={"20px"} color="#454745">
                   Self-Employed Friendly Verification Flow
                 </Typography>
               </Box>
             </Grid>
           </Grid>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Business Impact
           </Typography>
           <List>
@@ -202,12 +218,17 @@ export const GigEconomyWorkers = () => {
                   <Typography
                     component="span"
                     fontWeight={"bold"}
-                    fontSize={"14px"}
+                    fontSize={"16px"}
+                    color={"#525252"}
                   >
                     Reduce Manual Documentation Time
                   </Typography>
                 }
                 secondary="Eliminate the back-and-forth of requesting screenshots or paper payslips."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
@@ -216,12 +237,17 @@ export const GigEconomyWorkers = () => {
                   <Typography
                     component="span"
                     fontWeight={"bold"}
-                    fontSize={"14px"}
+                    fontSize={"16px"}
+                    color={"#525252"}
                   >
                     Stay Compliant with Affordability Checks
                   </Typography>
                 }
                 secondary="Meet local lending regulations by proving affordability with up-to-date digital income data."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
@@ -230,16 +256,21 @@ export const GigEconomyWorkers = () => {
                   <Typography
                     component="span"
                     fontWeight={"bold"}
-                    fontSize={"14px"}
+                    fontSize={"16px"}
+                    color={"#525252"}
                   >
                     Offer Personalised Financial Products
                   </Typography>
                 }
                 secondary="Use insights from income patterns to build custom offers, like credit limits or savings suggestions."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
           </List>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Which of My Services This Belongs To:
           </Typography>
           <List>
@@ -248,9 +279,9 @@ export const GigEconomyWorkers = () => {
                 primary={
                   <Typography
                     component="span"
-                    fontWeight={300}
-                    fontSize={"15px"}
-                    color="grey"
+                    fontWeight={700}
+                    fontSize={"16px"}
+                    color="#525252"
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -265,9 +296,9 @@ export const GigEconomyWorkers = () => {
                 primary={
                   <Typography
                     component="span"
-                    fontWeight={300}
-                    fontSize={"15px"}
-                    color="grey"
+                    fontWeight={700}
+                    fontSize={"16px"}
+                    color="#525252"
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -282,9 +313,9 @@ export const GigEconomyWorkers = () => {
                 primary={
                   <Typography
                     component="span"
-                    fontWeight={300}
-                    fontSize={"15px"}
-                    color="grey"
+                    fontWeight={700}
+                    fontSize={"16px"}
+                    color="#525252"
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -299,9 +330,9 @@ export const GigEconomyWorkers = () => {
                 primary={
                   <Typography
                     component="span"
-                    fontWeight={300}
-                    fontSize={"15px"}
-                    color="grey"
+                    fontWeight={700}
+                    fontSize={"16px"}
+                    color="#525252"
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
