@@ -8,3 +8,5 @@ export { default as GetStartedImage } from "./GetStartedImage.svg";
 export { default as PrivacyPolicyImage } from "./PrivacyPolicyImage.svg";
 export { default as TermsImage } from "./TermsImage.svg";
 export { default as CareersImage } from "./CareersImage.svg";
+export { default as PrivacyPolicyImage2 } from "./PrivacyPolicyImage2.svg";
+export { default as TermsImage2 } from "./TermsImage2.svg";

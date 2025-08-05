@@ -48,9 +48,9 @@ const ComplianceTrust = () => {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
-          px: { xs: "10px", md: "50px" },
-          mx: { xs: "20px", md: "50px", lg: "100px" },
-          py: { md: 8 },
+          px: { xs: "10px", md: "50px", lg: "100px" },
+          mx: { xs: "45px", md: "50px", lg: "100px" },
+          py: { xs: "10px", md: "50px", lg: "100px" },
         }}
       >
         <Box my={5}>

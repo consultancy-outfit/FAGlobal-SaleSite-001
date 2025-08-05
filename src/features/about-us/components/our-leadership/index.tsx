@@ -49,7 +49,14 @@ const OurLeadership = () => {
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   return (
-    <Container maxWidth="lg" sx={{ py: 8 }}>
+    <Container
+      maxWidth="lg"
+      sx={{
+        py: 8,
+        px: { xs: "20px", md: "80px" },
+        mx: { xs: "10px", md: "auto" },
+      }}
+    >
       <Box textAlign="center" mb={6}>
         <Typography
           fontSize={isMobile ? "24px" : isTablet ? "32px" : "40px"}
@@ -78,8 +85,9 @@ const OurLeadership = () => {
               sx={{
                 borderRadius: 3,
                 backgroundColor: "#f9f9f9",
-                display: "flex",
+                display: { xs: "block", md: "flex" },
                 minHeight: "198px",
+                textAlign: { xs: "center", md: "left" },
               }}
             >
               <Image

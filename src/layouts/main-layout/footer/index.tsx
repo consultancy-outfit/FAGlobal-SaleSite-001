@@ -1,11 +1,11 @@
 "use client";
 
-import { Icon5 } from "@/assets/icons/common";
+// import { Icon5 } from "@/assets/icons/common";
 import { FAGlobalLogoImage } from "@/assets/images/logo";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import XIcon from "@mui/icons-material/X";
-import { Box, Grid, IconButton, Link, Stack, Typography } from "@mui/material";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import XIcon from "@mui/icons-material/X";
+import { Box, Grid, Link, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import { about, products, resources } from "./footer.data";
 import { useRouter } from "next/navigation";
@@ -41,7 +41,7 @@ const Footer = () => {
             >
               Empowering Financial Innovation Through Open Banking
             </Typography>
-            <Stack direction="row" spacing={2} mt={2}>
+            {/* <Stack direction="row" spacing={2} mt={2}>
               <IconButton
                 color="inherit"
                 sx={{ backgroundColor: "#2E2E3E", p: 1 }}
@@ -66,7 +66,7 @@ const Footer = () => {
               >
                 <Image src={Icon5} alt="icon5" />
               </IconButton>
-            </Stack>
+            </Stack> */}
           </Stack>
         </Grid>
 

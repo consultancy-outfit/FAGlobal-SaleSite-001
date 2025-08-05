@@ -1,4 +1,5 @@
 import { useFormLib } from "@/hooks/use-form-lib";
+import { errorSnackbar } from "@/libs/snackbar.lib";
 import * as Yup from "yup";
 
 export const useLoginForm = () => {
@@ -13,6 +14,7 @@ export const useLoginForm = () => {
     }),
   });
   const onSubmit = (data: any) => {
+    errorSnackbar("Invalid Credentials");
     return data;
   };
   return { methods, onSubmit, handleSubmit };
