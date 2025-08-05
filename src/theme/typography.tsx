@@ -69,6 +69,7 @@ declare module "@mui/material/styles" {
     pageTitled: React.CSSProperties;
     extraHeading: React.CSSProperties;
     extraHeading2: React.CSSProperties;
+    fontWeightSemiBold: number;
   }
 
   interface TypographyVariantsOptions {
