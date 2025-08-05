@@ -66,8 +66,7 @@ const ComplianceTrust = () => {
           </Typography>
 
           <Typography
-            variant="h5"
-            component="h2"
+            variant="h4"
             sx={{
               fontWeight: 600,
               mb: 3,

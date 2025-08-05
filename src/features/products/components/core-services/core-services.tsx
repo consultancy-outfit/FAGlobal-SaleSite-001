@@ -24,11 +24,11 @@ const CoreServicesPage = () => {
       id: "account-information",
       title: "Account Information",
       subtitle: "Empower decisions with real-time banking data.",
-      description: `Account Information services (AIS) provide seamless, real-time connectivity to a customer's financial tapestry, including current balances, transaction records, and account identity. This data can be retrieved across multiple banks and accounts, ensuring a 360-degree view of personal or business finances. AIS empowers customers and businesses to make informed decisions by providing real-time data for financial insights. By leveraging robust analytics and AI, we transform raw data into actionable intelligence for budgeting, spending patterns, wealth management tools, and fraud detection engines. With powerful categorization and enrichment layers, the raw data becomes actionable insights in seconds. Our AIS infrastructure supports all types of financial data, including transaction details, account balances, and personal information, allowing for comprehensive financial analysis. Businesses can benefit from enhanced credit assessments, personalized product offerings, and automated reconciliation, leading to improved cash flow forecasting and optimizing working capital. Consumers enjoy a holistic view of their finances, simplified budgeting, and personalized financial advice. AIS enables smarter financial experiences from the ground up.`,
+      description: `Access live, secure financial data directly from users’ bank accounts with their explicit consent. Account Information Services (AIS) provide seamless, real-time connectivity to a customer’s financial history, including current balances, detailed transaction records, and account identity. This data can be retrieved across multiple banks and accounts, ensuring a 360-degree view of personal or business finances. AIS empowers businesses to make faster and more accurate credit assessments, deliver tailored financial recommendations, and optimise budgeting tools with confidence. It’s an essential building block for personal finance apps, lending platforms, wealth management tools, and risk evaluation engines. With powerful categorisation and enrichment layers, the raw data becomes actionable insights in seconds. Our AIS infrastructure supports full PSD2 compliance, with coverage across major UK and EU banks. Combined with strong consent management and advanced data security protocols, it guarantees trust, transparency, and regulatory peace of mind. Whether you're building a fintech solution or improving existing offerings, AIS unlocks smarter financial experiences from the ground up.`,
       features: [
-        "Up to the minute Account Balances",
+        "Up-to-the-minute Account Balances ",
         "Full Transaction History Retrieval",
-        "Multi-Bank Data Aggregation",
+        "Multi-bank Data Aggregation",
         "Verified Account Ownership",
         "Smart Spending & Budget Analysis",
         "Recognition of Recurring Payments",
@@ -43,7 +43,7 @@ const CoreServicesPage = () => {
       id: "secure-payment-initiation",
       title: "Secure Payment Initiation",
       subtitle: "Initiate payments instantly. No cards. No delays.",
-      description: `Empower users and businesses to initiate secure, real-time payments directly from their bank accounts. Payment Initiation Services (PIS) eliminate the friction of traditional card processing, offering a faster and more cost-effective alternative. Our secure payment gateway ensures every transaction is protected, reducing the risk of fraud and chargebacks. Instant payment confirmations enhance cash flow and provide immediate proof of payment. PIS is ideal for a wide range of uses, from e-commerce checkouts and utility bill payments to peer-to-peer transfers and financial vehicle disbursements. Refunds are streamlined, and payment disputes are minimized. By directly linking to bank accounts, PIS services offer a seamless and integrated payment experience, minimizing reconciliation efforts and improving overall financial efficiency. Experience simpler, safer, and smarter payments with PIS.`,
+      description: `Empower users and businesses to initiate secure, real-time payments directly from their bank accounts. Payment Initiation Services (PIS) eliminate the friction of traditional card processing, offering a faster and more cost-effective alternative. Users can authorise one-time or recurring payments with complete transparency and control. With built-in Strong Customer Authentication (SCA), transactions remain fully compliant and protected.  PIS is ideal for a range of use cases, from ecommerce checkouts and utility bill payments to peer-to-peer transfers and financial service disbursements. Refunds are streamlined, and payment statuses are easily tracked for operational ease. The user journey is smooth, with customisable consent screens and intuitive interfaces. By leveraging open banking rails, PIS delivers trusted, frictionless, and scalable payment experiences.`,
       features: [
         "Instant Bank Transfers",
         "One-Off & Recurring Payments",
@@ -62,15 +62,16 @@ const CoreServicesPage = () => {
       id: "bank-connectivity-data-aggregation",
       title: "Bank Connectivity & Data Aggregation",
       subtitle: "Connect once. Scale everywhere. Built for open finance.",
-      description: `Experience seamless connectivity to an extensive network of banks through our robust and high-speed API integrations. Our platform ensures seamless connectivity with both traditional and challenger banks across multiple regions, simplifying data retrieval and aggregation. Leverage our unified API to integrate with diverse financial institutions, enabling real-time access to critical financial data. The platform unifies fragmented data into a consistent format, optimizing monitoring and smart routing to ensure reliability and performance, even during high-demand periods. With advanced security and encryption protocols, we ensure the integrity and confidentiality of all data, providing a secure and reliable foundation for financial services. Designed for developers and businesses alike, our hassle-free connectivity minimizes technical efforts so you can innovate with confidence. Scale globally as we handle the infrastructure behind the scenes.`,
+      description: `Empower your product with direct, secure access to thousands of banks through robust and high-speed API integrations. Our platform ensures seamless connectivity with both traditional and challenger banks across the UK and EU, supporting everything from personal finance tools to payment and lending applications. With real-time, PSD2-compliant data access, you benefit from bank-grade encryption and stringent security protocols. We simplify integration with a unified API that normalises varied banking data into a consistent format. Uptime monitoring and smart routing ensure stability and performance, even during high-demand periods. Consent flows are optimised for user experience, while fallback mechanisms ensure uninterrupted access. Designed for developers and businesses alike, our bank connectivity layer eliminates complexity so you can innovate with confidence. Scale effortlessly as we handle the infrastructure behind the scenes.`,
       features: [
-        "Access to Major UK & EU Banks",
+        "PSD2-Compliant API Access",
+        "Coverage Across Major UK & EU Banks",
         "Uptime Monitoring & Connection Health",
-        "Multi-Bank Data Aggregation Capabilities",
-        "Unified Data Normalization Layer",
+        "Multi-Bank Aggregation Capabilities",
+        "Unified Data Normalisation Layer",
         "Developer-Friendly SDKs & Sandbox",
         "Smart Routing & Failover Support",
-        "Instant Onboarding & Connectivity",
+        "Instant Onboarding & Consent Handling",
       ],
       imageUrl: coreservicesimg3.src,
       featuresHeading: "Connectivity & Aggregation Services:",
@@ -82,8 +83,8 @@ const CoreServicesPage = () => {
       <Box sx={{ bgcolor: "#ffffff" }}>
         <HeroCustomSection
           subtitle="Core Services"
-          title="Smarter decisions from enriched data."
-          description="Our data intelligence & enrichment engine transforms raw financial data into a meaningful, actionable, and insightful resource. Whether you're building a personal finance tool, a lending platform, or an accounting engine, we'll help you unlock the full potential of your data. Gain deeper insights into spending habits, optimize for your specific market needs, bring smarter workflows and enable a better customer journey."
+          title="Core Services – Connect, Transact & Transform."
+          description="Core Services form the foundation of your financial infrastructure, offering robust capabilities that ensure secure, scalable, and compliant operations. These services include Account Information Services (AIS) and Payment Initiation Services (PIS), enabling seamless bank data access and direct payments. Built for reliability, they connect with hundreds of banks through a single API, providing users with real-time account balances, transaction histories, and payment authorisation. This reduces friction and improves transparency across the customer journey. From onboarding to final transaction, Core Services support smooth integration, empowering businesses with the tools they need to operate smarter. Whether for fintechs, lenders, or marketplaces, these services are essential to driving innovation in open banking."
           textColor="#FFFFFF"
         />
         <SectionPanel sections={sections} />

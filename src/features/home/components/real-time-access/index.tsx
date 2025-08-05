@@ -57,7 +57,10 @@ const RealTimeAccess = () => {
         }}
       >
         <Stack spacing={5}>
-          <Stack sx={{ width: { lg: "50%", xs: "100%" } }} spacing={4}>
+          <Stack
+            sx={{ width: { lg: "50%", xs: "100%" }, textAlign: "left" }}
+            spacing={4}
+          >
             <Stack spacing={1}>
               <Typography
                 color="#A97FFF"

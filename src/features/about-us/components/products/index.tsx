@@ -9,21 +9,21 @@ const features = [
     title: "Accountant Help Squad",
     description: "AHS helps users connect and manage their accounts",
     image: p2,
-    link: "accountant-help-squad",
+    link: "Explore AHS",
   },
   {
     title: "Centspay",
     description:
       "Enable users to pay directly from their bank accounts — securely and without cards.",
     image: p3,
-    link: "centspay",
+    link: "Explore Centspay Services",
   },
   {
     title: "Compliance & Monitoring",
     description:
       "Tools for consent management and regulatory reporting, aligned with PSD2, FCA, and open banking.",
     image: p4,
-    link: "compliance-access",
+    link: "Explore our secure Open Banking tools ",
   },
 ];
 
@@ -46,7 +46,7 @@ const Products = () => {
             color: "#9747FF",
           }}
         >
-          products
+          Products
         </Typography>
         <Typography
           sx={{

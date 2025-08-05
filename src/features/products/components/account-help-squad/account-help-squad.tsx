@@ -1,10 +1,6 @@
 "use client";
 import { Box } from "@mui/material";
-import {
-  Centspayimg1, // Assuming this will be the image for Digital Wallet Accounts
-  Centspayimg2, // Assuming this will be the image for Card Solutions
-  Centspayimg3, // Assuming this will be the image for Money Movement
-} from "../../assets/images"; // Make sure these paths are correct relative to this file
+import { accountant1, accountant2, accountant3 } from "../../assets/images";
 import HeroCustomSection from "../hero/hero";
 import SectionPanel from "../proudct-card/proudct-card";
 
@@ -23,60 +19,56 @@ export const CentspayFeature = () => {
   const sections: SectionData[] = [
     {
       id: "digital-wallet-accounts",
-      title: "Digital Wallet Accounts",
-      subtitle:
-        "Simplify payment management for individuals, students, and businesses.",
-      description: `Our easy-to-use and secure digital wallet accounts allow for flexible money management. Create multiple wallets, send and receive funds, and control spending with ease. Ideal for individuals, students, and businesses, our digital wallets simplify financial transactions. They support a wide range of uses, from everyday purchases to managing specific budgets. With real-time transaction tracking and instant notifications, you'll always stay on top of your finances. Our API-first approach allows for seamless integration with your existing platforms, enabling you to offer a robust and user-friendly digital wallet experience to your customers.`,
+      title: "Accounts Payable",
+      subtitle: "Pay Smarter, Not Harder",
+      description: `Never miss a payment again with AHS’s intuitive accounts payable module. It transforms traditional bill handling into a streamlined, digital workflow. Businesses can upload and categorise bills with just a few clicks, setting automated schedules and approvals based on internal policies. From vendor onboarding to transaction reconciliation, the module handles it all in one place. Users get a consolidated dashboard showing pending bills, due dates, and payment statuses in real time. Vendor performance can be tracked to negotiate better payment terms. Approval workflows ensure financial discipline with tiered review and authorisation mechanisms. Linked bank accounts allow direct payments, reducing errors and fraud. Notifications alert you to upcoming dues or irregularities. Historical records and audit logs ensure compliance and transparency. This system suits both small and large organisations, reducing processing costs and human error. With AHS, ensure every penny paid is accounted for smartly.`,
       features: [
-        "Flexible digital wallets for various uses",
-        "Multi-currency support for global transactions",
-        "Real-time fund transfers and payments",
-        "Secure API for seamless integration",
-        "Granular control over spending limits",
-        "Instant notifications for all transactions",
-        "Integration with mobile payment systems",
-        "Customizable user roles and permissions",
-        "Detailed transaction history and reporting",
+        "Dashboard with bill status and alerts",
+        "Bill Upload & Categorisation Tools",
+        "Secure Bank Integrations for Payments",
+        "Vendor Management & Tracking",
+        "Custom Approval Workflows",
+        "Payment Scheduling & Reminders",
+        "Audit Trail & Transaction History",
+        "Reports on Payables Ageing & Vendor Efficiency",
       ],
-      imageUrl: Centspayimg1.src, //
+      imageUrl: accountant1.src, //
       featuresHeading: "Digital Wallet Account Features:",
     },
     {
       id: "card-solutions",
-      title: "Card Solutions",
-      subtitle: "Customize, issue, and manage your card program.",
-      description: `Take control of your payment infrastructure with our customizable card solutions. Issue physical and virtual cards, manage spending limits, and automate expense categorization with ease. Our platform allows you to design and launch your own branded card programs, tailored to your specific needs, whether for expense management, loyalty programs, or payroll. With robust security features and real-time transaction monitoring, you can prevent fraud and ensure compliance. Streamline operations and enhance the payment experience for your customers with a fully integrated card solution.`,
+      title: "Accounts Receivable",
+      subtitle: "Get Paid Faster, Stay Ahead",
+      description: `Managing customer invoices and payments shouldn’t be a hassle. AHS empowers businesses to optimise their cash inflow by automating the entire receivables process—from invoice generation to payment tracking. With a powerful dashboard offering real-time insights into ageing invoices and balances, businesses can take proactive steps to follow up. Client management features centralise contact and history data, enhancing relationship building. Automated reminders and confirmations help reduce human follow-up time, improving collection rates. Custom reports provide deep insights into Days Sales Outstanding (DSO), overdue trends, and client-wise payment behaviour. The platform’s scalability means it suits both startups and growing enterprises alike. Multiple users can collaborate securely via permissions-based access. Businesses can send professional invoices instantly and accept payments through integrated gateways. Plus, AHS tracks collection performance across teams. Reduce write-offs and improve your liquidity with structured collections.`,
       features: [
-        "Physical and virtual card issuance",
-        "Customizable card designs and branding",
-        "Real-time spending controls and limits",
-        "Automated expense categorization",
-        "Fraud detection and prevention tools",
-        "Integration with existing payment systems",
-        "Multi-currency transaction support",
-        "Secure API for seamless integration",
-        "Detailed transaction reporting",
+        "Dashboard with real-time receivable metrics",
+        "Invoice Management (create, send, track)",
+        "Client Management & History Tracking",
+        "Payment Reminders & Confirmations",
+        "Reports & Analytics (DSO, ageing, projections)",
+        "Custom Alerts for overdue or partial payments",
+        "Secure Payment Integrations",
+        "Performance Tracking & Audit Trail",
       ],
-      imageUrl: Centspayimg2.src, //
+      imageUrl: accountant2.src, //
       featuresHeading: "Card Solutions Features:",
     },
     {
       id: "money-movement",
-      title: "Money Movement",
-      subtitle: "Transfer funds effortlessly, anywhere, instantly.",
-      description: `Our robust money movement solutions enable instant, secure, and cost-effective transfers across various channels. Whether it's peer-to-peer payments, business disbursements, or international remittances, our platform ensures seamless fund flow. We support multiple payment rails, including faster payments, SEPA, and international wires, giving you flexibility and broad reach. With real-time status tracking and transparent fees, you can manage your money transfers with confidence, ensuring they reach their destination quickly and securely. Streamline your operations and improve financial efficiency with our comprehensive money movement capabilities.`,
+      title: "Cash Flow Management",
+      subtitle: "Stay in Control of Your Finances",
+      description: `Cash flow is the lifeblood of any business, and AHS makes sure you’re always aware of yours. This tool provides a clear view of current liquidity, upcoming obligations, and future projections based on trends and transaction behaviour. Sync bank accounts to auto-import data or upload transactions manually with pre-built templates. Use flexible categorisation to track specific revenue sources and expense types. Dashboards show daily, weekly, and monthly summaries to help you make informed decisions. Predictive analytics identify periods of surplus or deficit, allowing timely interventions. The system flags anomalies or high-risk trends automatically. Businesses can also run simulations by adjusting income or expense forecasts. It supports planning for loans, investments, or procurement confidently. Built-in reports cater to CFOs, accountants, and business owners alike. Maintain operational stability by managing seasonal cash variations or emergency fund requirements.`,
       features: [
-        "Instant Peer-to-Peer Transfers",
-        "Automated business disbursements",
-        "Multi-currency international payments",
-        "Real-time transaction tracking",
-        "Low-cost payment processing",
-        "Secure API for seamless integration",
-        "Compliance with AML and KYC regulations",
-        "Flexible payment rails (Faster Payments, SEPA, SWIFT)",
-        "Detailed reporting and audit trails",
+        "Live Cash Flow Dashboard",
+        "Transaction Syncing from Bank Accounts",
+        "Excel Import with Error Validation",
+        "Custom Categorisation Options",
+        "Predictive Cash Flow Forecasting",
+        "Scenario Planning & Simulations",
+        "Alerts for Low Balances or Gaps",
+        "Reporting Tools for Trends & Liquidity Health",
       ],
-      imageUrl: Centspayimg3.src, //
+      imageUrl: accountant3.src, //
       featuresHeading: "Money Movement Features:",
     },
   ];

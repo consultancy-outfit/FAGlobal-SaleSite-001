@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Avatar,
   Box,
@@ -19,8 +21,10 @@ import {
 import { HoverScaleUpDown } from "@/components/animations/hover-scale-up-down";
 import SlideUpInView from "@/components/animations/animation-scroll/slide-up-in-view";
 import ScaleInView from "@/components/animations/animation-scroll/scale-in-view";
+import { useRouter } from "next/navigation";
 
 const WhatOurCustomersSaySection = () => {
+  const router = useRouter();
   const data = [
     {
       id: 1,
@@ -94,7 +98,7 @@ const WhatOurCustomersSaySection = () => {
               Real stories from users who trust and grow with us.{" "}
             </Typography>
           </Stack>
-          <Grid container spacing={3}>
+          <Grid container spacing={3} mt={1}>
             {data?.map((items) => (
               <Grid size={{ lg: 4, md: 6, xs: 12 }} key={items?.id}>
                 <HoverScaleUpDown scale={1.05}>
@@ -175,6 +179,7 @@ const WhatOurCustomersSaySection = () => {
               </Typography>
               <HoverScaleUpDown scale={1.05}>
                 <Button
+                  onClick={() => router.push("/contact-us")}
                   variant="contained"
                   sx={{
                     borderRadius: 10,

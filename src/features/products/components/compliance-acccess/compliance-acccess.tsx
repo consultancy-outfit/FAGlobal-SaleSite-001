@@ -25,17 +25,14 @@ export const ComplianceacccessFeature = () => {
       title: "FCA & PSD2 Regulatory Alignment",
       subtitle:
         "Meet the highest standards of Open Banking and PSD2 compliance with confidence.",
-      description: `Our comprehensive Open Banking solutions are built to exceed the stringent requirements of PSD2 and FCA regulations. We provide robust frameworks for Strong Customer Authentication (SCA), secure API access, and granular consent management, ensuring your operations are fully compliant. Our platform handles complex regulatory nuances, allowing you to focus on innovation while we manage compliance intricacies. By leveraging our compliant infrastructure, you can confidently navigate the regulatory landscape, minimize legal risks, and build trust with your customers. We provide detailed audit trails and reporting to simplify your regulatory obligations, giving you peace of mind that your business is always aligned with the latest standards.`,
+      description: `We provide a regulatory-grade infrastructure that ensures your operations align with FCA and PSD2 requirements. From secure authentication to audit-compliant data consent, our tools reduce legal exposure while supporting innovation. Perfect for Account Information Service Providers (AISPs) and Payment Initiation Service Providers (PISPs), our services include built-in support for Strong Customer Authentication (SCA), audit logs, and customer data permission flows. We also offer pre-vetted templates and sandbox environments to speed up FCA registration and authorisation processes.`,
       features: [
         "Strong Customer Authentication (SCA) support",
-        "Non-disruptive, frictionless integrations for seamless Open Banking",
-        "Full PSD2 regulatory alignment",
-        "Built-in fraud detection and prevention",
-        "Real-time audit reporting for compliance",
-        "GDPR-compliant data handling",
-        "Secure API access and management",
-        "Minimised operational and legal risk",
-        "Robust consent management tools",
+        "Secure consent capture & audit trails",
+        "FCA sandbox integration tools",
+        "AISP/PISP enablement toolkit",
+        "Token & scope management APIs",
+        "GDPR-aligned data handling practices",
       ],
       imageUrl: complianceAcccessimg1.src,
       featuresHeading: "Key Regulatory Features:",
@@ -45,17 +42,14 @@ export const ComplianceacccessFeature = () => {
       title: "Wide Market Coverage",
       subtitle:
         "Access 98% of UK and EU banks with consistent, secure, and always-on connectivity.",
-      description: `Expand your reach across the UK and EU with our extensive network of bank connections. Our robust infrastructure ensures consistent, secure, and reliable data access across thousands of financial institutions. We simplify the complexities of multi-bank integrations, offering a unified API that provides real-time access to account information and payment initiation services. This broad coverage allows you to serve a wider customer base and expand your business operations seamlessly into new markets. Our smart routing capabilities ensure high uptime and performance, even during peak periods. By offering unparalleled access to financial data, we empower businesses to innovate and deliver superior customer experiences globally.`,
+      description: `Our platform connects to a wide range of retail and commercial banks, credit unions, and fintech institutions using both Open Banking APIs and secure screen-scraping fallback methods. With high-performance uptime and support for dual-rail data access (API + HTML), your business can access near-complete coverage across multiple geographies. This allows you to deliver services to all customer types without locking out users from unsupported banks.`,
       features: [
-        "Extensive UK & EU Bank Coverage",
-        "Secure, high-speed API connections",
-        "Consistent Data Formatting",
-        "Always-on Connectivity & Monitoring",
-        "Multi-currency & International Payments Support",
-        "Centralized API Management",
-        "Smart Routing & Failover for reliability",
-        "Seamless Onboarding for new banks",
-        "Future-proof access to financial innovations",
+        "Open Banking API connectivity",
+        "Secure fallback scraping for non-API banks",
+        "Real-time and scheduled bank data pulls",
+        "Commercial and SME account access",
+        "Consent dashboards and expiry alerts",
+        "International bank and currency support",
       ],
       imageUrl: complianceAcccessimg2.src,
       featuresHeading: "Wide Market Coverage Features:",
@@ -65,17 +59,14 @@ export const ComplianceacccessFeature = () => {
       title: "Freemium Access for Startups",
       subtitle:
         "Open Banking for everyone: empowering innovation for all, big and small.",
-      description: `Accelerate your fintech innovation with our freemium model, providing essential Open Banking functionalities at no upfront cost. This tiered access allows startups to experiment, build, and scale their financial products without significant initial investment. Our platform offers robust API documentation, sandbox environments, and dedicated support to help you get started quickly and seamlessly. As your business grows, you can easily upgrade to premium tiers for advanced features and increased capacity. This approach fosters a vibrant ecosystem of innovation, making Open Banking accessible to a broader range of entrepreneurs and businesses.`,
+      description: `We believe early-stage companies should be able to experiment and build without incurring heavy upfront costs. Our freemium tier gives startups access to core API features including limited monthly requests, standard bank coverage, and regulatory templates. You also get access to our developer hub, mock bank data for testing, and upgrade flexibility as you scale. This approach fosters compliance-by-design from day one without restricting agility.`,
       features: [
-        "Free-tier access for initial development",
-        "Scalable pricing for growth",
-        "Dedicated sandbox environment",
-        "Comprehensive API documentation",
-        "Community support and resources",
-        "Seamless upgrade path to premium",
-        "Early access to new features",
-        "Partnership opportunities",
-        "Developer-friendly tools",
+        "Free sandbox with mock bank accounts",
+        "Starter API tier with usage limits",
+        "Developer console and API keys",
+        "Plug-and-play templates for compliance",
+        "Community support & documentation access",
+        "Discounted upgrade plans for accelerators/incubators",
       ],
       imageUrl: complianceAcccessimg3.src,
       featuresHeading: "Freemium Access Benefits:",
@@ -89,7 +80,7 @@ export const ComplianceacccessFeature = () => {
           subtitle="Compliance & Access"
           title="Trusted financial access 
 with regulatory compliance"
-          description="Our compliance & access services ensure that your business adheres to all major financial data regulations, such as PSD2 and GDPR, with our comprehensive framework built for security, consent, and data aggregation. We provide the right frameworks to securely access and manage financial data with full consent. With bank-grade security protocols, we ensure that your data is always protected and compliant with the highest standards. Build your future-proof an access to financial innovations without worrying about breaches or industry risks. Our platform supports bank-based access, seamless user multi-bank data aggregation, and robust consent management to give you the tools you need to build the future-proof an access to financial innovations."
+          description="Our Compliance & Access service ensures that your business adheres to all major financial data regulations, such as PSD2, UK Open Banking standards, and FCA mandates. Whether you're a bank, lender, fintech startup, or data aggregator, we provide the right frameworks to securely access and use customer data with full consent. With built-in consent management tools, data access auditing, and regulatory sandbox support, we help you launch faster without worrying about breaches or misalignment. The platform supports tiered access, tokenised APIs, and multi-bank integrations with consistent uptime and security. Startups and regulated firms alike can benefit from easy, future-proof API access to financial institutions."
           textColor="#FFFFFF"
           buttonText=""
         />

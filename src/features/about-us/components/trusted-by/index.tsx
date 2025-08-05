@@ -24,7 +24,7 @@ const TrustedBy = () => {
       }}
     >
       <Box sx={{ textAlign: "center", py: 6 }}>
-        <Typography variant="h6" sx={{ fontWeight: 600, mb: 4 }}>
+        <Typography variant="h4" sx={{ fontWeight: 600, mb: 4 }}>
           Trusted by
         </Typography>
         <Grid

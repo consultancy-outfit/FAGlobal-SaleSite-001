@@ -160,7 +160,12 @@ const Footer = () => {
           </Typography>
           <Typography
             variant="body1"
-            sx={{ mt: 1.5, cursor: "pointer" }}
+            sx={{
+              mt: 1.5,
+              cursor: "pointer",
+              wordBreak: "break-word",
+              overflowWrap: "break-word",
+            }}
             color="#D2D3DF"
             fontFamily="Manrope"
           >
