@@ -23,6 +23,7 @@ import { APP_ROUTES } from "@/constants/routes";
 import { useRouter } from "next/navigation";
 import ContactSection from "../contect-section/contect-section";
 import HeroCustomSection from "../hero/hero";
+import EastIcon from "@mui/icons-material/East";
 
 interface SectionData {
   id: string;
@@ -197,7 +198,7 @@ const Section = ({
                 variant="subtitle2"
                 gutterBottom
                 sx={{
-                  fontWeight: 500,
+                  fontWeight: 600,
                   opacity: 0.8,
                   fontSize: { xs: "1rem", sm: "1.15rem", md: "1.25rem" },
                 }}
@@ -206,11 +207,11 @@ const Section = ({
               </Typography>
               <Typography
                 variant="subtitle2"
+                fontWeight="fontWeightNormal"
                 sx={{
                   mt: 2,
                   lineHeight: 1.8,
-                  opacity: 0.9,
-                  fontSize: { xs: "1rem", sm: "1.15rem", md: "1.25rem" },
+                  opacity: 1,
                 }}
               >
                 {description}
@@ -220,6 +221,7 @@ const Section = ({
                   <Button
                     variant="contained"
                     onClick={() => router.push(link)}
+                    endIcon={<EastIcon />}
                     sx={{
                       mt: 3,
                       px: { xs: 3, md: 4 },
@@ -273,6 +275,7 @@ export const ViewAllFeature = () => {
         description="We provide a suite of powerful, secure, and regulatory-compliant products designed to modernise how financial data is accessed, used, and monetised. Whether you're a fintech startup, lender, business platform, or a bank, our products are built to help you launch faster, grow smarter, and scale securely."
         textColor="#FFFFFF"
         buttonText="Get Started"
+        buttonRedirectUrl={APP_ROUTES.Get_STARTED}
       />
       <Box sx={{ bgcolor: "#ffffff" }}>
         {sectionsData.map((section) => (

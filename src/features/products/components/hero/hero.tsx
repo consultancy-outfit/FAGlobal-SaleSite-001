@@ -14,6 +14,7 @@ interface SectionProps {
   showButton?: boolean;
   backgroundImageUrl?: string;
   textColor?: string;
+  buttonRedirectUrl?: string;
 }
 
 const HeroCustomSection: React.FC<SectionProps> = ({
@@ -24,6 +25,7 @@ const HeroCustomSection: React.FC<SectionProps> = ({
   showButton = true,
   backgroundImageUrl = HeroImageBG.src,
   textColor = "#FFFFFF",
+  buttonRedirectUrl = "/",
 }) => {
   const theme = useTheme();
 
@@ -106,6 +108,7 @@ const HeroCustomSection: React.FC<SectionProps> = ({
           )}
           {showButton && buttonText && (
             <LinkButton
+              link={buttonRedirectUrl}
               customStyles={{
                 borderRadius: "999px",
                 border: `1.5px solid ${theme.palette.primary.main}`,

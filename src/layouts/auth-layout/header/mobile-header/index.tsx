@@ -1,164 +1,235 @@
-import { Box, ClickAwayListener, Typography, useTheme } from "@mui/material";
+"use client";
+import {
+  Box,
+  ClickAwayListener,
+  useTheme,
+  Stack,
+  Collapse,
+} from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { navLinksData } from "../header.data";
-import { LinkButton } from "@/components/buttons/link-button";
 import { APP_ROUTES } from "@/constants/routes";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import { CustomLinkButton } from "@/layouts/main-layout/header/mobile-header";
 
 export const MobileHeader = () => {
   const [active, setActive] = useState(false);
+  const [openItem, setOpenItem] = useState<string | null>(null);
+
   const handleClose = () => {
     setActive(false);
+    setOpenItem(null);
   };
-  const handleOpen = () => {
-    setActive(true);
-  };
+  const handleOpen = () => setActive(true);
+
   const pathname = usePathname();
   const theme = useTheme();
 
   return (
     <ClickAwayListener onClickAway={handleClose}>
-      <Box>
+      <Box sx={{ position: "relative" }}>
+        {/* Hamburger / Cross Icon */}
         <Box
-          onClick={!active ? handleOpen : handleClose}
-          style={{
-            width: 24,
-            height: 24,
-            borderRadius: 10,
+          onClick={active ? handleClose : handleOpen}
+          role="button"
+          aria-label="Toggle navigation menu"
+          sx={{
+            width: 40,
+            height: 40,
+            borderRadius: "50%",
             cursor: "pointer",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            padding: 5,
-            transition: "all 0.5s ease",
+            p: 1,
+            zIndex: 300,
           }}
         >
-          <Box
-            style={{
-              transition: "all 0.5s ease",
-            }}
-          >
+          <Box>
             <Box
-              style={{
+              sx={{
                 height: 3,
                 borderRadius: 2,
-                background: theme?.palette?.secondary?.main,
-                margin: 5,
-                transition: "all 0.55s cubic-bezier(0.075, 0.82, 0.165, 1)",
+                background: theme.palette.secondary.main,
+                my: 0.5,
                 width: 24,
-                transform: active ? "translateY(3px) rotate(45deg)" : "none",
+                transform: active ? "translateY(7px) rotate(45deg)" : "none",
+                transition: "all 0.3s ease",
               }}
             />
             <Box
-              style={{
+              sx={{
                 height: 3,
                 borderRadius: 2,
-                background: theme?.palette?.secondary?.main,
-                margin: 5,
-                transition: "all 0.55s cubic-bezier(0.075, 0.82, 0.165, 1)",
+                background: theme.palette.secondary.main,
+                my: 0.5,
                 width: 24,
                 opacity: active ? 0 : 1,
+                transition: "all 0.3s ease",
               }}
             />
             <Box
-              style={{
+              sx={{
                 height: 3,
                 borderRadius: 2,
-                background: theme?.palette?.secondary?.main,
-                margin: 5,
-                transition: "all 0.55s cubic-bezier(0.075, 0.82, 0.165, 1)",
+                background: theme.palette.secondary.main,
+                my: 0.5,
                 width: 24,
-                transform: active ? "translateY(-13px) rotate(-45deg)" : "none",
+                transform: active ? "translateY(-7px) rotate(-45deg)" : "none",
+                transition: "all 0.3s ease",
               }}
             />
           </Box>
         </Box>
 
+        {/* Full Screen Menu */}
         <Box
           sx={{
-            position: "absolute",
-            top: active ? "90px" : "-600px",
-            left: "-5px",
-            opacity: active ? 1 : 0,
-            zIndex: 200,
-            transition: "0.7s",
-            backgroundColor: theme?.palette?.common?.white,
-            width: "100%",
-            boxShadow:
-              "0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08)",
-            borderRadius: 10,
-            padding: "20px 0",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            bgcolor: theme.palette.background.paper,
+            zIndex: 1200,
+            transform: active ? "translateY(0)" : "translateY(-100%)",
+            transition: "transform 0.5s ease",
+            display: "flex",
+            flexDirection: "column",
+            p: 4,
+            overflowY: "auto",
           }}
         >
-          <Typography
-            component={"ul"}
-            style={{
-              listStyle: "none",
-              paddingLeft: 20,
-              margin: 0,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-            }}
-          >
+          {/* Navigation Links */}
+          <Stack spacing={2} sx={{ mt: 8 }}>
             {navLinksData?.map((item) => (
-              <React.Fragment key={item?.title}>
-                <Link
-                  onClick={handleClose}
-                  href={item?.path}
-                  style={{
-                    textDecoration: "none",
-                    color:
-                      pathname?.startsWith(item?.path) && item?.path !== "/"
-                        ? theme?.palette?.primary?.main
-                        : pathname === "/" && item?.path === "/"
-                          ? theme?.palette?.primary?.main
-                          : theme?.palette?.common?.text_gray,
-                    fontSize: item?.path === pathname ? 18 : 16,
-                    fontWeight: theme?.typography?.fontWeightMedium,
-                    lineHeight: "32px",
-                  }}
-                >
-                  {item?.title}
-                </Link>
-              </React.Fragment>
+              <Box key={item.title}>
+                {item.children ? (
+                  <>
+                    <Box
+                      onClick={() =>
+                        setOpenItem(openItem === item.title ? null : item.title)
+                      }
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        cursor: "pointer",
+                        color: pathname?.startsWith(item.path)
+                          ? theme.palette.primary.main
+                          : theme.palette.text.secondary,
+                        fontSize: "14x",
+                        fontWeight: theme.typography.fontWeightRegular,
+                      }}
+                    >
+                      {item.title}
+                      {openItem === item.title ? (
+                        <ExpandLess />
+                      ) : (
+                        <ExpandMore />
+                      )}
+                    </Box>
+                    <Collapse
+                      in={openItem === item.title}
+                      timeout="auto"
+                      unmountOnExit
+                    >
+                      <Stack spacing={1} pl={2} mt={1}>
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.title}
+                            href={child.path}
+                            onClick={handleClose}
+                            style={{
+                              textDecoration: "none",
+                              color:
+                                pathname === child.path
+                                  ? theme.palette.primary.main
+                                  : theme.palette.text.secondary,
+                              fontSize: "14px",
+                            }}
+                          >
+                            {child.title}
+                          </Link>
+                        ))}
+                      </Stack>
+                    </Collapse>
+                  </>
+                ) : (
+                  <Link
+                    href={item.path}
+                    onClick={handleClose}
+                    style={{
+                      textDecoration: "none",
+                      color:
+                        pathname === item.path
+                          ? theme.palette.primary.main
+                          : theme.palette.text.secondary,
+                      fontSize: "14px",
+                      fontWeight:
+                        pathname === item.path
+                          ? theme.typography.fontWeightBold
+                          : theme.typography.fontWeightMedium,
+                    }}
+                  >
+                    {item.title}
+                  </Link>
+                )}
+              </Box>
             ))}
-          </Typography>
 
-          <Box
-            sx={{
-              display: { xs: "flex", sm: "none" },
-              justifyContent: "center",
-              padding: 1,
-              gap: 1,
-            }}
-          >
-            <LinkButton
-              link={APP_ROUTES?.PARTNER_WITH_US}
-              variant="outlined"
-              color="secondary"
-              customStyles={{
-                borderRadius: 2,
-                px: 2,
-                py: 1,
-                color: theme?.palette?.text?.primary,
+            {/* Buttons below links */}
+            <Stack
+              direction="column"
+              spacing={2}
+              alignItems="center"
+              mt={2}
+              sx={{
+                "& > a": {
+                  width: { xs: "100%", sm: "fit-content" },
+                },
+                display: { xs: "flex", sm: "none" },
               }}
             >
-              Login
-            </LinkButton>
-            <LinkButton
-              link={APP_ROUTES?.Get_STARTED}
-              customStyles={{
-                borderRadius: 2,
-                px: 2,
-                py: 1,
-                bgcolor: theme?.palette?.text?.primary,
-              }}
-            >
-              Get Started
-            </LinkButton>
-          </Box>
+              <CustomLinkButton
+                link={APP_ROUTES.PARTNER_WITH_US}
+                customStyles={{
+                  borderRadius: "999px",
+                  border: "1px solid #F2F2F2",
+                  padding: "8px 24px",
+                  height: "50px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: theme.palette.common.white,
+                  color: theme.palette.text.primary,
+                }}
+                onClick={handleClose}
+              >
+                Login
+              </CustomLinkButton>
+              <CustomLinkButton
+                link={APP_ROUTES.Get_STARTED}
+                customStyles={{
+                  borderRadius: "999px",
+                  border: `1.5px solid ${theme.palette.primary.main}`,
+                  padding: "8px 24px",
+                  backgroundColor: theme.palette.primary.main,
+                  color: theme.palette.common.white,
+                  height: "50px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                onClick={handleClose}
+              >
+                Get Started
+              </CustomLinkButton>
+            </Stack>
+          </Stack>
         </Box>
       </Box>
     </ClickAwayListener>

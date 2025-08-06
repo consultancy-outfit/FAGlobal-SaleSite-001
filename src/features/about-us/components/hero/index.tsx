@@ -57,7 +57,6 @@ const Hero = () => {
           layout="responsive"
         />
       </Box>
-      =
     </Box>
   );
 };

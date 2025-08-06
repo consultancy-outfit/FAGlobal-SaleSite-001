@@ -12,58 +12,62 @@ export const DataIntelligenceFeature = () => {
   const sections = [
     {
       id: "account-information",
-      title: "Account Information",
-      subtitle: "Empower decisions with real-time banking data.",
-      description: `Account Information services (AIS) provide seamless, real-time connectivity to a customer's financial tapestry, including current balances, transaction records, and account identity. This data can be retrieved across multiple banks and accounts, ensuring a 360-degree view of personal or business finances. AIS empowers customers and businesses to make informed decisions by providing real-time data for financial insights. By leveraging robust analytics and AI, we transform raw data into actionable intelligence for budgeting, spending patterns, wealth management tools, and fraud detection engines. With powerful categorization and enrichment layers, the raw data becomes actionable insights in seconds. Our AIS infrastructure supports all types of financial data, including transaction details, account balances, and personal information, allowing for comprehensive financial analysis. Businesses can benefit from enhanced credit assessments, personalized product offerings, and automated reconciliation, leading to improved cash flow forecasting and optimizing working capital. Consumers enjoy a holistic view of their finances, simplified budgeting, and personalized financial advice. AIS enables smarter financial experiences from the ground up.`,
+      title: " Smart Transaction Categorisation",
+      subtitle:
+        "Understand financial behaviour by transforming transactions into meaningful categories.",
+      description: `Our transaction categorisation engine uses advanced algorithms and merchant recognition to convert raw bank transactions into structured, easy-to-read spending and income labels. The service recognises patterns in user behaviour, classifies payments into hundreds of subcategories, and cleans merchant names with logos and metadata. It's ideal for banks, lenders, and finance apps that want to offer users real clarity into their financial lives. Businesses can create custom rules to fine-tune the categorisation according to region, user type, or vertical. The service supports recurring transaction identification and subscription tracking to highlight commitment-based spending.`,
       features: [
-        "Up to the minute Account Balances",
-        "Full Transaction History Retrieval",
-        "Multi-Bank Data Aggregation",
-        "Verified Account Ownership",
-        "Smart Spending & Budget Analysis",
-        "Recognition of Recurring Payments",
-        "Dynamic Expense Management",
+        "Auto-tagging of transactions into categories like Food, Utilities, Salary, etc.",
+        "Duplicate removal and standardisation of merchant names",
+        "Subscription detection and recurring payment tracking",
+        "Merchant logos and geolocation metadata",
+        "Industry-specific category customisation rules",
         "Full PSD2 Regulatory Alignment",
-        "Broadcast & Full Banking Network",
+        "Multi-region and multi-language category mapping",
+        "Real-time and batch categorisation options",
+        "API-first architecture for smooth integration",
       ],
       imageUrl: dataIntelligenceimg1.src,
-      featuresHeading: "Account Information Services:",
+      featuresHeading: " Smart Transaction Categorisation-Related Services:",
     },
     {
       id: "secure-payment-initiation",
-      title: "Secure Payment Initiation",
-      subtitle: "Initiate payments instantly. No cards. No delays.",
-      description: `Empower users and businesses to initiate secure, real-time payments directly from their bank accounts. Payment Initiation Services (PIS) eliminate the friction of traditional card processing, offering a faster and more cost-effective alternative. Our secure payment gateway ensures every transaction is protected, reducing the risk of fraud and chargebacks. Instant payment confirmations enhance cash flow and provide immediate proof of payment. PIS is ideal for a wide range of uses, from e-commerce checkouts and utility bill payments to peer-to-peer transfers and financial vehicle disbursements. Refunds are streamlined, and payment disputes are minimized. By directly linking to bank accounts, PIS services offer a seamless and integrated payment experience, minimizing reconciliation efforts and improving overall financial efficiency. Experience simpler, safer, and smarter payments with PIS.`,
+      title: "Income & Expense Insights",
+      subtitle:
+        "Turn transaction streams into powerful budgeting and financial planning tools.",
+      description: `Income & Expense Insights go beyond categorisation to analyse how money flows in and out of user accounts. The service can identify primary salary deposits, government benefits, freelance income, and secondary earnings. On the expense side, it breaks down fixed obligations, variable costs, and discretionary spending, offering a clear picture of financial stability. Trends over time show whether users are improving or declining financially. These insights fuel alert systems, budgeting tools, and personalised financial coaching that help end-users make smarter decisions and avoid financial pitfalls. Businesses can segment users based on financial behaviour for better targeting and engagement.`,
       features: [
-        "Instant Bank Transfers",
-        "One-Off & Recurring Payments",
-        "Strong Customer Authentication (SCA)",
+        "Detection of income streams (salary, benefits, freelance)",
+        "Expense breakdown by fixed, variable, and flexible spending",
+        "Trendline analytics by week, month, quarter",
         "Payment Status Tracking",
-        "Refund Handling",
-        "Customizable Consent Flows",
-        "Compliance with PSD2 Regulations",
-        "Integrated Payment UX/UI",
-        "Developer-Friendly APIs",
+        "Insights into net savings or overspending",
+        "Alerts for income dips or rising expenses",
+        "Budget suggestions and savings triggers",
+        "High-value or unusual transaction flags",
+        "Exportable summaries for underwriting or financial advice",
       ],
       imageUrl: dataIntelligenceimg2.src,
-      featuresHeading: "Payment Initiation Features:",
+      featuresHeading: "Income & Expense Insights-Related Services:",
     },
     {
       id: "bank-connectivity-data-aggregation",
-      title: "Bank Connectivity & Data Aggregation",
-      subtitle: "Connect once. Scale everywhere. Built for open finance.",
-      description: `Experience seamless connectivity to an extensive network of banks through our robust and high-speed API integrations. Our platform ensures seamless connectivity with both traditional and challenger banks across multiple regions, simplifying data retrieval and aggregation. Leverage our unified API to integrate with diverse financial institutions, enabling real-time access to critical financial data. The platform unifies fragmented data into a consistent format, optimizing monitoring and smart routing to ensure reliability and performance, even during high-demand periods. With advanced security and encryption protocols, we ensure the integrity and confidentiality of all data, providing a secure and reliable foundation for financial services. Designed for developers and businesses alike, our hassle-free connectivity minimizes technical efforts so you can innovate with confidence. Scale globally as we handle the infrastructure behind the scenes.`,
+      title: "Risk Scoring & Affordability Checks",
+      subtitle:
+        "Assess financial health and lending potential through real-time behavioural data.",
+      description: `Our Risk Scoring & Affordability module evaluates a user’s ability to meet financial obligations using live bank data and behavioural analytics. It calculates disposable income, cash flow stability, and historical spending patterns to determine affordability in real-world terms. The risk scoring engine supports both rule-based and AI-driven models, enabling lenders, insurers, and property firms to make data-backed decisions beyond traditional credit scores. It helps identify high-risk customers, manage regulatory checks, and support fair lending frameworks. This service is fully FCA-compliant and designed to integrate easily into existing decisioning engines.`,
       features: [
-        "Access to Major UK & EU Banks",
-        "Uptime Monitoring & Connection Health",
-        "Multi-Bank Data Aggregation Capabilities",
-        "Unified Data Normalization Layer",
-        "Developer-Friendly SDKs & Sandbox",
-        "Smart Routing & Failover Support",
-        "Instant Onboarding & Connectivity",
+        "Full audit trail for compliance and audit",
+        "Overdraft usage frequency and cash flow gap analysis",
+        "Monthly obligation pattern recognition",
+        "Missed or delayed payment detection",
+        "Predictive risk modelling based on spending volatility",
+        "Custom scoring configurations for lenders or fintechs",
+        "Real-time disposable income and affordability calculations",
+        "Seamless integration with lending, BNPL, and credit workflows",
       ],
       imageUrl: dataIntelligenceimg3.src,
-      featuresHeading: "Connectivity & Aggregation Services:",
+      featuresHeading: "Risk Scoring & Affordability Checks-Related Services:",
     },
   ];
 
@@ -73,7 +77,7 @@ export const DataIntelligenceFeature = () => {
         <HeroCustomSection
           subtitle="Data Intelligence & Enrichment"
           title="Smarter decisions from enriched data."
-          description="Our data intelligence & enrichment engine transforms raw financial data into a meaningful, actionable, and insightful resource. Whether you're building a personal finance tool, a lending platform, or an accounting engine, we'll help you unlock the full potential of your data. Gain deeper insights into spending habits, optimize for your specific market needs, bring smarter workflows and enable a better customer journey."
+          description="Our Data Intelligence & Enrichment engine transforms raw transaction data into a meaningful, structured, and insightful resource. Whether you’re building a personal finance tool, a lending platform, or an accounting engine, these services help you offer customers clarity, prediction, and personalisation. Each feature can be tailored to your specific market needs, driving smarter workflows and more intuitive customer journeys."
           textColor="#FFFFFF"
         />
         <SectionPanel sections={sections} />

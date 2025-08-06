@@ -26,3 +26,6 @@ export { default as IdentityKycImg } from "./identity-kyc.svg";
 export { default as ComplianceAccessImg } from "./compliance-access.svg";
 export { default as AccountantHelpSquadImg } from "./accountant-help-squad.svg";
 export { default as GenspayImg } from "./genspay.svg";
+export { default as accountant1 } from "./accountant1.svg";
+export { default as accountant2 } from "./accountant2.svg";
+export { default as accountant3 } from "./accountant3.svg";

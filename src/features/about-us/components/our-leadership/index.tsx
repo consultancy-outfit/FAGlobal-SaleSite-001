@@ -12,7 +12,7 @@ import Image from "next/image";
 
 const teamMembers = [
   {
-    name: "Allison Couse",
+    name: "Allison Gouse",
     title: "Compliance & Risk Manager",
     image: team,
   },
