@@ -32,7 +32,7 @@ const Products = () => {
     <Box
       sx={{
         px: { xs: "10px", md: "50px" },
-        mx: { xs: "20px", md: "50px", lg: "100px" },
+        mx: { xs: "45px", md: "50px", lg: "100px" },
         py: { md: 5 },
         bgcolor: "#272835",
       }}

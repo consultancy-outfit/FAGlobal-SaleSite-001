@@ -18,7 +18,7 @@ const ContactUs = () => {
   return (
     <Container
       maxWidth="lg"
-      sx={{ my: 8, py: 5, background: "#F9FAFB", borderRadius: "30px" }}
+      sx={{ my: 8, mx: 2, py: 5, background: "#F9FAFB", borderRadius: "30px" }}
     >
       <Box textAlign="center" mb={6}>
         <Typography

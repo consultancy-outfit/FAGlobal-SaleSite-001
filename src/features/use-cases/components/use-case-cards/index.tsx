@@ -33,12 +33,16 @@ export const UseCaseCards = () => {
                 image={item.image}
                 alt="green iguana"
               />
-              <CardContent>
+              <CardContent sx={{ height: 160 }}>
                 <Typography fontSize={"22px"} fontWeight={600} color="black">
                   {item.heading}
                 </Typography>
                 <Typography fontSize={"16px"} fontWeight={400} color="grey">
-                  {item.description}
+                  {/* {item.description}
+                   */}
+                  {item.description.split(" ").length > 20
+                    ? item.description.split(" ").slice(0, 20).join(" ") + "..."
+                    : item.description}
                 </Typography>
               </CardContent>
             </CardActionArea>

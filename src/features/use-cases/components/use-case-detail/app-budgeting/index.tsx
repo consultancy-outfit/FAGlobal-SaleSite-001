@@ -27,10 +27,15 @@ export const AppBudgeting = () => {
           p={6}
           bgcolor={theme?.palette?.grey?.[100]}
         >
-          <Typography variant="h2" color="black" fontWeight={600}>
+          <Typography variant="h2" color="#0A0A0A" fontWeight={600}>
             Personal Finance App Budgeting
           </Typography>
-          <Typography variant="body1" color="grey">
+          <Typography
+            variant="subtitle2"
+            color="#525252"
+            fontWeight={400}
+            width={{ md: "100%", lg: "60%" }}
+          >
             Empower users to take control of their financial lives by
             integrating bank account data into a personal finance app. Enable
             automated transaction categorisation, budget tracking, savings
@@ -41,47 +46,47 @@ export const AppBudgeting = () => {
       </SlideUpInView>
       <Box mx={6} my={2}>
         <Box display={"flex"} flexDirection={"column"} gap={1.5} py={5} px={2}>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Problem Statement:
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography variant="body1" fontWeight={300} color="grey">
             Users often struggle to manage their finances effectively due to
             fragmented bank data and manual tracking. Traditional budgeting
             methods lack real-time updates and require too much effort.
           </Typography>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Solution:
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} variant="body1" color="grey">
             Leverage Open Banking APIs to access real-time bank account and
             transaction data. Use data enrichment and intelligent categorisation
             to deliver tailored financial insights, allowing users to:
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} variant="body1" color="grey">
             Set spending limits across categories (e.g., food, travel, shopping)
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} variant="body1" color="grey">
             Receive real-time alerts on overspending
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} variant="body1" color="grey">
             Track monthly cash flow and financial goals
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} variant="body1" color="grey">
             Identify recurring payments and optimise subscriptions
           </Typography>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Who Benefits?
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} variant="body1" color="grey">
             End-users who want control over their budgeting
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} variant="body1" color="grey">
             Fintech startups offering budget solutions
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} variant="body1" color="grey">
             Neobanks enhancing customer retention
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} variant="body1" color="grey">
             Wealth & financial advisors offering app-based services
           </Typography>
           <Grid container my={3}>
@@ -129,7 +134,7 @@ export const AppBudgeting = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} fontSize={"20px"} color="#454745">
                   PSD2 & GDPR-compliant user consent flows
                 </Typography>
               </Box>
@@ -149,7 +154,7 @@ export const AppBudgeting = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} fontSize={"20px"} color="#454745">
                   AES-256 encryption for data at rest and TLS for data in
                   transit
                 </Typography>
@@ -170,17 +175,17 @@ export const AppBudgeting = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} fontSize={"20px"} color="#454745">
                   Payment cards takes the hassle-free of using ATMs abroad.
                 </Typography>
               </Box>
             </Grid>
           </Grid>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Functional & Technical Details
           </Typography>
           <List>
-            <Typography fontWeight={"bold"} fontSize={"18px"}>
+            <Typography fontWeight={"bold"} fontSize={"18px"} color={"#525252"}>
               How It Works:
             </Typography>
             <ListItem>
@@ -190,6 +195,7 @@ export const AppBudgeting = () => {
                     component="span"
                     fontWeight={"bold"}
                     fontSize={"18px"}
+                    color={"#525252"}
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -198,6 +204,10 @@ export const AppBudgeting = () => {
                   </Typography>
                 }
                 secondary="Users connect one or more bank accounts via secure APIs and provide explicit consent for data sharing."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
@@ -207,6 +217,7 @@ export const AppBudgeting = () => {
                     component="span"
                     fontWeight={"bold"}
                     fontSize={"18px"}
+                    color={"#525252"}
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -215,6 +226,10 @@ export const AppBudgeting = () => {
                   </Typography>
                 }
                 secondary="Account and transaction data is pulled in real-time via Open Banking APIs."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
@@ -224,6 +239,7 @@ export const AppBudgeting = () => {
                     component="span"
                     fontWeight={"bold"}
                     fontSize={"18px"}
+                    color={"#525252"}
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -232,6 +248,10 @@ export const AppBudgeting = () => {
                   </Typography>
                 }
                 secondary="Transactions are cleaned, categorised (e.g., groceries, entertainment), and tagged with merchant names and logos."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
@@ -241,6 +261,7 @@ export const AppBudgeting = () => {
                     component="span"
                     fontWeight={"bold"}
                     fontSize={"18px"}
+                    color={"#525252"}
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -249,6 +270,10 @@ export const AppBudgeting = () => {
                   </Typography>
                 }
                 secondary="Users can define monthly budgets per category. The system dynamically tracks their progress and triggers alerts as thresholds are crossed."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
@@ -258,6 +283,7 @@ export const AppBudgeting = () => {
                     component="span"
                     fontWeight={"bold"}
                     fontSize={"18px"}
+                    color={"#525252"}
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -266,6 +292,10 @@ export const AppBudgeting = () => {
                   </Typography>
                 }
                 secondary="Interactive graphs and dashboards show cash flow trends, spending comparisons, and suggestions for saving."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
@@ -275,6 +305,7 @@ export const AppBudgeting = () => {
                     component="span"
                     fontWeight={"bold"}
                     fontSize={"18px"}
+                    color={"#525252"}
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -283,6 +314,10 @@ export const AppBudgeting = () => {
                   </Typography>
                 }
                 secondary="Spending patterns are analysed over time to suggest habits, flag risky behaviours, or promote saving challenges."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
           </List>

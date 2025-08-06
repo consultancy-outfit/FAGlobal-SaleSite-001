@@ -11,12 +11,13 @@ export const products = [
   { id: 6, link: "/centspay", label: "Centspay" },
 ];
 export const about = [
+  { id: 1, link: "/view-all", label: "Products" },
   { id: 1, link: "/about-us", label: "About Us" },
-  { id: 2, link: "/careers", label: "Careers" },
+  // { id: 2, link: "/careers", label: "Careers" },
   { id: 3, link: "/contact-us", label: "Contact Us" },
 ];
 export const resources = [
   { id: 1, link: "/use-cases", label: "Use Cases" },
-  { id: 2, link: "/", label: "Developers" },
-  { id: 3, link: "/", label: "FAQ's" },
+  // { id: 2, link: "/", label: "Developers" },
+  // { id: 3, link: "/", label: "FAQ's" },
 ];

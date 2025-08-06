@@ -37,7 +37,7 @@ export const useContactUs = () => {
 
     try {
       // const response: any = await postDataAPI(apiDataParameter);
-      successSnackbar("Form Submitted Successfully!");
+      successSnackbar("Message sent! Our team will be in touch shortly");
       reset?.();
     } catch (error: any) {
       errorSnackbar(error?.data?.message);

@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
-import { Header } from "./header";
+import { Header } from "../main-layout/header";
+// import { Header } from "./header";
 
 export const AuthLayout = (props: any) => {
   const { children } = props;

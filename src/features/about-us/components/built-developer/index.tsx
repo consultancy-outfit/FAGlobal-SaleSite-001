@@ -25,7 +25,14 @@ const BuildDeveloper = () => {
   ];
 
   return (
-    <Box sx={{ py: 8 }}>
+    <Box
+      sx={{
+        px: { xs: "0px", md: "50px", lg: "100px" },
+        mx: { xs: "45px", md: "50px", lg: "100px" },
+        py: { xs: "0px", md: "50px", lg: "100px" },
+      }}
+      // sx={{ py: 8 }}
+    >
       <Container maxWidth="xl">
         <Typography
           gutterBottom

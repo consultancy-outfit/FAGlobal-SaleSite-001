@@ -114,12 +114,12 @@ const sectionsData: SectionData[] = [
     imageOnRight: true,
     backgroundColor: "#ffffff",
     textColor: "#333",
-    link: APP_ROUTES.PRODUCT_5,
+    link: APP_ROUTES.PRODUCT_6,
   },
   {
     id: "genspay",
     mainTitle: "Fintech",
-    title: "Genspay",
+    title: "Centspay",
     subtitle: "Bank-powered payments. Secure, instant, and cost-effective.",
     description:
       "Centspay empowers users to make direct payments straight from their bank accounts—no cards, no intermediaries. This approach cuts down transaction fees and eliminates chargebacks, making it ideal for digital commerce, utility bills, and subscription models. It supports both one-time and recurring payments, with real-time confirmation and rapid settlements that optimise cash flow. Designed with modern banking in mind, it includes Strong Customer Authentication (SCA) for top-tier security and full compliance. Centspay redefines the payment experience—seamless, direct, and future-ready.",
@@ -129,7 +129,7 @@ const sectionsData: SectionData[] = [
     imageOnRight: false,
     backgroundColor: "#33334d",
     textColor: "#fff",
-    link: APP_ROUTES.PRODUCT_6,
+    link: APP_ROUTES.PRODUCT_5,
   },
 ];
 

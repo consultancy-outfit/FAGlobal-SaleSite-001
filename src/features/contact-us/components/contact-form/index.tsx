@@ -18,7 +18,7 @@ const ContactForm = () => {
       boxShadow="none"
       customStyles={{
         pt: { md: 8, sm: 4, xs: 2 },
-        m: 6,
+        m: { xs: 0, md: 6 },
         backgroundColor: "common.bg_dull",
         borderRadius: 15,
       }}
@@ -49,7 +49,7 @@ const ContactForm = () => {
           onClick={() => handleSubmit(submitContactUs)}
           fullWidth
         >
-          {isLoading ? <CommonCircularProgress /> : "Contact Sales"}
+          {isLoading ? <CommonCircularProgress /> : "Submit"}
         </CommonLoadingButton>
         <SubHeadingText
           variant="subtitle1"

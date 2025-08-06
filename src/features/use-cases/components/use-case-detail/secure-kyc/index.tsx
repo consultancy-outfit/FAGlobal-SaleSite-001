@@ -32,10 +32,10 @@ export const SecureKyc = () => {
           p={6}
           bgcolor={theme?.palette?.grey?.[100]}
         >
-          <Typography variant="h2" color="black" fontWeight={600}>
+          <Typography variant="h2" color="#0A0A0A" fontWeight={600}>
             Accelerate Crypto Access with Seamless, Secure KYC
           </Typography>
-          <Typography variant="body1" color="grey">
+          <Typography variant="subtitle2" color="#525252" fontWeight={400}>
             Instant identity verification for crypto users—onboard users in
             seconds while staying compliant with global AML laws.
           </Typography>
@@ -43,29 +43,33 @@ export const SecureKyc = () => {
       </SlideUpInView>
       <Box mx={6} my={2}>
         <Box display={"flex"} flexDirection={"column"} gap={1.5} py={5} px={2}>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Overview
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={400} fontSize={"16px"} color="#525252">
             The crypto ecosystem thrives on speed, privacy, and decentralised
             innovation—but regulatory compliance remains non-negotiable.
             Traditional KYC processes are slow, inconsistent, and often cause
             user drop-offs during onboarding.
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={400} fontSize={"16px"} color="#525252">
             This use case offers a real-time KYC solution tailored for crypto
             platforms, wallets, and exchanges. With biometric verification,
             document scanning, and AML screening powered by AI, crypto platforms
             can onboard users instantly—without sacrificing compliance.
           </Typography>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Key Features
           </Typography>
           <List>
             <ListItem>
               <ListItemText
                 primary={
-                  <Typography component="span">
+                  <Typography
+                    component="span"
+                    fontSize={"16px"}
+                    color={"#525252"}
+                  >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
                     </span>
@@ -73,12 +77,20 @@ export const SecureKyc = () => {
                   </Typography>
                 }
                 secondary="Users upload ID documents and selfies for instant, automated validation using OCR and liveness checks."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
               <ListItemText
                 primary={
-                  <Typography component="span">
+                  <Typography
+                    component="span"
+                    fontSize={"16px"}
+                    color={"#525252"}
+                  >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
                     </span>
@@ -86,12 +98,20 @@ export const SecureKyc = () => {
                   </Typography>
                 }
                 secondary="Cross-reference user data against global sanctions lists, PEP databases, and crypto fraud registries."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
               <ListItemText
                 primary={
-                  <Typography component="span">
+                  <Typography
+                    component="span"
+                    fontSize={"16px"}
+                    color={"#525252"}
+                  >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
                     </span>
@@ -99,12 +119,20 @@ export const SecureKyc = () => {
                   </Typography>
                 }
                 secondary="Detect fraud attempts using device intelligence and login behaviour analytics."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
               <ListItemText
                 primary={
-                  <Typography component="span">
+                  <Typography
+                    component="span"
+                    fontSize={"16px"}
+                    color={"#525252"}
+                  >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
                     </span>
@@ -112,6 +140,10 @@ export const SecureKyc = () => {
                   </Typography>
                 }
                 secondary="Flexible APIs or SDKs for web, mobile, or dApp environments. Easily scale across jurisdictions."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
           </List>
@@ -141,7 +173,7 @@ export const SecureKyc = () => {
               size={{ xs: 12, md: 6 }}
               p={{ xs: 0, sm: 4 }}
             >
-              <Typography fontWeight={600} fontSize={"30px"} color="black">
+              <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
                 Business Impact
               </Typography>
               <Box
@@ -160,7 +192,7 @@ export const SecureKyc = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} color="#454745" fontSize={"20px"}>
                   Faster Conversion = Higher Retention
                 </Typography>
               </Box>
@@ -180,7 +212,7 @@ export const SecureKyc = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} color="#454745" fontSize={"20px"}>
                   Strengthen Compliance in a High-Risk Sector
                 </Typography>
               </Box>
@@ -200,7 +232,7 @@ export const SecureKyc = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} color="#454745" fontSize={"20px"}>
                   Minimise Fraud & Regulatory Fines
                 </Typography>
               </Box>
@@ -220,17 +252,17 @@ export const SecureKyc = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} color="#454745" fontSize={"20px"}>
                   Global Coverage
                 </Typography>
               </Box>
             </Grid>
           </Grid>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Which of My Services This Belongs To:
           </Typography>
           <List>
-            <Typography fontWeight={300} fontSize={"15px"} color="grey">
+            <Typography fontWeight={300} fontSize={"16px"} color="#525252">
               This use case can be grouped under:
             </Typography>
             <ListItem disableGutters>
@@ -239,8 +271,8 @@ export const SecureKyc = () => {
                   <Typography
                     component="span"
                     fontWeight={300}
-                    fontSize={"15px"}
-                    color="grey"
+                    fontSize={"16px"}
+                    color="#525252"
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -256,8 +288,8 @@ export const SecureKyc = () => {
                   <Typography
                     component="span"
                     fontWeight={300}
-                    fontSize={"15px"}
-                    color="grey"
+                    fontSize={"16px"}
+                    color="#525252"
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -273,8 +305,8 @@ export const SecureKyc = () => {
                   <Typography
                     component="span"
                     fontWeight={300}
-                    fontSize={"15px"}
-                    color="grey"
+                    fontSize={"16px"}
+                    color="#525252"
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●
@@ -290,8 +322,8 @@ export const SecureKyc = () => {
                   <Typography
                     component="span"
                     fontWeight={300}
-                    fontSize={"15px"}
-                    color="grey"
+                    fontSize={"16px"}
+                    color="#525252"
                   >
                     <span style={{ fontSize: "15px", marginRight: "8px" }}>
                       ●

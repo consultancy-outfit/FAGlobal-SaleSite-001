@@ -234,6 +234,10 @@ export const Header = () => {
                 : theme.palette.text.primary
               : "inherit";
 
+            const fontWeight = isActiveParent
+              ? theme.typography.fontWeightSemiBold
+              : theme.typography.fontWeightMedium;
+
             if (item.title === "Products") {
               return (
                 <React.Fragment key={item.title}>
@@ -263,7 +267,11 @@ export const Header = () => {
                       )
                     }
                   >
-                    <Typography variant="body2" component="span">
+                    <Typography
+                      variant="body2"
+                      component="span"
+                      fontWeight={500}
+                    >
                       {item?.title}
                     </Typography>
                   </Button>
@@ -585,7 +593,7 @@ export const Header = () => {
                   sx={{
                     textDecoration: "none",
                     color: textColor,
-                    fontWeight: theme?.typography?.fontWeightMedium,
+                    fontWeight: fontWeight,
                   }}
                 >
                   {item?.title}

@@ -16,7 +16,7 @@ export const typography = {
     fontSize: pxToRem(84),
   },
   h2: {
-    fontSize: pxToRem(72),
+    fontSize: pxToRem(60),
   },
   h3: {
     fontSize: pxToRem(52),
@@ -69,6 +69,7 @@ declare module "@mui/material/styles" {
     pageTitled: React.CSSProperties;
     extraHeading: React.CSSProperties;
     extraHeading2: React.CSSProperties;
+    fontWeightSemiBold: number;
   }
 
   interface TypographyVariantsOptions {

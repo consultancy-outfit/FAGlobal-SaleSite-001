@@ -27,10 +27,10 @@ export const RegulatePlatform = () => {
           p={6}
           bgcolor={theme?.palette?.grey?.[100]}
         >
-          <Typography variant="h2" color="black" fontWeight={600}>
+          <Typography variant="h2" color="#0A0A0A" fontWeight={600}>
             Smart Consent Management for Regulated Platforms
           </Typography>
-          <Typography variant="body1" color="grey">
+          <Typography variant="subtitle2" color="#525252">
             Regulated platforms such as banks, lending services, insurance
             providers, and investment apps must collect, manage, and track user
             consent with transparency and compliance. Open Banking enables these
@@ -42,18 +42,18 @@ export const RegulatePlatform = () => {
       </SlideUpInView>
       <Box mx={6} my={2}>
         <Box display={"flex"} flexDirection={"column"} gap={1.5} py={5} px={2}>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Challenge
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} fontSize={"16px"} color="#525252">
             Navigating complex regulations like GDPR, PSD2, and UK Open Banking
             standards can slow down product growth. Manual tracking and unclear
             consent flows lead to poor UX, data misuse risks, and audit issues.
           </Typography>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Solution
           </Typography>
-          <Typography fontWeight={300} fontSize={"15px"} color="grey">
+          <Typography fontWeight={300} fontSize={"16px"} color="#525252">
             With Open Banking-enabled consent management, platforms can
             implement automated, transparent consent journeys. These allow users
             to understand what data is being shared, for what purpose, and for
@@ -86,7 +86,7 @@ export const RegulatePlatform = () => {
               size={{ xs: 12, md: 6 }}
               p={{ xs: 0, sm: 4 }}
             >
-              <Typography fontWeight={600} fontSize={"30px"} color="black">
+              <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
                 Features, Benefits & Services
               </Typography>
               <Box
@@ -105,7 +105,7 @@ export const RegulatePlatform = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} fontSize={"20px"} color="#454745">
                   Granular Consent Controls
                 </Typography>
               </Box>
@@ -125,7 +125,7 @@ export const RegulatePlatform = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} fontSize={"20px"} color="#454745">
                   Dynamic Consent Dashboard
                 </Typography>
               </Box>
@@ -145,13 +145,13 @@ export const RegulatePlatform = () => {
                   }}
                   variant="rounded"
                 />
-                <Typography fontWeight={400} fontSize={"20px"}>
+                <Typography fontWeight={500} fontSize={"20px"} color="#454745">
                   Regulatory-Compliant Audit Trail
                 </Typography>
               </Box>
             </Grid>
           </Grid>
-          <Typography fontWeight={600} fontSize={"30px"} color="black">
+          <Typography fontWeight={600} fontSize={"30px"} color="#0A0A0A">
             Benefits for Regulated Platforms
           </Typography>
           <List>
@@ -159,18 +159,30 @@ export const RegulatePlatform = () => {
               <ListItemText
                 primary="Boost Trust and Transparency"
                 secondary="Enhance customer confidence by clearly showing how their data is handled."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
               <ListItemText
                 primary="Accelerate Onboarding and Renewals"
                 secondary="Automate recurring consent renewals, saving time for users and compliance teams."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
             <ListItem>
               <ListItemText
                 primary="Reduce Legal Risk"
                 secondary="Stay aligned with UK and EU compliance requirements while minimising fines and disputes."
+                secondaryTypographyProps={{
+                  fontSize: "16px",
+                  color: "#525252",
+                }}
               />
             </ListItem>
           </List>
