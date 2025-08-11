@@ -12,19 +12,19 @@ export const metadata: Metadata = {
       { rel: "icon", url: "/favicon.ico", type: "image/x-icon" },
       {
         rel: "icon",
-        url: "/favicon.png",
+        url: "/favicon.svg",
         type: "image/png",
         sizes: "16x16",
       },
       {
         rel: "icon",
-        url: "/favicon.png",
+        url: "/favicon.svg",
         type: "image/png",
         sizes: "32x32",
       },
     ],
     apple: {
-      rel: "favicon.png",
+      rel: "favicon.svg",
       url: "/apple-touch-icon.png",
       type: "image/png",
       sizes: "180x180",
