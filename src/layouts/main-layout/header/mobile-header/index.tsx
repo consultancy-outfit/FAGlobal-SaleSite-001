@@ -104,6 +104,7 @@ const MobileMenuItemWithChildren: React.FC<MobileMenuItemWithChildrenProps> = ({
                   ? theme.palette.primary.main
                   : theme.palette.text.primary,
                 fontWeight: theme.typography.fontWeightMedium,
+                fontSize: "16px",
               },
             }}
           />
@@ -138,7 +139,7 @@ const MobileMenuItemWithChildren: React.FC<MobileMenuItemWithChildrenProps> = ({
             >
               <Stack direction="row" alignItems="center" gap={1}>
                 {getIconComponent?.(childItem.icon)}
-                <Typography variant="body2">{childItem.title}</Typography>
+                <Typography variant="body1">{childItem.title}</Typography>
               </Stack>
             </MenuItem>
           ))}
@@ -279,7 +280,7 @@ export const MobileHeader: React.FC<{
                   >
                     <Stack direction="row" alignItems="center" gap={1}>
                       {getIconComponent?.(item.icon)}
-                      <Typography variant="body2">{item.title}</Typography>
+                      <Typography variant="body1">{item.title}</Typography>
                     </Stack>
                   </MenuItem>
                 )}
@@ -311,6 +312,7 @@ export const MobileHeader: React.FC<{
                   justifyContent: "center",
                   backgroundColor: theme.palette.common.white,
                   color: theme.palette.text.primary,
+                  fontSize: "16px",
                 }}
                 onClick={handleClose}
               >
@@ -328,6 +330,7 @@ export const MobileHeader: React.FC<{
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  fontSize: "16px",
                 }}
                 onClick={handleClose}
               >

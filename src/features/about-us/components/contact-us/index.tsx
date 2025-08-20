@@ -16,11 +16,18 @@ const ContactUs = () => {
 
   const router = useRouter();
   return (
-    <Container
-      maxWidth="lg"
-      sx={{ my: 8, mx: 2, py: 5, background: "#F9FAFB", borderRadius: "30px" }}
-    >
-      <Box textAlign="center" mb={6}>
+    <Container maxWidth={false}>
+      <Box
+        textAlign="center"
+        mb={6}
+        sx={{
+          my: 8,
+          mx: 2,
+          py: 5,
+          background: "#F9FAFB",
+          borderRadius: "32px",
+        }}
+      >
         <Typography
           fontSize={isMobile ? "24px" : isTablet ? "32px" : "40px"}
           fontWeight={700}

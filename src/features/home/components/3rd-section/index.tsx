@@ -68,9 +68,11 @@ const HomeThirdSection = () => {
                       src={item.image}
                       alt={item.heading}
                       style={{
-                        borderRadius: 25,
+                        borderRadius: 24,
                         width: "100%",
+                        maxWidth: "592px",
                         height: "auto",
+                        maxHeight: "588px",
                       }}
                     />
                   </Box>

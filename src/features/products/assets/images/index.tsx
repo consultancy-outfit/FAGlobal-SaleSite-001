@@ -10,7 +10,7 @@ export { default as dataIntelligenceimg2 } from "./dataIntelligenceimg2.svg";
 export { default as dataIntelligenceimg3 } from "./dataIntelligenceimg3.svg";
 export { default as IdentityKyc1 } from "./IdentityKyc1.svg";
 export { default as IdentityKyc2 } from "./IdentityKyc2.svg";
-export { default as IdentityKyc3 } from "./IdentityKyc3.svg";
+export { default as IdentityKyc3 } from "./IdentityKyc3One.svg";
 export { default as complianceAcccessimg1 } from "./complianceAcccessimg1.svg";
 export { default as complianceAcccessimg2 } from "./complianceAcccessimg2.svg";
 export { default as complianceAcccessimg3 } from "./complianceAcccessimg3.svg";

@@ -62,7 +62,7 @@ const SectionPanel: React.FC<SectionPanelProps> = ({ sections }) => {
                   alt={section.title}
                   sx={{
                     width: "100%",
-                    height: { xs: 200, sm: 250, md: 470 },
+                    height: { xs: 200, sm: 250, md: 467 },
                     objectFit: "cover",
                   }}
                 />
