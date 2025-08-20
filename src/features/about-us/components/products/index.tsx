@@ -10,6 +10,7 @@ const features = [
     description: "AHS helps users connect and manage their accounts",
     image: p2,
     link: "Explore AHS",
+    href: "/accountant-help-squad",
   },
   {
     title: "Centspay",
@@ -17,13 +18,15 @@ const features = [
       "Enable users to pay directly from their bank accounts — securely and without cards.",
     image: p3,
     link: "Explore Centspay Services",
+    href: "/centspay",
   },
   {
     title: "Compliance & Monitoring",
     description:
       "Tools for consent management and regulatory reporting, aligned with PSD2, FCA, and open banking.",
     image: p4,
-    link: "Explore our secure Open Banking tools ",
+    link: "Explore our secure Open Banking tools",
+    href: "/compliance-access",
   },
 ];
 
@@ -191,7 +194,7 @@ const Products = () => {
                         {member.description}
                       </Typography>
                     </Box>
-                    <Link href={member.link} passHref>
+                    <Link href={member.href} passHref>
                       <Typography
                         py={1}
                         pl={2}

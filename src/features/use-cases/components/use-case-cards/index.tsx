@@ -33,7 +33,7 @@ export const UseCaseCards = () => {
                 image={item.image}
                 alt="green iguana"
               />
-              <CardContent sx={{ height: 160 }}>
+              <CardContent>
                 <Typography fontSize={"22px"} fontWeight={600} color="black">
                   {item.heading}
                 </Typography>
@@ -47,7 +47,14 @@ export const UseCaseCards = () => {
               </CardContent>
             </CardActionArea>
           </SlideUpInView>
-          <CardActions>
+          <CardActions
+            sx={{
+              px: 2,
+              pb: 2,
+              display: "flex",
+              justifyContent: { xs: "center", sm: "flex-start" },
+            }}
+          >
             <ScaleInView>
               <LinkButton
                 link={item.exploreUrl}
