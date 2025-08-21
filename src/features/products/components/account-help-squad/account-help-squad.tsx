@@ -12,6 +12,7 @@ interface SectionData {
   features: string[];
   imageUrl?: string;
   featuresHeading?: string;
+  mediaRadius?: string;
 }
 
 export const CentspayFeature = () => {
@@ -34,6 +35,7 @@ export const CentspayFeature = () => {
       ],
       imageUrl: accountant1.src, //
       featuresHeading: "Digital Wallet Account Features:",
+      mediaRadius: "20px 20px 0 0",
     },
     {
       id: "card-solutions",
@@ -50,8 +52,9 @@ export const CentspayFeature = () => {
         "Secure Payment Integrations",
         "Performance Tracking & Audit Trail",
       ],
-      imageUrl: accountant2.src, //
+      imageUrl: accountant2.src,
       featuresHeading: "Card Solutions Features:",
+      mediaRadius: "20px 20px 0 0",
     },
     {
       id: "money-movement",
@@ -68,8 +71,9 @@ export const CentspayFeature = () => {
         "Alerts for Low Balances or Gaps",
         "Reporting Tools for Trends & Liquidity Health",
       ],
-      imageUrl: accountant3.src, //
+      imageUrl: accountant3.src,
       featuresHeading: "Money Movement Features:",
+      mediaRadius: "20px 20px 0 0",
     },
   ];
 

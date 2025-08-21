@@ -24,7 +24,13 @@ export const UseCaseCards = () => {
       m={2}
     >
       {cardData.map((item: any) => (
-        <Card sx={{ maxWidth: 420, borderRadius: 3 }} key={item.id}>
+        <Card
+          sx={{
+            maxWidth: 420,
+            borderRadius: 3,
+          }}
+          key={item.id}
+        >
           <SlideUpInView>
             <CardActionArea>
               <CardMedia
@@ -34,7 +40,19 @@ export const UseCaseCards = () => {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography fontSize={"22px"} fontWeight={600} color="black">
+                <Typography
+                  fontSize={"22px"}
+                  fontWeight={600}
+                  color="black"
+                  sx={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    minHeight: "56px",
+                  }}
+                >
                   {item.heading}
                 </Typography>
                 <Typography fontSize={"16px"} fontWeight={400} color="grey">

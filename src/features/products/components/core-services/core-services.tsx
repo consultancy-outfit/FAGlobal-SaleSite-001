@@ -16,6 +16,7 @@ interface SectionData {
   features: string[];
   imageUrl?: string;
   featuresHeading?: string;
+  mediaRadius?: string;
 }
 
 const CoreServicesPage = () => {
@@ -38,6 +39,7 @@ const CoreServicesPage = () => {
       ],
       imageUrl: coreservicesimg1.src,
       featuresHeading: "Account Information Services:",
+      mediaRadius: "20px 20px 0 0",
     },
     {
       id: "secure-payment-initiation",
@@ -57,6 +59,7 @@ const CoreServicesPage = () => {
       ],
       imageUrl: coreservicesimg2.src,
       featuresHeading: "Payment Initiation Features:",
+      mediaRadius: "20px 20px 0 0",
     },
     {
       id: "bank-connectivity-data-aggregation",
@@ -75,6 +78,7 @@ const CoreServicesPage = () => {
       ],
       imageUrl: coreservicesimg3.src,
       featuresHeading: "Connectivity & Aggregation Services:",
+      mediaRadius: "20px 20px 0 0",
     },
   ];
 

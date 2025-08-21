@@ -340,7 +340,7 @@ export const Header = () => {
                             py: 2,
                             px: 2,
                             textTransform: "none",
-                            fontSize: "0.9rem",
+                            fontSize: "1rem",
                             fontWeight: theme.typography.fontWeightMedium,
                             color: theme.palette.text.secondary,
                             "&.Mui-selected": {
@@ -389,7 +389,7 @@ export const Header = () => {
                               py: 2,
                               px: 2,
                               textTransform: "none",
-                              fontSize: "0.9rem",
+                              fontSize: "1rem",
                               fontWeight: theme.typography.fontWeightMedium,
                               color: theme.palette.text.secondary,
                               "&:hover": {
@@ -405,6 +405,7 @@ export const Header = () => {
                                 gap: "8px",
                                 width: "100%",
                                 justifyContent: "flex-start",
+                                fontSize: "16px !important",
                               }}
                             >
                               {getIconComponent(directLinkItem.icon)}
@@ -594,6 +595,7 @@ export const Header = () => {
                     textDecoration: "none",
                     color: textColor,
                     fontWeight: fontWeight,
+                    fontSize: "16px",
                   }}
                 >
                   {item?.title}
@@ -612,6 +614,7 @@ export const Header = () => {
               link={APP_ROUTES?.PARTNER_WITH_US}
               variant="outlined"
               color="secondary"
+              size="medium"
               customStyles={{
                 borderRadius: "999px",
                 border: "1px solid #F2F2F2",
@@ -630,6 +633,7 @@ export const Header = () => {
             </LinkButton>
             <LinkButton
               link={APP_ROUTES?.Get_STARTED}
+              size="medium"
               customStyles={{
                 borderRadius: "999px",
                 border: `1.5px solid ${theme?.palette?.primary?.main}`,

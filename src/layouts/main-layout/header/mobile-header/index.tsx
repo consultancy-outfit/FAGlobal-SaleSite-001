@@ -104,7 +104,6 @@ const MobileMenuItemWithChildren: React.FC<MobileMenuItemWithChildrenProps> = ({
                   ? theme.palette.primary.main
                   : theme.palette.text.primary,
                 fontWeight: theme.typography.fontWeightMedium,
-                fontSize: "16px",
               },
             }}
           />
@@ -312,7 +311,6 @@ export const MobileHeader: React.FC<{
                   justifyContent: "center",
                   backgroundColor: theme.palette.common.white,
                   color: theme.palette.text.primary,
-                  fontSize: "16px",
                 }}
                 onClick={handleClose}
               >
@@ -330,7 +328,6 @@ export const MobileHeader: React.FC<{
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "16px",
                 }}
                 onClick={handleClose}
               >

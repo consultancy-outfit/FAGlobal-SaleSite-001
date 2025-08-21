@@ -21,6 +21,7 @@ interface SectionData {
   features: string[];
   imageUrl?: string;
   featuresHeading?: string;
+  mediaRadius?: string;
 }
 
 interface SectionPanelProps {
@@ -62,8 +63,10 @@ const SectionPanel: React.FC<SectionPanelProps> = ({ sections }) => {
                   alt={section.title}
                   sx={{
                     width: "100%",
-                    height: { xs: 200, sm: 250, md: 467 },
+                    // height: { xs: 200, sm: 250, md: 467 },
+                    height: "100%",
                     objectFit: "cover",
+                    borderRadius: section.mediaRadius,
                   }}
                 />
               </SlideUpInView>

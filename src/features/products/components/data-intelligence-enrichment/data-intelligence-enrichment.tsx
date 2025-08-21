@@ -29,6 +29,7 @@ export const DataIntelligenceFeature = () => {
       ],
       imageUrl: dataIntelligenceimg1.src,
       featuresHeading: " Smart Transaction Categorisation-Related Services:",
+      mediaRadius: "20px 20px 0 0",
     },
     {
       id: "secure-payment-initiation",
@@ -49,6 +50,7 @@ export const DataIntelligenceFeature = () => {
       ],
       imageUrl: dataIntelligenceimg2.src,
       featuresHeading: "Income & Expense Insights-Related Services:",
+      mediaRadius: "20px 20px 0 0",
     },
     {
       id: "bank-connectivity-data-aggregation",
@@ -68,6 +70,7 @@ export const DataIntelligenceFeature = () => {
       ],
       imageUrl: dataIntelligenceimg3.src,
       featuresHeading: "Risk Scoring & Affordability Checks-Related Services:",
+      mediaRadius: "20px 20px 0 0",
     },
   ];
 
