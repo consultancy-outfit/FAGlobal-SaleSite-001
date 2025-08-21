@@ -16,6 +16,7 @@ interface SectionData {
   features: string[];
   imageUrl?: string;
   featuresHeading?: string;
+  mediaRadius?: string;
 }
 
 export const ComplianceacccessFeature = () => {
@@ -36,6 +37,7 @@ export const ComplianceacccessFeature = () => {
       ],
       imageUrl: complianceAcccessimg1.src,
       featuresHeading: "Key Regulatory Features:",
+      mediaRadius: "20px 20px 0 0",
     },
     {
       id: "wide-market-coverage",
@@ -53,6 +55,7 @@ export const ComplianceacccessFeature = () => {
       ],
       imageUrl: complianceAcccessimg2.src,
       featuresHeading: "Wide Market Coverage Features:",
+      mediaRadius: "20px 20px 0 0",
     },
     {
       id: "freemium-access-for-startups",
@@ -70,6 +73,7 @@ export const ComplianceacccessFeature = () => {
       ],
       imageUrl: complianceAcccessimg3.src,
       featuresHeading: "Freemium Access Benefits:",
+      mediaRadius: "20px 20px 0 0",
     },
   ];
 

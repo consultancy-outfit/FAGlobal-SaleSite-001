@@ -12,6 +12,7 @@ interface SectionData {
   features: string[];
   imageUrl?: string;
   featuresHeading?: string;
+  mediaRadius?: string;
 }
 
 export const IdentityKycFeature = () => {
@@ -34,6 +35,7 @@ export const IdentityKycFeature = () => {
       ],
       imageUrl: IdentityKyc1.src,
       featuresHeading: "Bank-Based Identity Verification Features:",
+      mediaRadius: "20px 20px 0 0",
     },
     {
       id: "account-ownership-confirmation",
@@ -53,6 +55,7 @@ export const IdentityKycFeature = () => {
       ],
       imageUrl: IdentityKyc2.src,
       featuresHeading: "Account Ownership Confirmation-Related Services::",
+      mediaRadius: "20px 20px 0 0",
     },
     {
       id: "consent-flow-customisation",
@@ -72,6 +75,7 @@ export const IdentityKycFeature = () => {
       ],
       imageUrl: IdentityKyc3.src,
       featuresHeading: "Consent Flow Customisation -Related Services:",
+      mediaRadius: "20px 20px 0 0",
     },
   ];
 
