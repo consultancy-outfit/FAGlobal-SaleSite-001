@@ -629,7 +629,7 @@ export const Header = () => {
                 color: theme?.palette?.text?.primary,
               }}
             >
-              Login
+              Log in
             </LinkButton>
             <LinkButton
               link={APP_ROUTES?.Get_STARTED}

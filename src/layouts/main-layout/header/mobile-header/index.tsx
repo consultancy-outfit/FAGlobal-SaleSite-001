@@ -194,7 +194,7 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({
           onClick={!active ? handleOpen : handleClose}
           role="button"
           aria-label="Toggle navigation menu"
-          style={{
+          sx={{
             width: 40,
             height: 40,
             borderRadius: "50%",
@@ -208,7 +208,7 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({
         >
           <Box>
             <Box
-              style={{
+              sx={{
                 height: 3,
                 borderRadius: 2,
                 background: theme?.palette?.secondary?.main,
@@ -268,7 +268,7 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({
                   <MobileMenuItemWithChildren
                     item={item}
                     pathname={pathname}
-                    // theme={theme}
+                    theme={theme}
                     handleCloseAll={handleClose}
                     getIconComponent={getIconComponent}
                   />
@@ -360,7 +360,7 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({
                 }}
                 onClick={handleClose}
               >
-                Login
+                Log in
               </CustomLinkButton>
               <CustomLinkButton
                 link={APP_ROUTES?.Get_STARTED}
