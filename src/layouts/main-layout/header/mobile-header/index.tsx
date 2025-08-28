@@ -6,21 +6,22 @@ import {
   useTheme,
   Stack,
   MenuItem,
+  List,
   ListItemButton,
   ListItemText,
   Collapse,
-  List,
 } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 
 import { APP_ROUTES } from "@/constants/routes";
+
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { NavLinkItem, navLinksData } from "../header.data";
 
-// Custom Button
+// Define LinkButtonPropsI and CustomLinkButton
 interface LinkButtonPropsI {
   children: React.ReactNode;
   link: string;
@@ -28,7 +29,7 @@ interface LinkButtonPropsI {
   onClick?: () => void;
 }
 
-export const CustomLinkButton: React.FC<LinkButtonPropsI> = ({
+const CustomLinkButton: React.FC<LinkButtonPropsI> = ({
   children,
   link,
   customStyles,
@@ -48,14 +49,12 @@ export const CustomLinkButton: React.FC<LinkButtonPropsI> = ({
   );
 };
 
-// Mobile Menu Item with Children
 interface MobileMenuItemWithChildrenProps {
   item: NavLinkItem;
   pathname: string | null;
+  theme: ReturnType<typeof useTheme>;
   handleCloseAll: () => void;
-  getIconComponent?: (icon?: string | React.FC<any>) => React.ReactNode;
-  isOpen: boolean;
-  onToggle: () => void;
+  getIconComponent: (icon?: string | React.FC<any>) => React.ReactNode;
 }
 
 const MobileMenuItemWithChildren: React.FC<MobileMenuItemWithChildrenProps> = ({
@@ -63,10 +62,13 @@ const MobileMenuItemWithChildren: React.FC<MobileMenuItemWithChildrenProps> = ({
   pathname,
   handleCloseAll,
   getIconComponent,
-  isOpen,
-  onToggle,
 }) => {
+  const [open, setOpen] = useState(false);
   const theme = useTheme();
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
 
   const isChildActive = item.children?.some((child) =>
     pathname?.startsWith(child.path),
@@ -77,8 +79,8 @@ const MobileMenuItemWithChildren: React.FC<MobileMenuItemWithChildrenProps> = ({
   return (
     <Box>
       <ListItemButton
-        onClick={onToggle}
-        aria-expanded={isOpen ? "true" : "false"}
+        onClick={handleClick}
+        aria-expanded={open ? "true" : "false"}
         aria-label={`Toggle ${item.title} menu`}
         sx={{
           borderRadius: 1,
@@ -108,39 +110,59 @@ const MobileMenuItemWithChildren: React.FC<MobileMenuItemWithChildrenProps> = ({
             }}
           />
         </Stack>
-        {isOpen ? <ExpandLess /> : <ExpandMore />}
+        {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
-      <Collapse in={isOpen} timeout="auto" unmountOnExit>
+      <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding sx={{ pl: 2 }}>
           {item.children?.map((childItem) => (
-            <MenuItem
-              key={childItem.title}
-              component={Link}
-              href={childItem.path}
-              onClick={handleCloseAll}
-              sx={{
-                color:
-                  pathname === childItem.path
-                    ? theme.palette.primary.main
-                    : theme.palette.text.primary,
-                fontWeight:
-                  pathname === childItem.path
-                    ? theme.typography.fontWeightBold
-                    : theme.typography.fontWeightRegular,
-                "&:hover": {
-                  backgroundColor: theme.palette.action.hover,
-                },
-                borderRadius: 1,
-                px: 2,
-                py: 1,
-                justifyContent: "flex-start",
-              }}
-            >
-              <Stack direction="row" alignItems="center" gap={1}>
-                {getIconComponent?.(childItem.icon)}
-                <Typography variant="body1">{childItem.title}</Typography>
-              </Stack>
-            </MenuItem>
+            <React.Fragment key={childItem.title}>
+              {childItem.children ? (
+                <MobileMenuItemWithChildren
+                  item={childItem}
+                  pathname={pathname}
+                  theme={theme}
+                  handleCloseAll={handleCloseAll}
+                  getIconComponent={getIconComponent}
+                />
+              ) : (
+                <MenuItem
+                  component={Link}
+                  href={childItem.path}
+                  onClick={handleCloseAll}
+                  sx={{
+                    color:
+                      pathname === childItem.path
+                        ? theme.palette.primary.main
+                        : theme.palette.text.primary,
+                    fontWeight:
+                      pathname === childItem.path
+                        ? theme.typography.fontWeightBold
+                        : theme.typography.fontWeightRegular,
+                    "&:hover": {
+                      backgroundColor: theme.palette.action.hover,
+                    },
+                    borderRadius: 1,
+                    px: 2,
+                    py: 1,
+                    justifyContent: "flex-start",
+                  }}
+                >
+                  <Stack direction="row" alignItems="center" gap={1}>
+                    {getIconComponent?.(childItem.icon)}
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        whiteSpace: "normal",
+                        wordBreak: "break-word",
+                        flex: 1,
+                      }}
+                    >
+                      {childItem.title}
+                    </Typography>
+                  </Stack>
+                </MenuItem>
+              )}
+            </React.Fragment>
           ))}
         </List>
       </Collapse>
@@ -148,31 +170,31 @@ const MobileMenuItemWithChildren: React.FC<MobileMenuItemWithChildrenProps> = ({
   );
 };
 
-// Main Mobile Header
-export const MobileHeader: React.FC<{
-  getIconComponent?: (icon?: string | React.FC<any>) => React.ReactNode;
-}> = ({ getIconComponent }) => {
-  const [active, setActive] = useState(false);
-  const [openItem, setOpenItem] = useState<string | null>(null);
+interface MobileHeaderProps {
+  getIconComponent: (icon?: string | React.FC<any>) => React.ReactNode;
+}
 
+export const MobileHeader: React.FC<MobileHeaderProps> = ({
+  getIconComponent,
+}) => {
+  const [active, setActive] = useState(false);
   const handleClose = () => {
     setActive(false);
-    setOpenItem(null);
   };
-  const handleOpen = () => setActive(true);
-
+  const handleOpen = () => {
+    setActive(true);
+  };
   const pathname = usePathname();
   const theme = useTheme();
 
   return (
     <ClickAwayListener onClickAway={handleClose}>
-      <Box sx={{ position: "relative" }}>
-        {/* Hamburger Button */}
+      <Box>
         <Box
-          onClick={active ? handleClose : handleOpen}
+          onClick={!active ? handleOpen : handleClose}
           role="button"
           aria-label="Toggle navigation menu"
-          sx={{
+          style={{
             width: 40,
             height: 40,
             borderRadius: "50%",
@@ -186,14 +208,14 @@ export const MobileHeader: React.FC<{
         >
           <Box>
             <Box
-              sx={{
+              style={{
                 height: 3,
                 borderRadius: 2,
-                background: theme.palette.secondary.main,
+                background: theme?.palette?.secondary?.main,
                 my: 0.5,
+                transition: "aall 0.3s ease",
                 width: 24,
-                transform: active ? "translateY(7px) rotate(45deg)" : "none",
-                transition: "all 0.3s ease",
+                transform: active ? "translateY(3px) rotate(45deg)" : "none",
               }}
             />
             <Box
@@ -221,18 +243,17 @@ export const MobileHeader: React.FC<{
           </Box>
         </Box>
 
-        {/* Mobile Menu */}
         <Box
           sx={{
             position: "fixed",
-            top: active ? 0 : "-100%",
+            top: active ? "0" : "-100vh",
             left: 0,
             right: 0,
             opacity: active ? 1 : 0,
             pointerEvents: active ? "auto" : "none",
             zIndex: 200,
             transition: "top 0.5s ease, opacity 0.3s ease",
-            backgroundColor: theme.palette.background.paper,
+            backgroundColor: theme?.palette?.background.paper,
             width: "100vw",
             height: "100vh",
             overflowY: "auto",
@@ -247,14 +268,11 @@ export const MobileHeader: React.FC<{
                   <MobileMenuItemWithChildren
                     item={item}
                     pathname={pathname}
+                    // theme={theme}
                     handleCloseAll={handleClose}
                     getIconComponent={getIconComponent}
-                    isOpen={openItem === item.title}
-                    onToggle={() =>
-                      setOpenItem(openItem === item.title ? null : item.title)
-                    }
                   />
-                ) : (
+                ) : item.path ? (
                   <MenuItem
                     component={Link}
                     href={item.path || "#"}
@@ -282,11 +300,35 @@ export const MobileHeader: React.FC<{
                       <Typography variant="body1">{item.title}</Typography>
                     </Stack>
                   </MenuItem>
+                ) : (
+                  <ListItemButton
+                    onClick={handleClose}
+                    sx={{
+                      borderRadius: 1,
+                      px: 2,
+                      py: 1,
+                      justifyContent: "flex-start",
+                      color:
+                        pathname === item.path
+                          ? theme.palette.primary.main
+                          : theme.palette.text.primary,
+                      fontWeight:
+                        pathname === item.path
+                          ? theme.typography.fontWeightBold
+                          : theme.typography.fontWeightRegular,
+                      "&:hover": {
+                        backgroundColor: theme.palette.action.hover,
+                      },
+                    }}
+                  >
+                    <Stack direction="row" alignItems="center" gap={1}>
+                      {getIconComponent?.(item.icon)}
+                      <Typography variant="body2">{item.title}</Typography>
+                    </Stack>
+                  </ListItemButton>
                 )}
               </React.Fragment>
             ))}
-
-            {/* Buttons for Login & Get Started */}
             <Stack
               direction="column"
               spacing={2}
@@ -300,27 +342,31 @@ export const MobileHeader: React.FC<{
               }}
             >
               <CustomLinkButton
-                link={APP_ROUTES.PARTNER_WITH_US}
+                link={APP_ROUTES?.PARTNER_WITH_US}
                 customStyles={{
                   borderRadius: "999px",
                   border: "1px solid #F2F2F2",
-                  padding: "8px 24px",
+                  paddingLeft: "24px",
+                  paddingRight: "24px",
+                  paddingTop: "8px",
+                  paddingBottom: "8px",
                   height: "50px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  backgroundColor: theme.palette.common.white,
-                  color: theme.palette.text.primary,
+                  width: "fit-content",
+                  backgroundColor: theme?.palette?.common?.white,
+                  color: theme?.palette?.text?.primary,
                 }}
                 onClick={handleClose}
               >
                 Login
               </CustomLinkButton>
               <CustomLinkButton
-                link={APP_ROUTES.Get_STARTED}
+                link={APP_ROUTES?.Get_STARTED}
                 customStyles={{
                   borderRadius: "999px",
-                  border: `1.5px solid ${theme.palette.primary.main}`,
+                  border: `1.5px solid ${theme?.palette?.primary?.main}`,
                   padding: "8px 24px",
                   backgroundColor: theme.palette.primary.main,
                   color: theme.palette.common.white,
@@ -328,6 +374,7 @@ export const MobileHeader: React.FC<{
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  width: "fit-content",
                 }}
                 onClick={handleClose}
               >
