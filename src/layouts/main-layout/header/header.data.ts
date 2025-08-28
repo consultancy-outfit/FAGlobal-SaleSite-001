@@ -47,12 +47,12 @@ export const navLinksData: NavLinkItem[] = [
         path: APP_ROUTES.PRODUCT_1,
         children: [
           {
-            title: "Account Activation",
+            title: "Account Information",
             path: APP_ROUTES.PRODUCT_1,
             icon: AccountInformationIcon,
           },
           {
-            title: "Approval Walters",
+            title: "Payment Initiation",
             path: APP_ROUTES.PRODUCT_1,
             icon: PaymentInitiationIcon,
           },
@@ -68,17 +68,17 @@ export const navLinksData: NavLinkItem[] = [
         path: APP_ROUTES.PRODUCT_2,
         children: [
           {
-            title: "Bancana Data Explorers",
+            title: "Transaction Categorization",
             path: APP_ROUTES.PRODUCT_2,
             icon: DataExplorersIcon,
           },
           {
-            title: "Normal Data Insights",
+            title: "Income & Expense Insights",
             path: APP_ROUTES.PRODUCT_2,
             icon: DataInsightsIcon,
           },
           {
-            title: "Debit & Corp with Affinity Score",
+            title: "Risk Scoring & Affordability Checks",
             path: APP_ROUTES.PRODUCT_2,
             icon: DebitCorpIcon,
           },
@@ -89,17 +89,17 @@ export const navLinksData: NavLinkItem[] = [
         path: APP_ROUTES.PRODUCT_3,
         children: [
           {
-            title: "Bancana Identity Verification",
+            title: "Bank-Based Identity Verification",
             path: APP_ROUTES.PRODUCT_3,
             icon: IdentityVerificationIcon,
           },
           {
-            title: "Normal Enterprise Confirmation",
+            title: "Account Ownership Confirmation",
             path: APP_ROUTES.PRODUCT_3,
             icon: EnterpriseConfirmationIcon,
           },
           {
-            title: "Normal Fraud Confirmation",
+            title: "Consent Flow Customization",
             path: APP_ROUTES.PRODUCT_3,
             icon: FraudConfirmationIcon,
           },
@@ -110,17 +110,17 @@ export const navLinksData: NavLinkItem[] = [
         path: APP_ROUTES.PRODUCT_4,
         children: [
           {
-            title: "KYC & AML Regulators",
+            title: "FCA & PSD2 Regulatory Alignment",
             path: APP_ROUTES.PRODUCT_4,
             icon: KycAmlRegulatorsIcon,
           },
           {
-            title: "Wide Normal Coverage",
+            title: "Wide Market Coverage",
             path: APP_ROUTES.PRODUCT_4,
             icon: WideNormalCoverageIcon,
           },
           {
-            title: "Financial Inclusion for Identity",
+            title: "Freemium Access for Startups",
             path: APP_ROUTES.PRODUCT_4,
             icon: FinancialInclusionIcon,
           },
@@ -131,17 +131,17 @@ export const navLinksData: NavLinkItem[] = [
         path: APP_ROUTES.PRODUCT_5,
         children: [
           {
-            title: "Digital Wallets",
+            title: "Digital Wallet Accounts",
             path: APP_ROUTES.PRODUCT_5,
             icon: DigitalWalletsIcon,
           },
           {
-            title: "Debit Notifications",
+            title: "Card Solutions",
             path: APP_ROUTES.PRODUCT_5,
             icon: DebitNotificationsIcon,
           },
           {
-            title: "Virtual Measure",
+            title: "Money Movement",
             path: APP_ROUTES.PRODUCT_5,
             icon: VirtualMeasureIcon,
           },
@@ -152,17 +152,17 @@ export const navLinksData: NavLinkItem[] = [
         path: APP_ROUTES.PRODUCT_6,
         children: [
           {
-            title: "Account Experts",
+            title: "Accounts Payable",
             path: APP_ROUTES.PRODUCT_6,
             icon: AccountExpertsIcon,
           },
           {
-            title: "Account Analysts",
+            title: "Account Receivable",
             path: APP_ROUTES.PRODUCT_6,
             icon: AccountExpertsIcon,
           },
           {
-            title: "Account Profilers",
+            title: "Account Cashflow",
             path: APP_ROUTES.PRODUCT_6,
             icon: AccountExpertsIcon,
           },

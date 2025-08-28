@@ -23,7 +23,7 @@ const LoginForm = () => {
           py: { lg: 10, md: 6, xs: 2 },
         }}
       >
-        <HeadingText variant="h4">Welcom back!</HeadingText>
+        <HeadingText variant="h4">Welcome back!</HeadingText>
         <BodyText variant="body2">
           Please enter your details to get started
         </BodyText>
