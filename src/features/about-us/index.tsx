@@ -22,7 +22,7 @@ export const AboutUsFeature = () => {
         <ComplianceTrust />
         <WhatWeDo />
         <BuildDeveloper />
-        <OurLeadership />
+        {/* <OurLeadership /> */}
         <Products />
         <ContactUs />
       </Box>

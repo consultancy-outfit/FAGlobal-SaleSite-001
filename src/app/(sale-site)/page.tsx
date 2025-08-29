@@ -10,7 +10,7 @@ export default function Home() {
         <Hero />
         <RealTimeAccess />
         <HomeThirdSection />
-        <WhatOurCustomersSaySection />
+        {/* <WhatOurCustomersSaySection /> */}
       </Stack>
     </>
   );
