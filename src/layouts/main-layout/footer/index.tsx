@@ -169,7 +169,7 @@ const Footer = () => {
             color="#D2D3DF"
             fontFamily="Manrope"
           >
-            Email: info@faglobalbkfinance.com
+            Email: business@faglobal.io
           </Typography>
           <Typography
             variant="body1"
