@@ -29,39 +29,45 @@ export default function PrivacyPolicy() {
   ];
   return (
     <Stack
-      sx={{ color: "#03020C" }}
+      // sx={{ color: "#03020C" }}
       alignItems="center"
       px={{ lg: 4, xs: 3 }}
-      py={{ lg: 1, xs: 8 }}
+      py={{ lg: 1, xs: 1 }}
     >
-      <Stack sx={{ width: { lg: "80%", xs: "100%" } }} spacing={4}>
+      <Stack sx={{ width: { lg: "80%", xs: "100%" } }}>
         <Box
           sx={{
             width: "100%",
-            height: "258px",
+            height: { xs: "150px", sm: "200px", md: "240px", lg: "242px" },
             backgroundImage: `url(${TermsImage2.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           <Typography
-            color="#000"
-            fontFamily="Manrope"
-            fontWeight={800}
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
+            fontWeight={600}
             textAlign="center"
             mt={12}
             sx={{
               fontSize: { xs: "2.5rem", sm: "3rem", md: "4rem", lg: "4.25rem" },
+              mt: {
+                xs: 5,
+                sm: 10,
+                md: 8,
+                lg: 9,
+              },
               lineHeight: 1.2,
             }}
           >
             Privacy Policy
           </Typography>
         </Box>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -76,8 +82,8 @@ export default function PrivacyPolicy() {
             Introduction
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -88,10 +94,10 @@ export default function PrivacyPolicy() {
             information when you visit our website or use our services.
           </Typography>
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -106,8 +112,8 @@ export default function PrivacyPolicy() {
             Information We Collect
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -118,8 +124,8 @@ export default function PrivacyPolicy() {
           {infoWeCollect?.map((items) => (
             // eslint-disable-next-line react/jsx-key
             <Typography
-              color="#646464"
-              fontFamily="Manrope"
+              color="rgba(87, 87, 87, 1)"
+              fontFamily="Inter Tight"
               textAlign="left"
               component={"li"}
               sx={{
@@ -130,10 +136,10 @@ export default function PrivacyPolicy() {
             </Typography>
           ))}
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -148,8 +154,8 @@ export default function PrivacyPolicy() {
             How We Use Your Information
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -160,8 +166,8 @@ export default function PrivacyPolicy() {
           {howWeUseYourInfo?.map((items) => (
             // eslint-disable-next-line react/jsx-key
             <Typography
-              color="#646464"
-              fontFamily="Manrope"
+              color="rgba(87, 87, 87, 1)"
+              fontFamily="Inter Tight"
               textAlign="left"
               component={"li"}
               sx={{
@@ -172,10 +178,10 @@ export default function PrivacyPolicy() {
             </Typography>
           ))}
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -190,8 +196,8 @@ export default function PrivacyPolicy() {
             Data Protection & Security{" "}
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -203,8 +209,8 @@ export default function PrivacyPolicy() {
           {dataProtection?.map((items) => (
             // eslint-disable-next-line react/jsx-key
             <Typography
-              color="#646464"
-              fontFamily="Manrope"
+              color="rgba(87, 87, 87, 1)"
+              fontFamily="Inter Tight"
               textAlign="left"
               component={"li"}
               sx={{
@@ -215,10 +221,10 @@ export default function PrivacyPolicy() {
             </Typography>
           ))}
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -233,8 +239,8 @@ export default function PrivacyPolicy() {
             Your Rights
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -245,8 +251,8 @@ export default function PrivacyPolicy() {
           {yourRights?.map((items) => (
             // eslint-disable-next-line react/jsx-key
             <Typography
-              color="#646464"
-              fontFamily="Manrope"
+              color="rgba(87, 87, 87, 1)"
+              fontFamily="Inter Tight"
               textAlign="left"
               component={"li"}
               sx={{
@@ -257,10 +263,10 @@ export default function PrivacyPolicy() {
             </Typography>
           ))}
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={800}
             textAlign="left"
             sx={{
@@ -275,8 +281,8 @@ export default function PrivacyPolicy() {
             Third-Party Services{" "}
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -287,10 +293,10 @@ export default function PrivacyPolicy() {
             their policies.
           </Typography>
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -305,8 +311,8 @@ export default function PrivacyPolicy() {
             Data Retention{" "}
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -316,10 +322,10 @@ export default function PrivacyPolicy() {
             stated or as required by law.
           </Typography>
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -334,8 +340,8 @@ export default function PrivacyPolicy() {
             Policy Updates{" "}
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -345,10 +351,10 @@ export default function PrivacyPolicy() {
             of significant changes via email or a prominent site notice.
           </Typography>
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -363,8 +369,8 @@ export default function PrivacyPolicy() {
             Contact Us{" "}
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },

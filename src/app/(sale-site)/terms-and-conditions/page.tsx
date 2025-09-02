@@ -20,27 +20,26 @@ export default function TermsAndConditionsPolicy() {
   ];
   return (
     <Stack
-      sx={{ color: "#03020C" }}
+      // sx={{ color: "#03020C" }}
       alignItems="center"
       px={{ lg: 4, xs: 3 }}
-      py={{ lg: 1, xs: 8 }}
+      py={{ lg: 1, xs: 1 }}
     >
       <Stack sx={{ width: { lg: "80%", xs: "100%" } }}>
         <Box
           sx={{
             width: "100%",
-            height: "258px",
+            height: { xs: "150px", sm: "200px", md: "240px", lg: "242px" },
             backgroundImage: `url(${TermsImage2.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           <Typography
-            color="#000"
-            fontFamily="Manrope"
-            fontWeight={700}
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
+            fontWeight={600}
             textAlign="center"
-            mt={12}
             sx={{
               fontSize: {
                 xs: "2.5rem",
@@ -48,17 +47,23 @@ export default function TermsAndConditionsPolicy() {
                 md: "4.25rem",
                 lg: "4.25rem",
               },
+              mt: {
+                xs: 5,
+                sm: 10,
+                md: 8,
+                lg: 9,
+              },
               lineHeight: 1.2,
             }}
           >
             Terms & Conditions
           </Typography>
         </Box>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
-            fontWeight={700}
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
+            fontWeight={600}
             textAlign="left"
             sx={{
               fontSize: {
@@ -72,8 +77,8 @@ export default function TermsAndConditionsPolicy() {
             Welcome to FA Global{" "}
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             align="justify"
             sx={{
@@ -83,10 +88,10 @@ export default function TermsAndConditionsPolicy() {
             {` Welcome to FA Global. These Terms and Conditions ("Terms") govern your access to and use of our website, services, and digital platforms operated by FA Global ("we," "us," or "our"). By using our services, you agree to be bound by these Terms.`}
           </Typography>
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -101,8 +106,8 @@ export default function TermsAndConditionsPolicy() {
             Acceptance of Terms
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -113,10 +118,10 @@ export default function TermsAndConditionsPolicy() {
             agree, you must not use our services.
           </Typography>
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -131,8 +136,8 @@ export default function TermsAndConditionsPolicy() {
             Account Registration
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -142,10 +147,9 @@ export default function TermsAndConditionsPolicy() {
             account. You are responsible for:{" "}
           </Typography>
           {accountRegistration?.map((items) => (
-             
             <Typography
-              color="#646464"
-              fontFamily="Manrope"
+              color="rgba(87, 87, 87, 1)"
+              fontFamily="Inter Tight"
               textAlign="left"
               component={"li"}
               key={items}
@@ -157,10 +161,10 @@ export default function TermsAndConditionsPolicy() {
             </Typography>
           ))}
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -175,8 +179,8 @@ export default function TermsAndConditionsPolicy() {
             Use of Services{" "}
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -186,10 +190,9 @@ export default function TermsAndConditionsPolicy() {
             compliance with all applicable laws. You must not:
           </Typography>
           {useOfServices?.map((items) => (
-             
             <Typography
-              color="#646464"
-              fontFamily="Manrope"
+              color="rgba(87, 87, 87, 1)"
+              fontFamily="Inter Tight"
               textAlign="left"
               component={"li"}
               key={items}
@@ -201,10 +204,10 @@ export default function TermsAndConditionsPolicy() {
             </Typography>
           ))}
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -219,8 +222,8 @@ export default function TermsAndConditionsPolicy() {
             Intellectual Property{" "}
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -232,10 +235,10 @@ export default function TermsAndConditionsPolicy() {
             not copy, distribute, or use it without prior written permission.
           </Typography>
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -250,8 +253,8 @@ export default function TermsAndConditionsPolicy() {
             Privacy
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -262,10 +265,10 @@ export default function TermsAndConditionsPolicy() {
           </Typography>
         </Stack>
 
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -280,8 +283,8 @@ export default function TermsAndConditionsPolicy() {
             Disclaimers{" "}
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -291,10 +294,9 @@ export default function TermsAndConditionsPolicy() {
             warranties of any kind. We do not guarantee:
           </Typography>
           {disclaimers?.map((items) => (
-             
             <Typography
-              color="#646464"
-              fontFamily="Manrope"
+              color="rgba(87, 87, 87, 1)"
+              fontFamily="Inter Tight"
               textAlign="left"
               component={"li"}
               key={items}
@@ -306,10 +308,10 @@ export default function TermsAndConditionsPolicy() {
             </Typography>
           ))}
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -324,8 +326,8 @@ export default function TermsAndConditionsPolicy() {
             Limitation of Liability
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -336,10 +338,10 @@ export default function TermsAndConditionsPolicy() {
             damages, or loss of data, arising from your use of our services.
           </Typography>
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -354,8 +356,8 @@ export default function TermsAndConditionsPolicy() {
             Modifications
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -366,10 +368,10 @@ export default function TermsAndConditionsPolicy() {
             use after changes indicates your acceptance.
           </Typography>
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -384,8 +386,8 @@ export default function TermsAndConditionsPolicy() {
             Governing Law
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
@@ -396,10 +398,10 @@ export default function TermsAndConditionsPolicy() {
             handled in the courts of UK.
           </Typography>
         </Stack>
-        <Stack spacing={1}>
+        <Stack spacing={1} mb={2}>
           <Typography
-            color="#000"
-            fontFamily="Manrope"
+            color="rgba(16, 15, 17, 1)"
+            fontFamily="Inter Tight"
             fontWeight={600}
             textAlign="left"
             sx={{
@@ -414,8 +416,8 @@ export default function TermsAndConditionsPolicy() {
             Contact Us{" "}
           </Typography>
           <Typography
-            color="#646464"
-            fontFamily="Manrope"
+            color="rgba(87, 87, 87, 1)"
+            fontFamily="Inter Tight"
             textAlign="left"
             sx={{
               fontSize: { xs: "14px", sm: "16px", md: "20px", lg: "22px" },
